@@ -1,6 +1,6 @@
 {
     "version": 1,
-    "name": "Player",
+    "name": "InputSystem_Actions",
     "maps": [
         {
             "name": "InLevel",
