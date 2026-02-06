@@ -1,5 +1,8 @@
+using System;
+using Unity.VectorGraphics;
 using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MainMenu : MonoBehaviour
 {
@@ -24,8 +27,19 @@ public class MainMenu : MonoBehaviour
 }
 public class Portals : MonoBehaviour
 {
+    // levels 
+    Scene level1;
+    Scene level2;
+    Scene level3;
+
+    public GameObject portal1;
     public GameObject portal2;
     public GameObject portal3;
+    public GameObject currentportal;
+    public bool level1beat = false;
+    public bool level2beat = false;
+
+   
 
     private void Awake()
     {
@@ -35,6 +49,30 @@ public class Portals : MonoBehaviour
 
     private void Update()
     {
-        if ()
+        if(level1beat == true)
+        {
+            portal2.SetActive(true);
+            
+        }
+
+        if (level2beat == true) 
+        {
+            portal3.SetActive(true);
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (currentportal == portal1)
+        {
+            //move to level 1
+        }
+        else if (currentportal == portal2)
+        {
+            
+        }
+        else if(currentportal == portal3)
+        {
+
+        }
     }
 }
