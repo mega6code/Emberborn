@@ -1,49 +1,68 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
+using UnityEngine.UIElements;
 
 public class PlayerMotor : MonoBehaviour
 {
-    private InputSystem_Actions m_actions; // a class I generated through the input system so i can access it
-
     private Rigidbody rb;
 
-    private Vector2 m_moveAmt; //variable to store inputs -> move forward/backward & left/right 
+    [SerializeField] private float jumpForce = 5f;
+    [SerializeField] private float moveSpeed = 10f;
 
-    public float moveSpeed = 5f;
-    public float flySpeed = 5f;
+    private Vector2 rotateStartVector = new Vector2(0, 1);
+
+    private bool isGrounded = false;
 
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        m_actions = new InputSystem_Actions();
     }
 
-    private void FixedUpdate()
+
+    public void OnMove(Vector2 input) //this function is being called by the the Unity Events
     {
-                           //where the dragon is facing       //dragon's right side          --> they are combined with input: forward/backward/left/right
-        Vector3 direction = transform.forward * m_moveAmt.y + transform.right * m_moveAmt.x;
-        rb.linearVelocity = direction * moveSpeed; //move the dragon in that specofoc direction * specfic speed
+        //if there is no input, then the velocity is 0
+        if (input == Vector2.zero)
+        { 
+            rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, 0);
+            return;
+        }
+
+        // ROTATION
+        float angle = Vector2.SignedAngle(rotateStartVector, input); //this is storing an agle in a variable
+        rb.MoveRotation(Quaternion.Euler(0, -angle, 0)); //this is rotating he rb around that angle
+
+        // MOVEMENT
+        Vector3 moveDir = transform.forward * moveSpeed; //this is creatin direction that will always be the forwad
+        rb.linearVelocity = new Vector3(moveDir.x, rb.linearVelocity.y, moveDir.z); //this is saying, the velocity will be the
     }
 
-    public void OnMove(InputAction.CallbackContext context) //this function is being called by the the Unity Events
+
+    public void OnJump()
     {
-        m_moveAmt = context.ReadValue<Vector2>();
+        if (!isGrounded) return;
+
+        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
 
-    public void OnLook(InputAction.CallbackContext context) //this function is being called by the the Unity Events
+    private void OnCollisionEnter(Collision collision)
     {
-        Vector2 inputValues = context.ReadValue<Vector2>();
-
-        Rotate(inputValues.x);
-        Rotate(inputValues.y);
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            isGrounded = true;
+        }
     }
 
-    public void Rotate(float inputX) //just the left or right of the mouse
+    private void OnCollisionExit(Collision collision)
     {
-        Vector3 mouseDirection = new Vector3(0, inputX , 0 );
-        transform.Rotate(mouseDirection * Time.deltaTime * flySpeed);
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            isGrounded = false;
+        }
     }
 
 }
+
+
