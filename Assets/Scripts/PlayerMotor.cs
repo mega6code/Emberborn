@@ -7,8 +7,10 @@ public class PlayerMotor : MonoBehaviour
 {
     private Rigidbody rb;
 
+    [SerializeField] Animator animator;
+
     [SerializeField] private float jumpForce = 5f;
-    [SerializeField] private float moveSpeed = 10f;
+    [SerializeField] private float moveSpeed = 5f;
 
     private Vector2 rotateStartVector = new Vector2(0, 1);
 
@@ -23,10 +25,13 @@ public class PlayerMotor : MonoBehaviour
 
     public void OnMove(Vector2 input) //this function is being called by the the Unity Events
     {
+        animator.SetBool("IsWalking", true);
         //if there is no input, then the velocity is 0
         if (input == Vector2.zero)
         { 
             rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, 0);
+            animator.SetBool("IsWalking", false);
+
             return;
         }
 
@@ -42,9 +47,16 @@ public class PlayerMotor : MonoBehaviour
 
     public void OnJump()
     {
-        if (!isGrounded) return;
+
+        if (!isGrounded)
+        {
+            return;
+        }
 
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        animator.SetBool("IsJumping", true);
+
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -52,6 +64,7 @@ public class PlayerMotor : MonoBehaviour
         if (collision.gameObject.CompareTag("Floor"))
         {
             isGrounded = true;
+            animator.SetBool("IsJumping", false);
         }
     }
 
