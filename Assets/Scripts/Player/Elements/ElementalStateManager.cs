@@ -1,40 +1,97 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Player
+namespace Emberborn.Player
 {
     public class ElementalStateManager : MonoBehaviour
     {
         #region Fields
-        [SerializeField] private List<ElementalTypes> collected_elements = new List<ElementalTypes>();
+        //serialized fields
+        [SerializeField] 
+        private List<ElementalTypes> collected_elements = new List<ElementalTypes>(); //Emby's elements!!!!!!
 
+        //other fields
+        private int collected_elem_index = 0; //to keep track of which collected element is being used for the state
         private ElementalState current_state = null;
         #endregion
 
         #region Properties
+        public ElementalState Current_state { get => current_state;} //in case u need to check Emby's state outside of this class
         #endregion
 
         #region Methods
+        /// <summary>
+        /// adds element to Emby's elements
+        /// </summary>
         private void AddElement(ElementalTypes e_type)
         {
             if (!collected_elements.Contains(e_type))
             {
                 collected_elements.Add(e_type);
             }
+            else
+            {
+                //collected-elements[e_type].Upgrade
+                //....maybeee
+            }
         }
-        #endregion
 
-        #region Event Methods
-        private void OnTriggerEnter(Collider other)
+        /// <summary>
+        /// For the collected elements list, increments index to next element index in list
+        /// </summary>
+        private void IncrementIndex()
         {
-            //if(other.CompareTag("ElementalPotion"))           
-            //{
-            //    //other.GetComponent<>
-            //}
-        }
-        #endregion
+            collected_elem_index++;
 
-        #region Events
+            if (collected_elem_index > collected_elements.Count - 1) //if index counter is past the last element index 
+            {
+                collected_elem_index = 0; //back to first element in the list
+            }
+        }
+
+        /// <summary>
+        /// Gets next state in the state cycle
+        /// </summary>
+        /// <returns>ElementalState</returns>
+        private ElementalState GetNextState()
+        {
+            ElementalState next_state = null;
+
+            IncrementIndex();
+
+            switch (collected_elements[collected_elem_index])
+            {
+                case ElementalTypes.Fire:
+                    next_state = new FireState();
+                    break;
+                case ElementalTypes.Ice:
+                    next_state = new IceState();
+                    break;
+            }
+
+            return next_state;
+        }
+
+        /// <summary>
+        /// To be called when Emby interacts with a Element pick up, adds element to Emby's elements
+        /// </summary>
+        public void OnElementPickUp(ElementalTypes e_types)
+        {
+            AddElement(e_types);
+        }
+
+        public void OnAbility()
+        {
+            current_state.ActivateAbility();
+        }
+
+        public void OnChangeState()
+        {
+            ElementalState next_state = GetNextState();
+
+            current_state = next_state;
+        }
         #endregion
     } 
 }

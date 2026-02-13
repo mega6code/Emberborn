@@ -1,6 +1,6 @@
-﻿using Interfaces;
+﻿using Emberborn.Interfaces;
 
-namespace Player
+namespace Emberborn.Player
 {
 	public abstract class ElementalState : IState
 	{
@@ -8,7 +8,7 @@ namespace Player
         #endregion
 
         #region Methods
-        protected abstract void ActivateAbility();       
+        public abstract void ActivateAbility();       
         #endregion
         
     }
