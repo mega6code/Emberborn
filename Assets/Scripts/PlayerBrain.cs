@@ -12,7 +12,7 @@ public class PlayerBrain : MonoBehaviour
     private bool jumpPressed;
     private InputSystem_Actions controls;
     private bool isActive = true;
-
+    private bool heldGlind = false; //is not pressing the key (shift)
 
     private void Awake()
     {
@@ -26,6 +26,9 @@ public class PlayerBrain : MonoBehaviour
         controls.InLevel.Move.performed += OnMove;
         controls.InLevel.Move.canceled += OnMove; //when stop pressing, the player stops to walk
 
+        controls.InLevel.Glind.performed += OnGlind;
+        controls.InLevel.Glind.canceled += OnGlind;
+
     }
 
     private void FixedUpdate()
@@ -38,6 +41,20 @@ public class PlayerBrain : MonoBehaviour
             playerMotor.OnJump();
             jumpPressed = false; // consume jump
         }
+
+         if (heldGlind == false)
+         {
+            return;
+         }
+
+    }
+
+    private void OnGlind(InputAction.CallbackContext ctx)
+    {
+        //heldGlind = ctx.ReadValue<bool>();
+        //say smth like, if there is input (shift), then heldGlind is true
+        heldGlind = ctx.ReadValueAsButton();
+        playerMotor.OnGlind(heldGlind);
 
     }
 

@@ -136,6 +136,15 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Glind"",
+                    ""type"": ""Button"",
+                    ""id"": ""795050d8-a320-4450-bac8-79b973722cf4"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -290,6 +299,17 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Gamepad"",
                     ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2c7c0a47-6e6a-496f-bd08-f39027e4bcce"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Glind"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -710,6 +730,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_InLevel_Interact = m_InLevel.FindAction("Interact", throwIfNotFound: true);
         m_InLevel_Ability = m_InLevel.FindAction("Ability", throwIfNotFound: true);
         m_InLevel_SwitchState = m_InLevel.FindAction("Switch State", throwIfNotFound: true);
+        m_InLevel_Glind = m_InLevel.FindAction("Glind", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -806,6 +827,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_InLevel_Interact;
     private readonly InputAction m_InLevel_Ability;
     private readonly InputAction m_InLevel_SwitchState;
+    private readonly InputAction m_InLevel_Glind;
     /// <summary>
     /// Provides access to input actions defined in input action map "InLevel".
     /// </summary>
@@ -837,6 +859,10 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "InLevel/SwitchState".
         /// </summary>
         public InputAction @SwitchState => m_Wrapper.m_InLevel_SwitchState;
+        /// <summary>
+        /// Provides access to the underlying input action "InLevel/Glind".
+        /// </summary>
+        public InputAction @Glind => m_Wrapper.m_InLevel_Glind;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -878,6 +904,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @SwitchState.started += instance.OnSwitchState;
             @SwitchState.performed += instance.OnSwitchState;
             @SwitchState.canceled += instance.OnSwitchState;
+            @Glind.started += instance.OnGlind;
+            @Glind.performed += instance.OnGlind;
+            @Glind.canceled += instance.OnGlind;
         }
 
         /// <summary>
@@ -904,6 +933,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @SwitchState.started -= instance.OnSwitchState;
             @SwitchState.performed -= instance.OnSwitchState;
             @SwitchState.canceled -= instance.OnSwitchState;
+            @Glind.started -= instance.OnGlind;
+            @Glind.performed -= instance.OnGlind;
+            @Glind.canceled -= instance.OnGlind;
         }
 
         /// <summary>
@@ -1217,6 +1249,13 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSwitchState(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Glind" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnGlind(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.
