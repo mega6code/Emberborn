@@ -8,12 +8,12 @@ using UnityEngine.InputSystem;
 public class MainMenu : MonoBehaviour
 {
     public EggController method;
-    public GameObject dragon;
+    public GameObject player;
 
     private void Awake()
     {
         gameObject.SetActive(true);
-        dragon.SetActive(false);
+        player.SetActive(false);
     }
     private void Update()
     {
@@ -22,7 +22,7 @@ public class MainMenu : MonoBehaviour
             if (method != null)
             {
                 method.Hatch();
-                dragon.SetActive(true);
+                player.SetActive(true);
                 gameObject.SetActive(false);
                 Debug.Log("space was pressed");
             }
