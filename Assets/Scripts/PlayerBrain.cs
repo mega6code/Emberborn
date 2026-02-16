@@ -1,4 +1,5 @@
 using System;
+using Emberborn.Player;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -7,6 +8,7 @@ using static UnityEngine.InputSystem.LowLevel.InputStateHistory;
 public class PlayerBrain : MonoBehaviour
 {
     [SerializeField] PlayerMotor playerMotor;
+    [SerializeField] ElementalStateManager elementalStateManager;
 
     private Vector2 moveInput;
     private bool jumpPressed;
@@ -25,6 +27,9 @@ public class PlayerBrain : MonoBehaviour
 
         controls.InLevel.Move.performed += OnMove;
         controls.InLevel.Move.canceled += OnMove; //when stop pressing, the player stops to walk
+
+        controls.InLevel.Ability.performed += OnAbility;
+        controls.InLevel.SwitchState.performed += OnSwitchState;
 
     }
 
@@ -49,6 +54,16 @@ public class PlayerBrain : MonoBehaviour
     private void OnMove(InputAction.CallbackContext ctx)
     {
         moveInput = ctx.ReadValue<Vector2>();
+    }
+
+    private void OnAbility(InputAction.CallbackContext context)
+    {
+        elementalStateManager.OnAbility();
+    }
+
+    private void OnSwitchState(InputAction.CallbackContext context)
+    {
+        elementalStateManager.OnChangeState();
     }
 
 }

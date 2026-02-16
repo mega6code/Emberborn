@@ -83,14 +83,32 @@ namespace Emberborn.Player
 
         public void OnAbility()
         {
-            current_state.ActivateAbility();
+            if(current_state != null)
+            {
+                current_state.ActivateAbility();
+            }
+            else
+            {
+                Debug.Log("No Elemental State yet!");
+            }
+
         }
 
         public void OnChangeState()
         {
-            ElementalState next_state = GetNextState();
+            if(collected_elements != null && collected_elements.Count != 0) //at least 1 element has to be collected to be able to activate 'switch'
+            {
+                ElementalState next_state = GetNextState();
 
-            current_state = next_state;
+                current_state = next_state; //will be the same elemeent if Emby only has 1 element collected
+
+                Debug.Log($"Switched to {current_state.GetType()}");
+            }
+            else
+            {
+                Debug.Log("No Elements collected yet!");
+            }
+            
         }
         #endregion
     } 
