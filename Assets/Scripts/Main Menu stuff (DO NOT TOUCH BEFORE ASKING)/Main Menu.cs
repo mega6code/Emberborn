@@ -8,6 +8,7 @@ using UnityEngine.InputSystem;
 public class MainMenu : MonoBehaviour
 {
     public EggController method;
+    public Startbgm startbgm;
     public GameObject player;
 
     private void Awake()
@@ -21,6 +22,7 @@ public class MainMenu : MonoBehaviour
         {
             if (method != null)
             {
+                startbgm.PlayBGM();
                 method.Hatch();
                 player.SetActive(true);
                 gameObject.SetActive(false);
