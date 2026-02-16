@@ -9950,11 +9950,11 @@ MonoBehaviour:
   movementControl: {fileID: 4099060358282427602, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   jumpControl: {fileID: -3440093267870110826, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   glideControl: {fileID: -4150274994127920272, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  playerSpeed: 2
-  jumpHeight: 3
-  gravityValue: -9.81
-  rotationSpeed: 4
-  fallForce: 5
+  playerSpeed: 3
+  jumpHeight: 2.5
+  gravityValue: -4
+  rotationSpeed: 10
+  glideGravity: 0
 --- !u!143 &6588220683519053926
 CharacterController:
   m_ObjectHideFlags: 0

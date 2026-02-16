@@ -21,51 +21,45 @@ public class PlayerController : MonoBehaviour
     private bool groundedPlayer;
     private Transform cameraMainTransform;
 
-    private Rigidbody rb; //
-    [SerializeField] private float fallForce = 0.1f;
+    [SerializeField] private float glideGravity = -2f;
 
     private void OnEnable()
     {
         movementControl.action.Enable();
         jumpControl.action.Enable();
+        glideControl.action.Enable();
     }
 
     private void OnDisable()
     {
         movementControl.action.Disable();
         jumpControl.action.Disable();
+        glideControl.action.Disable();
     }
     private void Start()
     {
         controller = gameObject.GetComponent<CharacterController>();
         cameraMainTransform = Camera.main.transform;
         animator = GetComponent<Animator>();
-
-        rb = GetComponent<Rigidbody>();
-
     }
 
     void Update()
     {
         groundedPlayer = controller.isGrounded;
 
+        //is not moving
         if (groundedPlayer && playerVelocity.y < 0)
         {
             OnIdle();
         }
 
+        //movement
         Vector2 movement = movementControl.action.ReadValue<Vector2>();
         Vector3 move = new Vector3(movement.x, 0, movement.y);
         move = cameraMainTransform.forward * move.z + cameraMainTransform.right * move.x ;
         move.y = 0f;
         controller.Move(move * Time.deltaTime * playerSpeed);
 
-
-        // Changes the height position of the player..
-        if (jumpControl.action.triggered && groundedPlayer)
-        {
-            OnJump();
-        }
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
@@ -79,22 +73,29 @@ public class PlayerController : MonoBehaviour
         }
 
         // Changes the height position of the player..
-        if (glideControl.action.inProgress && !groundedPlayer)
+        if (jumpControl.action.triggered && groundedPlayer)
+        {
+            OnJump();
+        }
+
+
+        // Changes the height position of the player..
+        if (glideControl.action.IsPressed() && !groundedPlayer)
         {
             OnGlide();
         }
         else
         {
-            rb.useGravity = true;
-            animator.SetBool("IsGlinding", false);
+            playerVelocity.y += gravityValue * Time.deltaTime;
         }
+
+        // Apply vertical movement
+        controller.Move(playerVelocity * Time.deltaTime);
     }
     public void OnGlide()
     {
+        playerVelocity.y += glideGravity * Time.deltaTime;
         animator.SetBool("IsGlinding", true);
-
-        rb.useGravity = false; // turn off normal gravity
-        rb.linearVelocity = new Vector3(rb.linearVelocity.x, -fallForce, rb.linearVelocity.z); // constant slow fall;
     }
 
     public void OnJump()
