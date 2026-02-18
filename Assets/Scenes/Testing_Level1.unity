@@ -2692,8 +2692,8 @@ GameObject:
   m_Component:
   - component: {fileID: 690796323}
   - component: {fileID: 690796322}
-  - component: {fileID: 690796321}
-  - component: {fileID: 690796320}
+  - component: {fileID: 690796324}
+  - component: {fileID: 690796325}
   m_Layer: 0
   m_Name: CinemachineCamera
   m_TagString: Untagged
@@ -2701,54 +2701,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &690796320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 690796319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f38bda98361e1de48a4ca2bd86ea3c17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineRotationComposer
-  Composition:
-    ScreenPosition: {x: 0, y: 0}
-    DeadZone:
-      Enabled: 0
-      Size: {x: 0.2, y: 0.2}
-    HardLimits:
-      Enabled: 0
-      Size: {x: 0.8, y: 0.8}
-      Offset: {x: 0, y: 0}
-  CenterOnActivate: 1
-  TargetOffset: {x: 0, y: 0, z: 0}
-  Damping: {x: 0.5, y: 0.5}
-  Lookahead:
-    Enabled: 0
-    Time: 0
-    Smoothing: 0
-    IgnoreY: 0
---- !u!114 &690796321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 690796319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b617507da6d07e749b7efdb34e1173e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineFollow
-  TrackerSettings:
-    BindingMode: 4
-    PositionDamping: {x: 1, y: 1, z: 1}
-    AngularDampingMode: 0
-    RotationDamping: {x: 1, y: 1, z: 1}
-    QuaternionDamping: 1
-  FollowOffset: {x: 2.38, y: 5.81, z: -0.02}
 --- !u!114 &690796322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2800,13 +2752,61 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690796319}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.39564386, y: -0.58470005, z: 0.39233494, w: 0.5896314}
-  m_LocalPosition: {x: -0.61399984, y: 24.9, z: 263.704}
+  m_LocalRotation: {x: 0.24347803, y: 0.056974795, z: -0.0143288355, w: 0.9681255}
+  m_LocalPosition: {x: -3.444, y: 21.15, z: 259.914}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 42.83, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -1.875, z: 0}
+--- !u!114 &690796324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690796319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b617507da6d07e749b7efdb34e1173e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineFollow
+  TrackerSettings:
+    BindingMode: 4
+    PositionDamping: {x: 1, y: 1, z: 1}
+    AngularDampingMode: 0
+    RotationDamping: {x: 1, y: 1, z: 1}
+    QuaternionDamping: 1
+  FollowOffset: {x: -0.45, y: 2.06, z: -3.81}
+--- !u!114 &690796325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690796319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f38bda98361e1de48a4ca2bd86ea3c17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineRotationComposer
+  Composition:
+    ScreenPosition: {x: 0, y: 0}
+    DeadZone:
+      Enabled: 0
+      Size: {x: 0.2, y: 0.2}
+    HardLimits:
+      Enabled: 0
+      Size: {x: 0.8, y: 0.8}
+      Offset: {x: 0, y: 0}
+  CenterOnActivate: 1
+  TargetOffset: {x: 0, y: 0, z: 0}
+  Damping: {x: 0.5, y: 0.5}
+  Lookahead:
+    Enabled: 0
+    Time: 0
+    Smoothing: 0
+    IgnoreY: 0
 --- !u!1001 &694407666
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4018,8 +4018,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947603543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.3956438, y: -0.58470005, z: 0.39233497, w: 0.5896313}
-  m_LocalPosition: {x: -0.61399984, y: 24.9, z: 263.704}
+  m_LocalRotation: {x: 0.24347806, y: 0.0569748, z: -0.014328836, w: 0.9681255}
+  m_LocalPosition: {x: -3.444, y: 21.15, z: 259.914}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5767,6 +5767,10 @@ PrefabInstance:
     - target: {fileID: 183838, guid: 53df91a386bb7b541a0c24d10af51a54, type: 3}
       propertyPath: m_Name
       value: SM_Env_Bridge_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 183838, guid: 53df91a386bb7b541a0c24d10af51a54, type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 443662, guid: 53df91a386bb7b541a0c24d10af51a54, type: 3}
       propertyPath: m_LocalScale.x
@@ -8309,7 +8313,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3364414464613289865, guid: 699794db30c05994e9cdf68d096f64e8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.78791565
+      value: 0.9870041
       objectReference: {fileID: 0}
     - target: {fileID: 3364414464613289865, guid: 699794db30c05994e9cdf68d096f64e8, type: 3}
       propertyPath: m_LocalRotation.x
@@ -8317,7 +8321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3364414464613289865, guid: 699794db30c05994e9cdf68d096f64e8, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.61578333
+      value: 0.16069536
       objectReference: {fileID: 0}
     - target: {fileID: 3364414464613289865, guid: 699794db30c05994e9cdf68d096f64e8, type: 3}
       propertyPath: m_LocalRotation.z
@@ -8329,7 +8333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3364414464613289865, guid: 699794db30c05994e9cdf68d096f64e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -76.018
+      value: 18.495
       objectReference: {fileID: 0}
     - target: {fileID: 3364414464613289865, guid: 699794db30c05994e9cdf68d096f64e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z

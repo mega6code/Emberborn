@@ -8,7 +8,7 @@ public class PlayerMotor : MonoBehaviour
     private Rigidbody rb;
 
     [SerializeField] Animator animator;
-    [SerializeField] Transform dragon; //
+    //[SerializeField] Transform dragon; //
 
     [SerializeField] private float jumpForce;
     [SerializeField] private float moveSpeed;
@@ -22,7 +22,7 @@ public class PlayerMotor : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        dragon = GetComponent<Transform>(); // 
+        //dragon = GetComponent<Transform>(); // 
     }
 
 
@@ -45,7 +45,7 @@ public class PlayerMotor : MonoBehaviour
         rb.MoveRotation(Quaternion.Euler(0, -angle, 0)); //this is rotating he rb around that angle
 
         // MOVEMENT
-        Vector3 moveDir = dragon.forward * moveSpeed; //this is creatin direction that will always be the forwad
+        Vector3 moveDir = transform.forward * moveSpeed; //this is creatin direction that will always be the forwad
         rb.linearVelocity = new Vector3(moveDir.x, rb.linearVelocity.y, moveDir.z); //this is saying, the velocity will be the
     }
 

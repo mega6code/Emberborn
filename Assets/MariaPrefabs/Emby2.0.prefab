@@ -691,7 +691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMotor
   animator: {fileID: 5225151195133185369}
   jumpForce: 4
-  moveSpeed: 2.5
+  moveSpeed: 5
   fallForce: 1
 --- !u!1 &3007393830257709054
 GameObject:
