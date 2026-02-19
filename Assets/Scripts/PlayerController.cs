@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] AudioSource grassStep_audio;
     [SerializeField] AudioSource ambience_music;
+    [SerializeField] AudioSource flapWing_SFX;
+    [SerializeField] AudioSource landGrass_SFX;
 
     [SerializeField] private float playerSpeed = 2.0f;
     [SerializeField] private float jumpHeight = 1.0f;
@@ -127,6 +129,20 @@ public class PlayerController : MonoBehaviour
         //animator.SetBool("IsWalking", false);
         animator.SetBool("IsGlinding", false);
         animator.SetBool("IsJumping", false);
+    }
+    public void FlapWing_Sound()
+    {
+        if (!flapWing_SFX.isPlaying)
+        {
+            flapWing_SFX.PlayOneShot(flapWing_SFX.clip);
+        }
+    }
+    public void LandOnGrass_Sound()
+    {
+        if (!landGrass_SFX.isPlaying)
+        {
+            landGrass_SFX.PlayOneShot(landGrass_SFX.clip);
+        }
     }
     
 }
