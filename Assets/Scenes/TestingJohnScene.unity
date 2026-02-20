@@ -178,7 +178,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4529074579130086384, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 683398003}
+    - targetCorrespondingSourceObject: {fileID: 4529074579130086384, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 683398004}
   m_SourcePrefab: {fileID: 100100000, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
+--- !u!4 &29555997 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8579002508563003989, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
+  m_PrefabInstance: {fileID: 29555996}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &138761600
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,6 +319,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Emberborn.Player.ElementalStateManager
   collected_elements: 0000000001000000
   current_state: {fileID: 11400000, guid: 3d68c0bf7d8415f4fbd90017d0afec1a, type: 2}
+--- !u!114 &683398004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683397994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f99f8b539d9b8f64da1a9c7899c5e7f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Emberborn.Mechanics.ProjectileLauncher
+  launch_point: {fileID: 29555997}
+  launch_speed: 5
 --- !u!1 &1264120750
 GameObject:
   m_ObjectHideFlags: 0

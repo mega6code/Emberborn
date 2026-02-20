@@ -85,7 +85,7 @@ namespace Emberborn.Elements
         {
             if(current_state != null)
             {
-                current_state.ActivateAbility();
+                current_state.ActivateAbility(this.gameObject);
             }
             else
             {

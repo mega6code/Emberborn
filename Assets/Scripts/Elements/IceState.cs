@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Emberborn.Mechanics;
+using UnityEngine;
 
 namespace Emberborn.Elements
 {
@@ -6,9 +7,9 @@ namespace Emberborn.Elements
     public class IceState : ElementalState
     {
         [SerializeField] private GameObject projectile;
-        public override void ActivateAbility()
+        public override void ActivateAbility(GameObject parent_game_object)
         {
-            throw new System.NotImplementedException();
+            parent_game_object.GetComponent<ProjectileLauncher>().FireProjectile(projectile);
         }
     }
 }

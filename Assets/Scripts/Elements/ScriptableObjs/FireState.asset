@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31c56064bbe317347a4374b4d45b0edf, type: 3}
   m_Name: FireState
   m_EditorClassIdentifier: Assembly-CSharp::Emberborn.Player.FireState
-  gameObject: {fileID: 0}
+  projectile: {fileID: 5823594571715055504, guid: 66d6534c49586a18f98829cab3e848bc, type: 3}
