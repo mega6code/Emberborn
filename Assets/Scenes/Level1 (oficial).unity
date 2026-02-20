@@ -9261,6 +9261,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 9.663857
       objectReference: {fileID: 0}
+    - target: {fileID: 2459294699005001536, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
+      propertyPath: abilityControl
+      value: 
+      objectReference: {fileID: -1064906690905917254, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    - target: {fileID: 2459294699005001536, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
+      propertyPath: interactControl
+      value: 
+      objectReference: {fileID: -6111427712367084989, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    - target: {fileID: 2459294699005001536, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
+      propertyPath: switchStateControl
+      value: 
+      objectReference: {fileID: 1554870421266485963, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    - target: {fileID: 2459294699005001536, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
+      propertyPath: elementalStateManager
+      value: 
+      objectReference: {fileID: 8988107843310571370}
     - target: {fileID: 2895720507790117324, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -89.34747
@@ -9660,8 +9676,55 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4529074579130086384, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8988107843310571370}
+    - targetCorrespondingSourceObject: {fileID: 4529074579130086384, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8988107843310571372}
   m_SourcePrefab: {fileID: 100100000, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
+--- !u!1 &8988107843310571369 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4529074579130086384, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
+  m_PrefabInstance: {fileID: 8988107843310571368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8988107843310571370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8988107843310571369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2009e14796113dc489b17d0557e7101c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Emberborn.Player.ElementalStateManager
+  collected_elements: 0000000001000000
+  current_state: {fileID: 11400000, guid: 115a69b7c76da5ba8af58de34c247715, type: 2}
+  allElements:
+  - {fileID: 11400000, guid: 3d68c0bf7d8415f4fbd90017d0afec1a, type: 2}
+  - {fileID: 11400000, guid: 115a69b7c76da5ba8af58de34c247715, type: 2}
+--- !u!4 &8988107843310571371 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6984131790196628468, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
+  m_PrefabInstance: {fileID: 8988107843310571368}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8988107843310571372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8988107843310571369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f99f8b539d9b8f64da1a9c7899c5e7f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Emberborn.Mechanics.ProjectileLauncher
+  launch_point: {fileID: 8988107843310571371}
+  launch_speed: 3
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

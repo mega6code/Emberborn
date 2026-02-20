@@ -1,4 +1,4 @@
-using Emberborn.Player;
+using Emberborn.Elements;
 using UnityEngine;
 using UnityEngine.InputSystem;
 [RequireComponent(typeof(CharacterController))] 
@@ -40,6 +40,9 @@ public class PlayerController : MonoBehaviour
         movementControl.action.Enable();
         jumpControl.action.Enable();
         glideControl.action.Enable();
+        switchStateControl.action.Enable();
+        interactControl.action.Enable();
+        abilityControl.action.Enable();
     }
 
     private void OnDisable()
@@ -53,6 +56,9 @@ public class PlayerController : MonoBehaviour
         controller = gameObject.GetComponent<CharacterController>();
         cameraMainTransform = Camera.main.transform;
         animator = GetComponent<Animator>();
+
+        abilityControl.action.performed += OnAbility;
+        switchStateControl.action.performed += OnSwitchState;
 
     }
 
@@ -137,15 +143,17 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsGlinding", false);
         animator.SetBool("IsJumping", false);
     }
-    public void OnAbility()
+    public void OnAbility(InputAction.CallbackContext ctx)
     {
 
         elementalStateManager.OnAbility();
+        Debug.Log("OnAbility");
     }
 
-    public void OnSwitchState()
+    public void OnSwitchState(InputAction.CallbackContext ctx)
     {
         elementalStateManager.OnChangeState();
+        Debug.Log("OnSwitchState");
     }
     public void FlapWing_Sound()
     {

@@ -11,6 +11,7 @@ namespace Emberborn.Elements
         [SerializeField] 
         private List<ElementalTypes> collected_elements = new List<ElementalTypes>(); //Emby's elements!!!!!!
         [SerializeField]private ElementalState current_state = null;
+        [SerializeField] private ElementalState[] allElements;
 
         //other fields
         private int collected_elem_index = 0; //to keep track of which collected element is being used for the state
@@ -63,10 +64,10 @@ namespace Emberborn.Elements
             switch (collected_elements[collected_elem_index])
             {
                 case ElementalTypes.Fire:
-                    next_state = ScriptableObject.CreateInstance<FireState>();
+                    next_state = allElements[0];
                     break;
                 case ElementalTypes.Ice:
-                    next_state = ScriptableObject.CreateInstance<IceState>();
+                    next_state = allElements[1];
                     break;
             }
 
