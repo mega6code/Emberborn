@@ -1,3 +1,4 @@
+using Emberborn.Player;
 using UnityEngine;
 using UnityEngine.InputSystem;
 [RequireComponent(typeof(CharacterController))] 
@@ -9,6 +10,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] InputActionReference movementControl;
     [SerializeField] InputActionReference jumpControl;
     [SerializeField] InputActionReference glideControl;
+
+    [SerializeField] InputActionReference abilityControl;
+    [SerializeField] InputActionReference switchStateControl;
+    [SerializeField] InputActionReference interactControl;
 
     [SerializeField] AudioSource grassStep_audio;
     [SerializeField] AudioSource ambience_music;
@@ -25,6 +30,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 playerVelocity;
     private bool groundedPlayer;
     private Transform cameraMainTransform;
+
+    [SerializeField] private ElementalStateManager elementalStateManager;
 
     [SerializeField] private float glideGravity = -2f;
 
@@ -129,6 +136,16 @@ public class PlayerController : MonoBehaviour
         //animator.SetBool("IsWalking", false);
         animator.SetBool("IsGlinding", false);
         animator.SetBool("IsJumping", false);
+    }
+    public void OnAbility()
+    {
+
+        elementalStateManager.OnAbility();
+    }
+
+    public void OnSwitchState()
+    {
+        elementalStateManager.OnChangeState();
     }
     public void FlapWing_Sound()
     {
