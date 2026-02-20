@@ -1116,7 +1116,7 @@ Light:
   serializedVersion: 12
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 0.12
+  m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -3358,6 +3358,8 @@ MonoBehaviour:
   glideControl: {fileID: -4150274994127920272, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   grassStep_audio: {fileID: 4233158336616421925}
   ambience_music: {fileID: 2981551622804655539}
+  flapWing_SFX: {fileID: 0}
+  landGrass_SFX: {fileID: 0}
   playerSpeed: 3
   jumpHeight: 1
   gravityValue: -15

@@ -9093,16 +9093,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8579002508563003989, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
   m_PrefabInstance: {fileID: 8988107843310571368}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &7787832192261726618 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 8981580660898497012, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
-  m_PrefabInstance: {fileID: 8988107843310571368}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &7787832192261726619 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 4749603011728268324, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
-  m_PrefabInstance: {fileID: 8988107843310571368}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8988107843310571368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9134,10 +9124,6 @@ PrefabInstance:
     - target: {fileID: 101147335714605902, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -6.4538283
-      objectReference: {fileID: 0}
-    - target: {fileID: 518254703513634859, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -38.48482
       objectReference: {fileID: 0}
     - target: {fileID: 518254703513634859, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -9227,10 +9213,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -0.000072283416
       objectReference: {fileID: 0}
-    - target: {fileID: 1736179389826788930, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
-      objectReference: {fileID: 0}
     - target: {fileID: 1868287614263528920, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0.1376167
@@ -9279,18 +9261,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 9.663857
       objectReference: {fileID: 0}
-    - target: {fileID: 2240466208023636480, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
-      propertyPath: m_MinMoveDistance
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2459294699005001536, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
-      propertyPath: flapWing_SFX
-      value: 
-      objectReference: {fileID: 7787832192261726618}
-    - target: {fileID: 2459294699005001536, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
-      propertyPath: landGrass_SFX
-      value: 
-      objectReference: {fileID: 7787832192261726619}
     - target: {fileID: 2895720507790117324, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -89.34747
@@ -9298,14 +9268,6 @@ PrefabInstance:
     - target: {fileID: 2895720507790117324, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -94.700165
-      objectReference: {fileID: 0}
-    - target: {fileID: 2895720507790117324, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 179.45708
-      objectReference: {fileID: 0}
-    - target: {fileID: 2981551621977319267, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
-      propertyPath: Priority
-      value: 190
       objectReference: {fileID: 0}
     - target: {fileID: 3329149042142647962, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9510,10 +9472,6 @@ PrefabInstance:
     - target: {fileID: 6984131790196628468, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0.00013082809
-      objectReference: {fileID: 0}
-    - target: {fileID: 6984131790196628468, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -83.59975
       objectReference: {fileID: 0}
     - target: {fileID: 6994728860833530618, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
