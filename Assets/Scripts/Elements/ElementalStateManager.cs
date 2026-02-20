@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Emberborn.Player
+namespace Emberborn.Elements
 {
     public class ElementalStateManager : MonoBehaviour
     {
@@ -10,10 +10,10 @@ namespace Emberborn.Player
         //serialized fields
         [SerializeField] 
         private List<ElementalTypes> collected_elements = new List<ElementalTypes>(); //Emby's elements!!!!!!
+        [SerializeField]private ElementalState current_state = null;
 
         //other fields
         private int collected_elem_index = 0; //to keep track of which collected element is being used for the state
-        private ElementalState current_state = null;
         #endregion
 
         #region Properties
@@ -63,10 +63,10 @@ namespace Emberborn.Player
             switch (collected_elements[collected_elem_index])
             {
                 case ElementalTypes.Fire:
-                    next_state = new FireState();
+                    next_state = ScriptableObject.CreateInstance<FireState>();
                     break;
                 case ElementalTypes.Ice:
-                    next_state = new IceState();
+                    next_state = ScriptableObject.CreateInstance<IceState>();
                     break;
             }
 

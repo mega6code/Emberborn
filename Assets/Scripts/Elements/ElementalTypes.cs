@@ -1,4 +1,4 @@
-﻿namespace Emberborn.Player
+﻿namespace Emberborn.Elements
 {
     public enum ElementalTypes
     {
