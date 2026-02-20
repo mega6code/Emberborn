@@ -9,9 +9,9 @@ namespace Emberborn.Elements
     public class FireState : ElementalState
     {
         [SerializeField] private GameObject projectile;
-        public override void ActivateAbility(object o = null)
+        public override void ActivateAbility(GameObject parent_game_object)
         {
-            
+            parent_game_object.GetComponent<ProjectileLauncher>().FireProjectile(projectile);
         }
     }
 }
