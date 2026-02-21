@@ -3,32 +3,35 @@ using UnityEngine.UI;
 
 public class InventorySlotManager : MonoBehaviour
 {
-    public Image slot1;
-    public Image slot2;
-    public Image slot3;
+    public GameObject slot1;
+    public GameObject slot2;
+    public GameObject slot3;
 
-
+    /*
     public void AddIcon(Item item)
     {
         if (slot1 = null)
         {
-            slot1.sprite = item.icon;
-            slot1.enabled = true;
+            CreateIcon(item, slot1);
         }
         else if (slot2 = null)
         {
-            slot2.sprite = item.icon;
-            slot2.enabled = true;
+            CreateIcon(item, slot2);
         }
         else if (slot3 = null)
         {
-            slot3.sprite = item.icon;
-            slot3.enabled = true;
+            CreateIcon (item, slot3);
         }
         else
         {
             Debug.Log("no space in inventory!");
         }
     }
+    public void CreateIcon(Item item, GameObject Slot)
+    {
+        
+         Slot.GetComponentInChildren<Image>().sprite = item.icon;
 
+    }
+    */
 }

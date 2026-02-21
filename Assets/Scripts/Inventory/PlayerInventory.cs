@@ -21,23 +21,34 @@ public class Inventory : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("collided with an item!");
+        //Debug.Log("collided with an item!");
 
         if (other.GetComponent<ItemObject>())
         {
             Debug.Log("found item: " + other.name);
-            Item item = other.GetComponent<ItemObject>().ItemCollect();// gets the specific item in game object
 
-            Additem(item);
-            other.gameObject.SetActive(false);
+            Item item = other.GetComponent<ItemObject>().ItemCollect();// gets the specific itemData in game object
+            GameObject prefab = other.GameObject();//gets the GameObject that the player collided with
+
+            //Debug.Log("Prefab name: " + prefab.name);
+
+            Additem(prefab, item);
         }
     }
-    public void Additem(Item item)
+    public void Additem(GameObject prefab, Item item)
     {
-        Debug.Log( item.name + " has been added to inventory");
-        playerItems.Add(item);
+        if (playerItems.Count >= 2 || playerItems == null)// makes sure player can only pick up 3 items 
+        {
+            Debug.Log(item.name + " has been added to inventory");
+            playerItems.Add(item);
 
-        slotManager.AddIcon(item);
+            prefab.gameObject.SetActive(false);
+            //slotManager.AddIcon(item);
+        }
+        else
+        {
+            Debug.Log("Player inventory full!!");
+        }
 
     }
 
