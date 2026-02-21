@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   name: YellowGem
   prefab: {fileID: 9146371031146922217, guid: 3fb7f1fe16247b740be91f4615d6e4e4, type: 3}
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 28d1c55524528204e925fc37f6674d93, type: 3}

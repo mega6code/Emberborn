@@ -1,6 +1,7 @@
 
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -9,6 +10,7 @@ public class Inventory : MonoBehaviour
 {
     List<Item> playerItems = new List<Item>();
     [SerializeField] private GameObject player;
+    InventorySlotManager slotManager;
     
     private void Awake()
     {
@@ -19,16 +21,24 @@ public class Inventory : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("collided with an item!");
+
         if (other.GetComponent<ItemObject>())
         {
-           Item item = other.GetComponent<ItemObject>().ItemCollect();
+            Debug.Log("found item: " + other.name);
+            Item item = other.GetComponent<ItemObject>().ItemCollect();// gets the specific item in game object
+
             Additem(item);
+            other.gameObject.SetActive(false);
         }
     }
     public void Additem(Item item)
     {
-        //add item to inventory
+        Debug.Log( item.name + " has been added to inventory");
         playerItems.Add(item);
+
+        slotManager.AddIcon(item);
+
     }
 
     public void DropItem(Item item)
@@ -42,7 +52,7 @@ public class Inventory : MonoBehaviour
 
             Vector3 playerLocation = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
 
-            Instantiate(item, playerLocation, Quaternion.identity);
+            Instantiate(item.prefab, playerLocation, Quaternion.identity);
 
             return; 
         }
@@ -87,6 +97,8 @@ public class Inventory : MonoBehaviour
             Debug.Log("item not found. Item name: " + item.name);
         }
     }
-    
-
+    public Sprite itemIcon(Item item)
+    {
+        return item.icon;
+    }
 }

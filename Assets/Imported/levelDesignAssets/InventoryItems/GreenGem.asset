@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Item
   name: GreenGem
   prefab: {fileID: 7407324285640192801, guid: b4c4b70bfb9a6dc4cb61e5021aaca439, type: 3}
-  icon: {fileID: 0}
+  icon: {fileID: 21300004, guid: 28d1c55524528204e925fc37f6674d93, type: 3}

@@ -9,5 +9,5 @@ using UnityEngine;
          public string name;
          public GameObject prefab;
          public Sprite icon;
-        
+           
     }

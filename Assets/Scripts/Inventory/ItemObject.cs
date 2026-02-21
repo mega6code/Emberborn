@@ -6,6 +6,8 @@ public class ItemObject : MonoBehaviour
     
     public Item ItemCollect()
     {
+
+        Debug.Log("Return item: " + item.name);
         return item;
     }
 }
