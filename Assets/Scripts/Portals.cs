@@ -14,36 +14,42 @@ public class Portals : MonoBehaviour
 
     private void Awake()
     {
-        portal2.SetActive(false);
-        portal3.SetActive(false);
-    }
-
-    private void Update()
-    {
         if (level1beat == true)
         {
             portal2.SetActive(true);
 
+        }
+        else
+        {
+            portal2.SetActive(false);
         }
 
         if (level2beat == true)
         {
             portal3.SetActive(true);
         }
+        else
+        {
+            portal3.SetActive(false);
+        }
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject == portal1)
         {
-            SceneManager.LoadScene("Wind Level");
+            SceneManager.LoadScene("Level1");
+            Debug.Log("Portal 1");
         }
         else if (other.gameObject == portal2)
         {
             SceneManager.LoadScene("Fire Level");
+            Debug.Log("Portal 2");
         }
         else if (other.gameObject == portal3)
         {
             SceneManager.LoadScene("Ice Level");
+            Debug.Log("Portal 3");
         }
     }
 }
