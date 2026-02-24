@@ -3,35 +3,53 @@ using UnityEngine.UI;
 
 public class InventorySlotManager : MonoBehaviour
 {
-    public GameObject slot1;
-    public GameObject slot2;
-    public GameObject slot3;
+    public GameObject ImageSlot1;
+    public GameObject ImageSlot2;
+    public GameObject ImageSlot3;
 
-    /*
-    public void AddIcon(Item item)
+    private bool ImSlot1;
+    private bool ImSlot2;
+    private bool ImSlot3;
+
+    private void Awake()
     {
-        if (slot1 = null)
+        ImSlot1 = false;
+        ImSlot2 = false;
+        ImSlot3 = false;
+    }
+
+    public void AddIcon(Item item)//need to fix, code it atomatically going into the else statement.
+    {
+        if (ImSlot1 == false)
         {
-            CreateIcon(item, slot1);
+            Debug.Log("In slot 1.");
+            CreateIcon(item, ImageSlot1, ImSlot1);
         }
-        else if (slot2 = null)
+        else if (ImSlot2 == false)
         {
-            CreateIcon(item, slot2);
+            Debug.Log("In slot 1.");
+            CreateIcon(item, ImageSlot2, ImSlot2);
         }
-        else if (slot3 = null)
+        else if (ImSlot3 == false)
         {
-            CreateIcon (item, slot3);
+            Debug.Log("In slot 1.");
+            CreateIcon (item, ImageSlot3, ImSlot3);
         }
         else
         {
             Debug.Log("no space in inventory!");
         }
     }
-    public void CreateIcon(Item item, GameObject Slot)
+    public void CreateIcon(Item item, GameObject imageSlot, bool InSlot)
     {
-        
-         Slot.GetComponentInChildren<Image>().sprite = item.icon;
+        Debug.Log("icon in Bar.");
+
+        Transform location = imageSlot.GetComponent<Transform>();
+
+        Instantiate(item.icon, location);
+
+        InSlot = true;
 
     }
-    */
+    
 }

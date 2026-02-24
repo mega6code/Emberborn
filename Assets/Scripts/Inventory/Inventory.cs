@@ -9,8 +9,8 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     List<Item> playerItems = new List<Item>();
-    [SerializeField] private GameObject player;
-    InventorySlotManager slotManager;
+    private Transform player;
+    [SerializeField]InventorySlotManager slotManager;
     
     private void Awake()
     {
@@ -18,6 +18,7 @@ public class Inventory : MonoBehaviour
         {
             Debug.Log("Inventory list is empty.");
         }
+        player = GetComponentInParent<Transform>();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -28,7 +29,7 @@ public class Inventory : MonoBehaviour
             Debug.Log("found item: " + other.name);
 
             Item item = other.GetComponent<ItemObject>().ItemCollect();// gets the specific itemData in game object
-            GameObject prefab = other.GameObject();//gets the GameObject that the player collided with
+            GameObject prefab = other.gameObject;//gets the GameObject that the player collided with
 
             //Debug.Log("Prefab name: " + prefab.name);
 
@@ -37,18 +38,23 @@ public class Inventory : MonoBehaviour
     }
     public void Additem(GameObject prefab, Item item)
     {
-        if (playerItems.Count >= 2 || playerItems == null)// makes sure player can only pick up 3 items 
-        {
+        //if (playerItems.Count >= 2 || playerItems != null)// makes sure player can only pick up 3 items 
+        //{
+            
             Debug.Log(item.name + " has been added to inventory");
             playerItems.Add(item);
 
-            prefab.gameObject.SetActive(false);
-            //slotManager.AddIcon(item);
-        }
-        else
-        {
-            Debug.Log("Player inventory full!!");
-        }
+            MeshRenderer mesh = prefab.GetComponentInChildren<MeshRenderer>();
+            mesh.enabled = false;
+            Light lightingObj = prefab.GetComponentInChildren<Light>();
+            lightingObj.enabled = false;
+
+            slotManager.AddIcon(item);
+        //}
+        //else
+        //{
+            //Debug.Log("Player inventory full!!");
+        //}
 
     }
 
@@ -98,7 +104,7 @@ public class Inventory : MonoBehaviour
 
             playerItems.Remove(item);
             
-            Instantiate(item, location, Quaternion.identity);
+            Instantiate(item.prefab, location, Quaternion.identity);
             Debug.Log("item: " + item.name + " has been placed."); 
 
             return;
@@ -107,9 +113,5 @@ public class Inventory : MonoBehaviour
         {
             Debug.Log("item not found. Item name: " + item.name);
         }
-    }
-    public Sprite itemIcon(Item item)
-    {
-        return item.icon;
     }
 }

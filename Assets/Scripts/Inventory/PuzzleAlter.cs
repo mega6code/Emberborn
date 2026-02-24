@@ -3,13 +3,14 @@ using UnityEngine.InputSystem;
 
 public class PuzzleAlter : MonoBehaviour
 {
+    /*
     [SerializeField] InputActionReference interactControl;
 
-    Inventory playerInventory;
+    
     Item itemRequired;
     bool inRange;
     bool hasItem;
-
+    
     void Awake()
     {
         interactControl.action.Enable();
@@ -22,7 +23,7 @@ public class PuzzleAlter : MonoBehaviour
         /*if ()
         {
             OnInteract();
-        }*/
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -53,5 +54,7 @@ public class PuzzleAlter : MonoBehaviour
             Debug.Log("Not in range for interactions.");
         }
     }
+
+    */
  
 }

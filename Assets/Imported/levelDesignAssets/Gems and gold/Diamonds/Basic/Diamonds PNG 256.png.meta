@@ -142,7 +142,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Yellow gem
+      name: Diamonds PNG 256_0
       rect:
         serializedVersion: 2
         x: 25
@@ -157,19 +157,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be722ba411cef4446a1df5743aa56aa4
-      internalID: 21300000
+      spriteID: 888304c3415c47c449e900d71792bdce
+      internalID: -979174903
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Blue gem
+      name: Diamonds PNG 256_1
       rect:
         serializedVersion: 2
-        x: 149
+        x: 150
         y: 147
-        width: 85
+        width: 84
         height: 77
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ea28f5a2d646674697f8eab76cf4996
-      internalID: 21300002
+      spriteID: bd7bdd186c5f11e48a569ea416b48813
+      internalID: 1837151016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Green gem
+      name: Diamonds PNG 256_2
       rect:
         serializedVersion: 2
         x: 22
@@ -201,19 +201,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6530d1c5facca5749b4933d1d3126ce8
-      internalID: 21300004
+      spriteID: d918539ff33cfb044aa53731daabc902
+      internalID: -1021571953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pink gem
+      name: Diamonds PNG 256_3
       rect:
         serializedVersion: 2
-        x: 149
+        x: 150
         y: 26
-        width: 85
+        width: 84
         height: 77
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -223,8 +223,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0b779d2bac38b74ea9e3a7f6d5f1786
-      internalID: 21300006
+      spriteID: 93fb641f243a39b4e945ac7f16916855
+      internalID: 1970088512
       vertices: []
       indices: 
       edges: []
@@ -241,12 +241,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Blue gem: 21300002
-      Green gem: 21300004
-      Pink gem: 21300006
-      Yellow gem: 21300000
+      Diamonds PNG 256_0: -979174903
+      Diamonds PNG 256_1: 1837151016
+      Diamonds PNG 256_2: -1021571953
+      Diamonds PNG 256_3: 1970088512
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
