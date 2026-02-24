@@ -23,32 +23,33 @@ public class InventorySlotManager : MonoBehaviour
         if (ImSlot1 == false)
         {
             Debug.Log("In slot 1.");
-            CreateIcon(item, ImageSlot1, ImSlot1);
+            CreateIcon(item, ImageSlot1);
+            this.ImSlot1 = true;
         }
         else if (ImSlot2 == false)
         {
             Debug.Log("In slot 1.");
-            CreateIcon(item, ImageSlot2, ImSlot2);
+            CreateIcon(item, ImageSlot2);
+            this.ImSlot1 = true;
         }
         else if (ImSlot3 == false)
         {
             Debug.Log("In slot 1.");
-            CreateIcon (item, ImageSlot3, ImSlot3);
+            CreateIcon (item, ImageSlot3);
+            this.ImSlot1 = true;
         }
         else
         {
             Debug.Log("no space in inventory!");
         }
     }
-    public void CreateIcon(Item item, GameObject imageSlot, bool InSlot)
+    public void CreateIcon(Item item, GameObject imageSlot)
     {
         Debug.Log("icon in Bar.");
 
         Transform location = imageSlot.GetComponent<Transform>();
 
         Instantiate(item.icon, location);
-
-        InSlot = true;
 
     }
     

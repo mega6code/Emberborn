@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 137555425}
   - component: {fileID: 137555424}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Image2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -368,7 +368,7 @@ GameObject:
   - component: {fileID: 174388892}
   - component: {fileID: 174388891}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Image3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -825,7 +825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 567794233b57679438c94bbfa8278643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemObject
-  item: {fileID: 11400000, guid: 7874ff39d838be448ad0ce8ba610b444, type: 2}
+  item: {fileID: 11400000, guid: a351aa2697bf6db44bb1bd5e204df113, type: 2}
 --- !u!1 &1021247305
 GameObject:
   m_ObjectHideFlags: 0
@@ -1566,7 +1566,7 @@ GameObject:
   - component: {fileID: 1515418765}
   - component: {fileID: 1515418764}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Image1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

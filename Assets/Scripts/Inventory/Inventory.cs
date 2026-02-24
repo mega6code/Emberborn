@@ -38,23 +38,26 @@ public class Inventory : MonoBehaviour
     }
     public void Additem(GameObject prefab, Item item)
     {
-        //if (playerItems.Count >= 2 || playerItems != null)// makes sure player can only pick up 3 items 
-        //{
+        if (playerItems.Count >= 2 || playerItems != null)// makes sure player can only pick up 3 items 
+        {
             
             Debug.Log(item.name + " has been added to inventory");
             playerItems.Add(item);
 
-            MeshRenderer mesh = prefab.GetComponentInChildren<MeshRenderer>();
-            mesh.enabled = false;
-            Light lightingObj = prefab.GetComponentInChildren<Light>();
-            lightingObj.enabled = false;
+            //turning off the following components so gem is not Visible
+            MeshRenderer gemMesh = prefab.GetComponentInChildren<MeshRenderer>();
+            gemMesh.enabled = false;
+            Light gemLighting = prefab.GetComponentInChildren<Light>();
+            gemLighting.enabled = false;
+            Collider gemCollider = prefab.GetComponent<Collider>();
+            gemCollider.enabled = false;
 
             slotManager.AddIcon(item);
-        //}
-        //else
-        //{
-            //Debug.Log("Player inventory full!!");
-        //}
+        }
+        else
+        {
+            Debug.Log("Player inventory full!!");
+        }
 
     }
 
