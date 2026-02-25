@@ -6,27 +6,15 @@ using UnityEngine.InputSystem;
 
 public class MenuOptions : MonoBehaviour
 {
-    public GameObject pauseMenu;
-
+    public Pause pausePanel;
     private void Awake()
     {
-        pauseMenu.SetActive(false);
         AudioListener.volume = 1;
     }
-    public void PauseMenu()
+
+    public void Unpause()
     {
-        //opening and closing the pause menu
-        if (pauseMenu.activeSelf == false)
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                pauseMenu.SetActive(true);
-            }
-        }
-        else if (pauseMenu.activeSelf == true)
-        {
-            pauseMenu.SetActive(false);
-        }
+        pausePanel.Unpause();
     }
 
     public void ReturnToMain()

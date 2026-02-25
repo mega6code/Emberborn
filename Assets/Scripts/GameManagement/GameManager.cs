@@ -6,8 +6,6 @@ public class GameManager : MonoBehaviour
     public bool isLevel1Beat = false;
     public bool isLevel2Beat = false;
 
-    public GameObject pauseMenu;//Always make sure to place the inactive panel in Level UI here
-
     public static GameManager Instance { get => instance; }
 
     public void OnAwake()
@@ -20,7 +18,5 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this);
         }
-
-        pauseMenu.SetActive(false);
     }
 }

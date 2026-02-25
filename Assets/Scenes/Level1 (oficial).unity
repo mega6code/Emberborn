@@ -622,7 +622,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 485977248}
+      - m_Target: {fileID: 485977253}
         m_TargetAssemblyTypeName: MenuOptions, Assembly-CSharp
         m_MethodName: MuteOrUnmute
         m_Mode: 1
@@ -757,6 +757,7 @@ GameObject:
   - component: {fileID: 141915804}
   - component: {fileID: 141915806}
   - component: {fileID: 141915805}
+  - component: {fileID: 141915807}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -825,6 +826,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 141915803}
   m_CullTransparentMesh: 1
+--- !u!114 &141915807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141915803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fb28e95c9442dd4480a4efd28e1ac0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pause
+  pauseMenu: {fileID: 141915803}
 --- !u!1001 &146833097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2719,7 +2733,8 @@ GameObject:
   - component: {fileID: 485977251}
   - component: {fileID: 485977250}
   - component: {fileID: 485977249}
-  - component: {fileID: 485977248}
+  - component: {fileID: 485977254}
+  - component: {fileID: 485977253}
   m_Layer: 5
   m_Name: LevelUI
   m_TagString: Untagged
@@ -2727,19 +2742,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &485977248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485977247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 340aad61148e7fa4a9161780b83a6cbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MenuOptions
-  pauseMenu: {fileID: 141915803}
 --- !u!114 &485977249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2824,6 +2826,32 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &485977253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485977247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 340aad61148e7fa4a9161780b83a6cbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuOptions
+  pausePanel: {fileID: 141915807}
+--- !u!114 &485977254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485977247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fb28e95c9442dd4480a4efd28e1ac0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pause
+  pauseMenu: {fileID: 141915803}
 --- !u!1 &487142719
 GameObject:
   m_ObjectHideFlags: 0
@@ -3029,7 +3057,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 485977248}
+      - m_Target: {fileID: 485977253}
         m_TargetAssemblyTypeName: MenuOptions, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -8527,7 +8555,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 485977248}
+      - m_Target: {fileID: 485977253}
         m_TargetAssemblyTypeName: MenuOptions, Assembly-CSharp
         m_MethodName: ReturnToMain
         m_Mode: 1
@@ -9780,9 +9808,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 485977248}
+      - m_Target: {fileID: 485977253}
         m_TargetAssemblyTypeName: MenuOptions, Assembly-CSharp
-        m_MethodName: PauseMenu
+        m_MethodName: Unpause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
