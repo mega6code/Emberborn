@@ -757,7 +757,6 @@ GameObject:
   - component: {fileID: 141915804}
   - component: {fileID: 141915806}
   - component: {fileID: 141915805}
-  - component: {fileID: 141915807}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -826,19 +825,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 141915803}
   m_CullTransparentMesh: 1
---- !u!114 &141915807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 141915803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fb28e95c9442dd4480a4efd28e1ac0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Pause
-  pauseMenu: {fileID: 141915803}
 --- !u!1001 &146833097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2838,7 +2824,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 340aad61148e7fa4a9161780b83a6cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuOptions
-  pausePanel: {fileID: 141915807}
+  pausePanel: {fileID: 485977254}
 --- !u!114 &485977254
 MonoBehaviour:
   m_ObjectHideFlags: 0

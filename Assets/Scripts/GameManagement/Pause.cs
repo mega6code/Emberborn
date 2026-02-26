@@ -4,27 +4,39 @@ using UnityEngine.InputSystem;
 public class Pause : MonoBehaviour
 {
     public GameObject pauseMenu;
-    private InputAction pause;
+    private InputSystem_Actions ourInputActions;//makes an object of our input action asset (named "InputSystem_Actions"), so that we can access OUR actions
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         pauseMenu.SetActive(false);
-        pause = InputSystem.actions.FindAction("Pause");
+        ourInputActions = new InputSystem_Actions();
+        Debug.Log(ourInputActions.Player.enabled + "player");
+        ourInputActions.Player.Enable();
+        Debug.Log(ourInputActions.Player.enabled + "player");
     }
 
-    public void PauseMenu()
+    private void OnEnable()
     {
-        //opening and closing the pause menu
-        if (pause.IsPressed())
-        {
-            Debug.Log("escape pressed");
+        ourInputActions.Player.Pause.performed += PauseMenu;
+    }
 
-            if (pauseMenu.activeSelf == false)
-            {
-                Debug.Log("Game should pause");
-                pauseMenu.SetActive(true);
-            }
+    private void OnDisable()
+    {
+        ourInputActions.Player.Pause.performed -= PauseMenu;
+    }
+
+    public void PauseMenu(InputAction.CallbackContext ctx)
+    {
+        Debug.Log("escape pressed");
+
+        if (pauseMenu.activeSelf == false)
+        {
+            ourInputActions.Player.Disable();//disabling player controls
+            ourInputActions.UI.Enable(); //enabling UI controls
+
+            Debug.Log("Game should pause");
+            pauseMenu.SetActive(true);
         }
     }
 
@@ -32,6 +44,9 @@ public class Pause : MonoBehaviour
     {
         if (pauseMenu.activeSelf == true)
         {
+            ourInputActions.Player.Enable(); //disabling UI controls
+            ourInputActions.UI.Disable(); //enabling player controls
+
             pauseMenu.SetActive(false);
         }
     }
