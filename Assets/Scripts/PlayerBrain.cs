@@ -20,14 +20,14 @@ public class PlayerBrain : MonoBehaviour
         controls.Enable();
 
 
-        controls.InLevel.Jump.performed += OnJump; //its called while the action is happening, is called at the same time as performed
-        //controls.InLevel.Jump.canceled += OnJump; //happens when the action is canceled
+        //controls.InLevel.Jump.performed += OnJump; //its called while the action is happening, is called at the same time as performed
+        ////controls.InLevel.Jump.canceled += OnJump; //happens when the action is canceled
 
-        controls.InLevel.Move.performed += OnMove;
-        controls.InLevel.Move.canceled += OnMove; //when stop pressing, the player stops to walk
+        //controls.InLevel.Move.performed += OnMove;
+        //controls.InLevel.Move.canceled += OnMove; //when stop pressing, the player stops to walk
 
-        controls.InLevel.Glind.performed += OnGlind;
-        controls.InLevel.Glind.canceled += OnGlind;
+        //controls.InLevel.Glind.performed += OnGlind;
+        //controls.InLevel.Glind.canceled += OnGlind;
 
     }
 

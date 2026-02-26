@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2054d0cb99d22f84caddaaf807759a97, type: 3}
   m_Name: IceState
   m_EditorClassIdentifier: Assembly-CSharp::Emberborn.Elements.IceState
-  projectile: {fileID: 5823594571715055504, guid: f27d532c854c26d5283e94196c63cd68, type: 3}
+  projectile: {fileID: 7878878559164095388, guid: 8f4788103392ffaa1b4b904016113263, type: 3}
