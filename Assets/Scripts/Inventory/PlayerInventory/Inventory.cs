@@ -20,13 +20,13 @@ public class Inventory : MonoBehaviour
         }
         player = GetComponentInParent<Transform>();
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)//player collects items if they collide with it
     {
-        //Debug.Log("collided with an item!");
+        //Debug.Log("collided with an targetItem!");
 
         if (other.GetComponent<ItemObject>())
         {
-            Debug.Log("found item: " + other.name);
+            Debug.Log("found targetItem: " + other.name);
 
             Item item = other.GetComponent<ItemObject>().ItemCollect();// gets the specific itemData in game object
             GameObject prefab = other.gameObject;//gets the GameObject that the player collided with
@@ -38,8 +38,8 @@ public class Inventory : MonoBehaviour
     }
     public void Additem(GameObject prefab, Item item)
     {
-        if (playerItems.Count >= 2 || playerItems != null)// makes sure player can only pick up 3 items 
-        {
+        //if (playerItems.Count >= 2 || playerItems != null)// makes sure player can only pick up 3 items 
+        //{
             
             Debug.Log(item.name + " has been added to inventory");
             playerItems.Add(item);
@@ -53,35 +53,14 @@ public class Inventory : MonoBehaviour
             gemCollider.enabled = false;
 
             slotManager.AddIcon(item);
-        }
-        else
-        {
-            Debug.Log("Player inventory full!!");
-        }
+        //}
+        //else
+        //{
+            //Debug.Log("Player inventory full!!");
+        //}
 
     }
-
-    public void DropItem(Item item)
-    {
-        if (playerItems != null && HasItem(item))//double check if statment
-        {
-
-            playerItems.Remove(item);
-            Debug.Log("Item removed: + item.name");
-
-
-            Vector3 playerLocation = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
-
-            Instantiate(item.prefab, playerLocation, Quaternion.identity);
-
-            return; 
-        }
-        else
-        {
-            Debug.Log("item not found. Item name: " + item.name);
-        }
-    }
-    public bool HasItem(Item targetItem)
+    public bool HasItem(Item targetItem)//makes sure if the player has a spcific item in inventory
     {
         if (playerItems != null)
         {
@@ -96,25 +75,20 @@ public class Inventory : MonoBehaviour
             }
             
         }
-        Debug.Log("target item is not in inventory: " + targetItem.name);
+        Debug.Log("target targetItem is not in inventory: " + targetItem.name);
         return false;
     }
 
-    public void PlaceItem(Item item, Vector3 location)
+    public void PlaceItem(Item targetItem, Transform location)//Should place prefab at a target position
     {
-        if (playerItems != null && HasItem(item))//double check if statment
+        if (playerItems != null)
         {
 
-            playerItems.Remove(item);
-            
-            Instantiate(item.prefab, location, Quaternion.identity);
-            Debug.Log("item: " + item.name + " has been placed."); 
+            Instantiate(targetItem.prefab, location);
+            playerItems.Remove(targetItem);
+            Debug.Log("targetItem: " + targetItem.name + " has been placed."); 
 
-            return;
         }
-        else
-        {
-            Debug.Log("item not found. Item name: " + item.name);
-        }
+
     }
 }

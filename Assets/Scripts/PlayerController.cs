@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] InputActionReference movementControl;
     [SerializeField] InputActionReference jumpControl;
     [SerializeField] InputActionReference glideControl;
+    [SerializeField] InputActionReference interactControl;
 
     [SerializeField] AudioSource grassStep_audio;
     [SerializeField] AudioSource ambience_music;
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
         movementControl.action.Enable();
         jumpControl.action.Enable();
         glideControl.action.Enable();
+        interactControl.action.Enable();
     }
 
     private void OnDisable()
@@ -40,6 +42,7 @@ public class PlayerController : MonoBehaviour
         movementControl.action.Disable();
         jumpControl.action.Disable();
         glideControl.action.Disable();
+        interactControl.action.Disable();
     }
     private void Start()
     {

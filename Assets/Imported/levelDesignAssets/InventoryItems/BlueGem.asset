@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: BlueGem
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Inventory.Item
   name: BlueGem
-  prefab: {fileID: 1725628465938492788, guid: 76b99bd04bfe8f14bbf5997c504c8ba6, type: 3}
+  prefab: {fileID: 2830103166017680343, guid: 7917be7b5f1d4fe49a15ec51d0285d18, type: 3}
   icon: {fileID: 8008449102156777020, guid: 1b2b9ff99ca84314d88f5f14e3bedbec, type: 3}

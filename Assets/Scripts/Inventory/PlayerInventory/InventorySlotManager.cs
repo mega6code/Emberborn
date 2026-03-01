@@ -3,10 +3,12 @@ using UnityEngine.UI;
 
 public class InventorySlotManager : MonoBehaviour
 {
+    //uses gameobject to get the postions of where the icons should go
     public GameObject ImageSlot1;
     public GameObject ImageSlot2;
     public GameObject ImageSlot3;
 
+    //makes sure that slots are empty or in use
     private bool ImSlot1;
     private bool ImSlot2;
     private bool ImSlot3;
@@ -16,6 +18,7 @@ public class InventorySlotManager : MonoBehaviour
         ImSlot1 = false;
         ImSlot2 = false;
         ImSlot3 = false;
+
     }
 
     public void AddIcon(Item item)//need to fix, code it atomatically going into the else statement.
@@ -28,22 +31,42 @@ public class InventorySlotManager : MonoBehaviour
         }
         else if (ImSlot2 == false)
         {
-            Debug.Log("In slot 1.");
+            Debug.Log("In slot 2.");
             CreateIcon(item, ImageSlot2);
-            this.ImSlot1 = true;
+            this.ImSlot2 = true;
         }
         else if (ImSlot3 == false)
         {
-            Debug.Log("In slot 1.");
+            Debug.Log("In slot 3.");
             CreateIcon (item, ImageSlot3);
-            this.ImSlot1 = true;
+            this.ImSlot3 = true;
         }
         else
         {
             Debug.Log("no space in inventory!");
         }
     }
-    public void CreateIcon(Item item, GameObject imageSlot)
+    
+    /*public void RemoveIcon(Item item)
+    {
+        if ()
+        {
+
+        }
+        else if ()
+        {
+
+        }
+        else if ()
+        {
+
+        }
+        else
+        {
+            Debug.Log("Could not remove: " + item.name + "From the UI bar");
+        }
+    }*/
+    public void CreateIcon(Item item, GameObject imageSlot)//creates a gameObject at the location of the slot 
     {
         Debug.Log("icon in Bar.");
 
