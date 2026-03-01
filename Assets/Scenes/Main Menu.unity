@@ -1199,7 +1199,7 @@ GameObject:
   - component: {fileID: 1062976021}
   - component: {fileID: 1062976025}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Title Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1586,7 +1586,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -15.1, y: 63.1}
+  m_AnchoredPosition: {x: -55.2, y: 60.49}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1208874244
@@ -1609,7 +1609,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press Space to Begin
+  m_text: 'Press Space to Begin
+
+    Press Escape to Quit Game'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1643,7 +1645,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1675,7 +1677,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -35.177704, w: 0}
+  m_margin: {x: 0, y: 0, z: -119.6749, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3358,6 +3360,8 @@ MonoBehaviour:
   glideControl: {fileID: -4150274994127920272, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   grassStep_audio: {fileID: 4233158336616421925}
   ambience_music: {fileID: 2981551622804655539}
+  flapWing_SFX: {fileID: 0}
+  landGrass_SFX: {fileID: 0}
   playerSpeed: 3
   jumpHeight: 1
   gravityValue: -15
@@ -5232,8 +5236,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 1435388690}
   - {fileID: 1048384159}
-  - {fileID: 1272851935}
   - {fileID: 1062976024}
+  - {fileID: 1272851935}
   - {fileID: 2056299024}
   - {fileID: 8579002507280601221}
   - {fileID: 1565165723}
