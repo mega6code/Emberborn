@@ -821,6 +821,8 @@ GameObject:
   m_Component:
   - component: {fileID: 158281868}
   - component: {fileID: 158281869}
+  - component: {fileID: 158281871}
+  - component: {fileID: 158281870}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -864,8 +866,126 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.92, y: 10.07, z: 18.05}
-  m_Center: {x: -0.35, y: 3.9, z: -6.09}
+  m_Size: {x: 3, y: 10.07, z: 8.66}
+  m_Center: {x: 0.06, y: 4.7, z: -1.6}
+--- !u!82 &158281870
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158281866}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1.7
+  MaxDistance: 6.6
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1.045
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!135 &158281871
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158281866}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 3.96
+  m_Center: {x: -0.95, y: 0, z: 0.81}
 --- !u!1001 &161951466
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2181,9 +2301,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: fe7d4e80c2853e04c8161eb895ab6d6d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 176206057}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: fe7d4e80c2853e04c8161eb895ab6d6d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1933893829}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fe7d4e80c2853e04c8161eb895ab6d6d, type: 3}
       insertIndex: -1
@@ -5685,6 +5802,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8892145251485049390, guid: 255781c69b4610b4a8f3457ce70a4aca, type: 3}
+      propertyPath: m_AnimatePhysics
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5947,6 +6068,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 412658, guid: cd606ab60f6818b49a4ec45944e39c49, type: 3}
   m_PrefabInstance: {fileID: 1127285276}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1139932401 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8107666999072763085, guid: f4e0630506553f64a932b1f8fb61d756, type: 3}
+  m_PrefabInstance: {fileID: 176206056}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1156904981
 PrefabInstance:
@@ -7347,6 +7473,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 158281868}
     m_Modifications:
+    - target: {fileID: 1067789626408758684, guid: 9bb2750b8841dc44baa39e3b87eaee3f, type: 3}
+      propertyPath: m_AnimatePhysics
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6015245021630786908, guid: 9bb2750b8841dc44baa39e3b87eaee3f, type: 3}
       propertyPath: m_Name
       value: Jimbles
@@ -7714,19 +7844,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4503935920351826960, guid: a1b51fa7dabc2024784a1281a7021ab8, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4503935920351826960, guid: a1b51fa7dabc2024784a1281a7021ab8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4503935920351826960, guid: a1b51fa7dabc2024784a1281a7021ab8, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4503935920351826960, guid: a1b51fa7dabc2024784a1281a7021ab8, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4503935920351826960, guid: a1b51fa7dabc2024784a1281a7021ab8, type: 3}
       propertyPath: m_SizeDelta.x
@@ -7766,11 +7896,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4503935920351826960, guid: a1b51fa7dabc2024784a1281a7021ab8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 7
+      value: 26.059998
       objectReference: {fileID: 0}
     - target: {fileID: 4503935920351826960, guid: a1b51fa7dabc2024784a1281a7021ab8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -11
+      value: 180.31
       objectReference: {fileID: 0}
     - target: {fileID: 4503935920351826960, guid: a1b51fa7dabc2024784a1281a7021ab8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9295,75 +9425,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
---- !u!1 &1933893828
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1933893829}
-  - component: {fileID: 1933893831}
-  - component: {fileID: 1933893830}
-  m_Layer: 0
-  m_Name: PortalCollider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1933893829
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1933893828}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.72421557, z: -0, w: 0.6895737}
-  m_LocalPosition: {x: 0.19, y: 1.3, z: 0.66}
-  m_LocalScale: {x: 3.779147, y: 3.779147, z: 3.779147}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 441586951}
-  m_LocalEulerAnglesHint: {x: 0, y: -92.807, z: 0}
---- !u!65 &1933893830
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1933893828}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.782808, y: 1, z: 1.2699934}
-  m_Center: {x: 0.14119507, y: 0, z: 0.071507215}
---- !u!114 &1933893831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1933893828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 708fa866da3a04a4892666be347df573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AlterPortal
-  alter1: {fileID: 1051414858}
-  alter2: {fileID: 977992812}
-  alter3: {fileID: 1219396657}
 --- !u!1001 &1944120983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10544,6 +10605,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 730554745111938558, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
+      propertyPath: portal2
+      value: 
+      objectReference: {fileID: 1139932401}
     - target: {fileID: 4237686924286529574, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
       propertyPath: slotManager
       value: 

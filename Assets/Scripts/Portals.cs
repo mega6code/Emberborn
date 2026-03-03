@@ -46,7 +46,7 @@ public class Portals : MonoBehaviour
             SceneManager.LoadScene("Final Level");
             Debug.Log("Portal 2");
         }
-        else if (other.gameObject == portal3)
+        //else if (other.gameObject == portal3)
         {
             SceneManager.LoadScene("");
             Debug.Log("Portal 3");
