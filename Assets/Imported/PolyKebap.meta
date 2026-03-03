@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/PolyKebap.meta
+guid: f9504f8c3cb041747b235677769de0d0
+========
 guid: 42e4cec0de7b69c45a3a919b839e88ac
+>>>>>>>> main:Assets/Imported/PolyKebap.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

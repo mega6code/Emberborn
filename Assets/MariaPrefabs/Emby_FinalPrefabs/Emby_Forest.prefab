@@ -634,6 +634,73 @@ Transform:
   - {fileID: 5368770988825355169}
   m_Father: {fileID: 1868287614263528920}
   m_LocalEulerAnglesHint: {x: 1.2603948, y: 7.4800415, z: -6.4538283}
+--- !u!1 &3798057277282485839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1520234916642690858}
+  - component: {fileID: 4237686924286529574}
+  - component: {fileID: 9010581854081927096}
+  m_Layer: 20
+  m_Name: InventoryCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1520234916642690858
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3798057277282485839}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8579002508563003989}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4237686924286529574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3798057277282485839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09015beb040e7994898411cace456a40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Inventory
+  slotManager: {fileID: 0}
+--- !u!65 &9010581854081927096
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3798057277282485839}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.4058516, y: 0.8284054, z: 0.7008333}
+  m_Center: {x: 0.018281173, y: 0.25094128, z: 0.14123443}
 --- !u!1 &3852364726994946083
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,7 +782,7 @@ GameObject:
   - component: {fileID: 8981580660898497012}
   - component: {fileID: 4749603011728268324}
   m_Layer: 20
-  m_Name: Emby_Forest
+  m_Name: Emby3.0
   m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -738,6 +805,7 @@ Transform:
   - {fileID: 1736179389826788930}
   - {fileID: 4794646750095013003}
   - {fileID: 287492716834626882}
+  - {fileID: 1520234916642690858}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 10.986, z: 0}
 --- !u!95 &1202421980292280061
@@ -803,6 +871,7 @@ MonoBehaviour:
   movementControl: {fileID: 4099060358282427602, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   jumpControl: {fileID: -3440093267870110826, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   glideControl: {fileID: -4150274994127920272, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  interactControl: {fileID: 4461424669430907566, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   grassStep_audio: {fileID: 4233158337416474869}
   ambience_music: {fileID: 2981551621977319267}
   flapWing_SFX: {fileID: 8981580660898497012}
