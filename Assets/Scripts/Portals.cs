@@ -38,17 +38,17 @@ public class Portals : MonoBehaviour
     {
         if (other.gameObject == portal1)
         {
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("Level 1");
             Debug.Log("Portal 1");
         }
         else if (other.gameObject == portal2)
         {
-            SceneManager.LoadScene("Fire Level");
+            SceneManager.LoadScene("Final Level");
             Debug.Log("Portal 2");
         }
         else if (other.gameObject == portal3)
         {
-            SceneManager.LoadScene("Ice Level");
+            SceneManager.LoadScene("");
             Debug.Log("Portal 3");
         }
     }
