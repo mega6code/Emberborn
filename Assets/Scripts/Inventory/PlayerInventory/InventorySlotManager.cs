@@ -13,6 +13,12 @@ public class InventorySlotManager : MonoBehaviour
     private bool ImSlot2;
     private bool ImSlot3;
 
+    //stores instantiated items
+    GameObject icon1;
+    GameObject icon2;
+    GameObject icon3;
+
+
     private void Awake()
     {
         ImSlot1 = false;

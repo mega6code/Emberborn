@@ -956,8 +956,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1397,7 +1397,7 @@ GameObject:
   - component: {fileID: 1122585896}
   - component: {fileID: 1122585897}
   m_Layer: 0
-  m_Name: ItemSpawn
+  m_Name: ItemSpawnPink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1628,7 +1628,7 @@ GameObject:
   - component: {fileID: 1184403002}
   - component: {fileID: 1184403003}
   m_Layer: 0
-  m_Name: itemSpawn
+  m_Name: itemSpawnGreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1686,7 +1686,7 @@ GameObject:
   - component: {fileID: 1271990692}
   - component: {fileID: 1271990693}
   m_Layer: 0
-  m_Name: ItemSpawn
+  m_Name: ItemSpawnBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1893,8 +1893,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2272,7 +2272,7 @@ MonoBehaviour:
   playerInventory: {fileID: 309366608}
   interactControl: {fileID: 4461424669430907566, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   alterActivated: 0
-  objectSpawn: {fileID: 1184403001}
+  objectSpawn: {fileID: 1271990691}
 --- !u!54 &2030729670
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2295,8 +2295,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0

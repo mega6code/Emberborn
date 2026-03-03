@@ -7,15 +7,15 @@ public class AlterPortal : MonoBehaviour
     [SerializeField] GameObject alter2;
     [SerializeField] GameObject alter3;
 
-    PuzzleAlter activation1;
-    PuzzleAlter activation2;
-    PuzzleAlter activation3;
+    private bool activation1;
+    private bool activation2;
+    private bool activation3;
 
     private void Awake()
     {
-        activation1 = alter1.GetComponent<PuzzleAlter>();
-        activation2 = alter2.GetComponent<PuzzleAlter>();
-        activation3 = alter3.GetComponent<PuzzleAlter>();   
+        activation1 = alter1.GetComponent<PuzzleAlter>().alterActivated;
+        activation2 = alter2.GetComponent<PuzzleAlter>().alterActivated;
+        activation3 = alter3.GetComponent<PuzzleAlter>().alterActivated;   
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -35,8 +35,8 @@ public class AlterPortal : MonoBehaviour
     }
     private void CheckActivation()
     {
-        activation1 = alter1.GetComponent<PuzzleAlter>();
-        activation2 = alter2.GetComponent<PuzzleAlter>();
-        activation3 = alter3.GetComponent<PuzzleAlter>();
+        activation1 = alter1.GetComponent<PuzzleAlter>().alterActivated;
+        activation2 = alter2.GetComponent<PuzzleAlter>().alterActivated;
+        activation3 = alter3.GetComponent<PuzzleAlter>().alterActivated;
     }
 }

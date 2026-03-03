@@ -38,8 +38,8 @@ public class Inventory : MonoBehaviour
     }
     public void Additem(GameObject prefab, Item item)
     {
-        //if (playerItems.Count >= 2 || playerItems != null)// makes sure player can only pick up 3 items 
-        //{
+        if (playerItems.Count < 3)// makes sure player can only pick up 3 items 
+        {
             
             Debug.Log(item.name + " has been added to inventory");
             playerItems.Add(item);
@@ -53,11 +53,11 @@ public class Inventory : MonoBehaviour
             gemCollider.enabled = false;
 
             slotManager.AddIcon(item);
-        //}
-        //else
-        //{
-            //Debug.Log("Player inventory full!!");
-        //}
+        }
+        else
+        {
+            Debug.Log("Player inventory full!!");
+        }
 
     }
     public bool HasItem(Item targetItem)//makes sure if the player has a spcific item in inventory
@@ -84,7 +84,7 @@ public class Inventory : MonoBehaviour
         if (playerItems != null)
         {
 
-            Instantiate(targetItem.prefab, location);
+            Instantiate(targetItem.prefab, location.position, location.rotation);
             playerItems.Remove(targetItem);
             Debug.Log("targetItem: " + targetItem.name + " has been placed."); 
 
