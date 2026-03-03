@@ -3358,6 +3358,7 @@ MonoBehaviour:
   movementControl: {fileID: 4099060358282427602, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   jumpControl: {fileID: -3440093267870110826, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   glideControl: {fileID: -4150274994127920272, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  interactControl: {fileID: 4461424669430907566, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   grassStep_audio: {fileID: 4233158336616421925}
   ambience_music: {fileID: 2981551622804655539}
   flapWing_SFX: {fileID: 0}
