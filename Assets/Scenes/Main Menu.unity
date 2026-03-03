@@ -3790,6 +3790,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0feda76545390924ab8eece8cdaf803a, type: 3}
+--- !u!1 &3664357555927727278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6652060218339061621, guid: 0feda76545390924ab8eece8cdaf803a, type: 3}
+  m_PrefabInstance: {fileID: 3664357555927727277}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3852364725731402483
 GameObject:
   m_ObjectHideFlags: 0
@@ -3964,6 +3969,7 @@ GameObject:
   - component: {fileID: 2459294699798779280}
   - component: {fileID: 4233158336616421925}
   - component: {fileID: 2981551622804655539}
+  - component: {fileID: 8579002507280601222}
   m_Layer: 20
   m_Name: Emby3.0
   m_TagString: Animal
@@ -4596,6 +4602,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a324b6afa2a568479f676e3dba33b7c, type: 3}
+--- !u!1 &6230117810175558798 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8563061336884272745, guid: 0a324b6afa2a568479f676e3dba33b7c, type: 3}
+  m_PrefabInstance: {fileID: 6230117810175558797}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6420476424141206857
 GameObject:
   m_ObjectHideFlags: 0
@@ -4899,6 +4910,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e0630506553f64a932b1f8fb61d756, type: 3}
+--- !u!1 &7437776110543215696 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8107666999072763085, guid: f4e0630506553f64a932b1f8fb61d756, type: 3}
+  m_PrefabInstance: {fileID: 7437776110543215695}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7510165961797555352
 Transform:
   m_ObjectHideFlags: 0
@@ -5111,6 +5127,23 @@ Transform:
   - {fileID: 287492715950700434}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 10.986, z: 0}
+--- !u!114 &8579002507280601222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4529074578386622752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f29240e66bf54ca42b5411517c0aa47c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Portals
+  portal1: {fileID: 6230117810175558798}
+  portal2: {fileID: 7437776110543215696}
+  portal3: {fileID: 3664357555927727278}
+  level1beat: 0
+  level2beat: 0
 --- !u!4 &8592817353578028290
 Transform:
   m_ObjectHideFlags: 0

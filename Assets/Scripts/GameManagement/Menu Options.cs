@@ -27,6 +27,7 @@ public class MenuOptions : MonoBehaviour
     public void QuitGame()
     {
         //Close game
+        Debug.Log("Game should close");
         Application.Quit();
     }
 

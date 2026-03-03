@@ -2,7 +2,6 @@ using System;
 using Unity.VectorGraphics;
 using Unity.VisualScripting;
 using UnityEditor;
-using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
