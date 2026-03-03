@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] InputActionReference abilityControl;
     [SerializeField] InputActionReference switchStateControl;
-    [SerializeField] InputActionReference interactControl;
+    //[SerializeField] InputActionReference interactControl;
 
     [SerializeField] AudioSource grassStep_audio;
     [SerializeField] AudioSource ambience_music;

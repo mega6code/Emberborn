@@ -805,14 +805,14 @@ MonoBehaviour:
   Radius: 5
   Orbits:
     Top:
-      Radius: 5
-      Height: 4.5
+      Radius: 3.64
+      Height: 1.5
     Center:
-      Radius: 5.8
-      Height: 3
+      Radius: 4.2
+      Height: 1
     Bottom:
-      Radius: 6.5
-      Height: 1.25
+      Radius: 3.52
+      Height: 0.5
     SplineCurvature: 0.5
   RecenteringTarget: 2
   HorizontalAxis:
@@ -896,8 +896,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122572445}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.16901428, y: 0.000000035790176, z: -0.000000009475181, w: 0.98561364}
-  m_LocalPosition: {x: 588.88, y: 28.8, z: 314.77002}
+  m_LocalRotation: {x: 0.04800914, y: -0.000000028841807, z: 0.0000000013862687, w: 0.99884695}
+  m_LocalPosition: {x: 584.86, y: 26.8, z: 311.28998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1220,8 +1220,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282785443}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.1690143, y: 0.000000035200465, z: -0.000000006036221, w: 0.98561364}
-  m_LocalPosition: {x: 588.88, y: 28.8, z: 314.77002}
+  m_LocalRotation: {x: 0.048009142, y: -0.000000028841809, z: 0.0000000013862691, w: 0.99884695}
+  m_LocalPosition: {x: 584.86, y: 26.8, z: 311.28998}
   m_LocalScale: {x: 0.83332, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2166,6 +2166,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7040843552677978867, guid: 96fc2d398a7da554db03444eab89d995, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2489,7 +2493,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2143110859509428314, guid: 881b0a0af15679d4dbf558c77e97b170, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 588.88
+      value: 584.86
       objectReference: {fileID: 0}
     - target: {fileID: 2143110859509428314, guid: 881b0a0af15679d4dbf558c77e97b170, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2497,7 +2501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2143110859509428314, guid: 881b0a0af15679d4dbf558c77e97b170, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 320.57
+      value: 315.49
       objectReference: {fileID: 0}
     - target: {fileID: 2143110859509428314, guid: 881b0a0af15679d4dbf558c77e97b170, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2958,11 +2962,11 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264154982}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 12
   m_Type: 1
   m_Color: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -3005,7 +3009,7 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 8649
+  m_ColorTemperature: 6207
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
