@@ -1199,7 +1199,7 @@ GameObject:
   - component: {fileID: 1062976021}
   - component: {fileID: 1062976025}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Title Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1586,7 +1586,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -15.1, y: 63.1}
+  m_AnchoredPosition: {x: -55.2, y: 60.49}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1208874244
@@ -1609,7 +1609,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press Space to Begin
+  m_text: 'Press Space to Begin
+
+    Press Escape to Quit Game'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1643,7 +1645,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1675,7 +1677,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -35.177704, w: 0}
+  m_margin: {x: 0, y: 0, z: -119.6749, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3788,6 +3790,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0feda76545390924ab8eece8cdaf803a, type: 3}
+--- !u!1 &3664357555927727278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6652060218339061621, guid: 0feda76545390924ab8eece8cdaf803a, type: 3}
+  m_PrefabInstance: {fileID: 3664357555927727277}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3852364725731402483
 GameObject:
   m_ObjectHideFlags: 0
@@ -3962,6 +3969,7 @@ GameObject:
   - component: {fileID: 2459294699798779280}
   - component: {fileID: 4233158336616421925}
   - component: {fileID: 2981551622804655539}
+  - component: {fileID: 8579002507280601222}
   m_Layer: 20
   m_Name: Emby3.0
   m_TagString: Animal
@@ -4594,6 +4602,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a324b6afa2a568479f676e3dba33b7c, type: 3}
+--- !u!1 &6230117810175558798 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8563061336884272745, guid: 0a324b6afa2a568479f676e3dba33b7c, type: 3}
+  m_PrefabInstance: {fileID: 6230117810175558797}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6420476424141206857
 GameObject:
   m_ObjectHideFlags: 0
@@ -4897,6 +4910,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e0630506553f64a932b1f8fb61d756, type: 3}
+--- !u!1 &7437776110543215696 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8107666999072763085, guid: f4e0630506553f64a932b1f8fb61d756, type: 3}
+  m_PrefabInstance: {fileID: 7437776110543215695}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7510165961797555352
 Transform:
   m_ObjectHideFlags: 0
@@ -5109,6 +5127,23 @@ Transform:
   - {fileID: 287492715950700434}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 10.986, z: 0}
+--- !u!114 &8579002507280601222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4529074578386622752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f29240e66bf54ca42b5411517c0aa47c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Portals
+  portal1: {fileID: 6230117810175558798}
+  portal2: {fileID: 7437776110543215696}
+  portal3: {fileID: 3664357555927727278}
+  level1beat: 0
+  level2beat: 0
 --- !u!4 &8592817353578028290
 Transform:
   m_ObjectHideFlags: 0
@@ -5234,8 +5269,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 1435388690}
   - {fileID: 1048384159}
-  - {fileID: 1272851935}
   - {fileID: 1062976024}
+  - {fileID: 1272851935}
   - {fileID: 2056299024}
   - {fileID: 8579002507280601221}
   - {fileID: 1565165723}

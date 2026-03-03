@@ -1,7 +1,7 @@
 using System;
 using Unity.VectorGraphics;
+using Unity.VisualScripting;
 using UnityEditor;
-using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -28,6 +28,11 @@ public class MainMenu : MonoBehaviour
                 gameObject.SetActive(false);
                 Debug.Log("space was pressed");
             }
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+            Debug.Log("Game should be shut");
         }
     }
 }
