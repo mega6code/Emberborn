@@ -120,6 +120,17 @@ public class PlayerController : MonoBehaviour
         controller.Move(playerVelocity * Time.deltaTime);
         
     }
+
+    public void TeleportTo(Vector3 targetPos)
+    {
+        // 1) Stop all motion so Update() doesn't keep pushing you
+        playerVelocity = Vector3.zero;
+
+        // 2) Disable controller so it doesn't block the position set
+        controller.enabled = false;
+        transform.position = targetPos;
+        controller.enabled = true;
+    }
     public void OnGlide()
     {
         playerVelocity.y += glideGravity * Time.deltaTime;
