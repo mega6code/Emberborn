@@ -261,6 +261,10 @@ PrefabInstance:
       propertyPath: portal3
       value: 
       objectReference: {fileID: 3664357555927727278}
+    - target: {fileID: 2981551621977319267, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4529074579130086384, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
       propertyPath: m_Name
       value: Emby3.0
@@ -1813,9 +1817,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8932240932007668663}
   - {fileID: 616429895757065039}
   - {fileID: 8903449742329758768}
-  - {fileID: 8932240932007668663}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &1279641077 stripped
@@ -2086,8 +2090,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92d0cdabb65d72341bc095a78dfcc580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraScript
-  dragonPosition: {fileID: 110365347}
-  camera: {fileID: 1435388686}
 --- !u!114 &1435388692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3046,16 +3048,32 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1714591102763568932, guid: 0feda76545390924ab8eece8cdaf803a, type: 3}
       propertyPath: m_Name
-      value: Portal3
+      value: Portal 1
       objectReference: {fileID: 0}
     - target: {fileID: 4691955763205953032, guid: 0feda76545390924ab8eece8cdaf803a, type: 3}
       propertyPath: m_Radius
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4819329551838788436, guid: 0feda76545390924ab8eece8cdaf803a, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 103227832}
     - target: {fileID: 5557631175077875591, guid: 0feda76545390924ab8eece8cdaf803a, type: 3}
       propertyPath: player
       value: 
+      objectReference: {fileID: 103227832}
+    - target: {fileID: 5557631175077875591, guid: 0feda76545390924ab8eece8cdaf803a, type: 3}
+      propertyPath: level1beat
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5557631175077875591, guid: 0feda76545390924ab8eece8cdaf803a, type: 3}
+      propertyPath: level2beat
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5557631175077875591, guid: 0feda76545390924ab8eece8cdaf803a, type: 3}
+      propertyPath: thisPortal
+      value: 
+      objectReference: {fileID: 3664357555927727278}
     - target: {fileID: 6652060218339061621, guid: 0feda76545390924ab8eece8cdaf803a, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -3070,7 +3088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7940183886467270674, guid: 0feda76545390924ab8eece8cdaf803a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.72
+      value: 24.7
       objectReference: {fileID: 0}
     - target: {fileID: 7940183886467270674, guid: 0feda76545390924ab8eece8cdaf803a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3129,7 +3147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3497897995376279553, guid: 0a324b6afa2a568479f676e3dba33b7c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 24.68
+      value: 16.03
       objectReference: {fileID: 0}
     - target: {fileID: 3497897995376279553, guid: 0a324b6afa2a568479f676e3dba33b7c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3163,6 +3181,10 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5216912328395785507, guid: 0a324b6afa2a568479f676e3dba33b7c, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 103227832}
     - target: {fileID: 8484038607420407238, guid: 0a324b6afa2a568479f676e3dba33b7c, type: 3}
       propertyPath: scene
       value: '"Level1"'
@@ -3170,10 +3192,14 @@ PrefabInstance:
     - target: {fileID: 8484038607420407238, guid: 0a324b6afa2a568479f676e3dba33b7c, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 103227832}
+    - target: {fileID: 8484038607420407238, guid: 0a324b6afa2a568479f676e3dba33b7c, type: 3}
+      propertyPath: thisPortal
+      value: 
+      objectReference: {fileID: 6230117810175558798}
     - target: {fileID: 8863897893310773594, guid: 0a324b6afa2a568479f676e3dba33b7c, type: 3}
       propertyPath: m_Name
-      value: Portal1
+      value: Portal 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8484038607420407238, guid: 0a324b6afa2a568479f676e3dba33b7c, type: 3}
@@ -3200,23 +3226,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3752572751019104833, guid: f4e0630506553f64a932b1f8fb61d756, type: 3}
       propertyPath: m_Name
-      value: Portal2
+      value: Portal 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4740766360936747518, guid: f4e0630506553f64a932b1f8fb61d756, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 103227832}
     - target: {fileID: 4895691058624260514, guid: f4e0630506553f64a932b1f8fb61d756, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 103227832}
+    - target: {fileID: 4895691058624260514, guid: f4e0630506553f64a932b1f8fb61d756, type: 3}
+      propertyPath: thisPortal
+      value: 
+      objectReference: {fileID: 7437776110543215696}
     - target: {fileID: 6890299686335454806, guid: f4e0630506553f64a932b1f8fb61d756, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.19
+      value: -21.190006
       objectReference: {fileID: 0}
     - target: {fileID: 6890299686335454806, guid: f4e0630506553f64a932b1f8fb61d756, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.02
+      value: 0.01999998
       objectReference: {fileID: 0}
     - target: {fileID: 6890299686335454806, guid: f4e0630506553f64a932b1f8fb61d756, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.783
+      value: 6.260005
       objectReference: {fileID: 0}
     - target: {fileID: 6890299686335454806, guid: f4e0630506553f64a932b1f8fb61d756, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3282,5 +3316,5 @@ SceneRoots:
   - {fileID: 2056299024}
   - {fileID: 1565165723}
   - {fileID: 616378214}
-  - {fileID: 2117589176}
   - {fileID: 121003741}
+  - {fileID: 2117589176}

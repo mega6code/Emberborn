@@ -781,9 +781,8 @@ GameObject:
   - component: {fileID: 2981551621977319267}
   - component: {fileID: 8981580660898497012}
   - component: {fileID: 4749603011728268324}
-  - component: {fileID: 730554745111938558}
   m_Layer: 20
-  m_Name: Emby3.0
+  m_Name: Emby_Forest
   m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -873,6 +872,8 @@ MonoBehaviour:
   jumpControl: {fileID: -3440093267870110826, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   glideControl: {fileID: -4150274994127920272, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   interactControl: {fileID: 4461424669430907566, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  abilityControl: {fileID: 0}
+  switchStateControl: {fileID: 0}
   grassStep_audio: {fileID: 4233158337416474869}
   ambience_music: {fileID: 2981551621977319267}
   flapWing_SFX: {fileID: 8981580660898497012}
@@ -881,6 +882,7 @@ MonoBehaviour:
   jumpHeight: 1
   gravityValue: -15
   rotationSpeed: 10
+  elementalStateManager: {fileID: 0}
   glideGravity: -7
 --- !u!82 &4233158337416474869
 AudioSource:
@@ -1270,23 +1272,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &730554745111938558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4529074579130086384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f29240e66bf54ca42b5411517c0aa47c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Portals
-  portal1: {fileID: 0}
-  portal2: {fileID: 0}
-  portal3: {fileID: 0}
-  level1beat: 0
-  level2beat: 0
 --- !u!1 &4738014652014487158
 GameObject:
   m_ObjectHideFlags: 0
