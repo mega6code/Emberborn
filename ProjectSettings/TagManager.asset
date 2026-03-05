@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Floor
+  - Animal
+  - MovingPlaftorm
+  - Point1
   layers:
   - Default
   - TransparentFX
