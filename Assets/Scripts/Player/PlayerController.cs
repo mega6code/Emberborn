@@ -1,4 +1,4 @@
-using Emberborn.Player;
+using Emberborn.Elements;
 using UnityEngine;
 using UnityEngine.InputSystem;
 [RequireComponent(typeof(CharacterController))] 
@@ -42,6 +42,12 @@ public class PlayerController : MonoBehaviour
         jumpControl.action.Enable();
         glideControl.action.Enable();
         interactControl.action.Enable();
+
+        //tbd later
+        //movementControl = InputSystem.actions.FindAction("Player/Movement");
+        //jumpControl = InputSystem.actions.FindAction("Player/Jump");
+        InputSystem.actions.FindAction("Player/Ability1").performed += OnAbility;
+        InputSystem.actions.FindAction("Player/AbilitySwitch").performed += OnSwitchState;
     }
 
     private void OnDisable()
@@ -50,6 +56,9 @@ public class PlayerController : MonoBehaviour
         jumpControl.action.Disable();
         glideControl.action.Disable();
         interactControl.action.Disable();
+
+        InputSystem.actions.FindAction("Player/Ability1").performed -= OnAbility;
+        InputSystem.actions.FindAction("Player/AbilitySwitch").performed -= OnSwitchState;
     }
     private void Start()
     {
@@ -151,13 +160,12 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsGlinding", false);
         animator.SetBool("IsJumping", false);
     }
-    public void OnAbility()
+    public void OnAbility(InputAction.CallbackContext ctx)
     {
-
         elementalStateManager.OnAbility();
     }
 
-    public void OnSwitchState()
+    public void OnSwitchState(InputAction.CallbackContext ctx)
     {
         elementalStateManager.OnChangeState();
     }
