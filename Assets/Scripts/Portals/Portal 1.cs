@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Portal1 : MonoBehaviour
+public class Portal1 : Portals
 {
     public GameObject player;
 
