@@ -6,8 +6,15 @@ TagManager:
   tags:
   - Floor
   - Animal
+<<<<<<< HEAD
   - MovingPlaftorm
   - Point1
+=======
+  - Projectile
+  - Fire
+  - Ice
+  - Obstacle
+>>>>>>> main
   layers:
   - Default
   - TransparentFX

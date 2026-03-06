@@ -781,8 +781,10 @@ GameObject:
   - component: {fileID: 2981551621977319267}
   - component: {fileID: 8981580660898497012}
   - component: {fileID: 4749603011728268324}
+  - component: {fileID: 4821725848370907930}
+  - component: {fileID: 8267374612157329846}
   m_Layer: 20
-  m_Name: Emby_Forest
+  m_Name: Emby_Base
   m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -802,6 +804,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8052558748709645653}
+  - {fileID: 7149575230792717523}
   - {fileID: 1736179389826788930}
   - {fileID: 4794646750095013003}
   - {fileID: 287492716834626882}
@@ -872,17 +875,17 @@ MonoBehaviour:
   jumpControl: {fileID: -3440093267870110826, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   glideControl: {fileID: -4150274994127920272, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   interactControl: {fileID: 4461424669430907566, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  abilityControl: {fileID: 0}
-  switchStateControl: {fileID: 0}
+  abilityControl: {fileID: -8076984762595263760, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  switchStateControl: {fileID: -5096580550102873975, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   grassStep_audio: {fileID: 4233158337416474869}
   ambience_music: {fileID: 2981551621977319267}
   flapWing_SFX: {fileID: 8981580660898497012}
   landGrass_SFX: {fileID: 4749603011728268324}
-  playerSpeed: 3
+  playerSpeed: 4
   jumpHeight: 1
   gravityValue: -15
-  rotationSpeed: 10
-  elementalStateManager: {fileID: 0}
+  rotationSpeed: 25
+  elementalStateManager: {fileID: 4821725848370907930}
   glideGravity: -7
 --- !u!82 &4233158337416474869
 AudioSource:
@@ -1272,6 +1275,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4821725848370907930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4529074579130086384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2009e14796113dc489b17d0557e7101c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Emberborn.Elements.ElementalStateManager
+  collected_elements: 
+  current_state: {fileID: 0}
+  allElements:
+  - {fileID: 11400000, guid: 115a69b7c76da5ba8af58de34c247715, type: 2}
+  - {fileID: 11400000, guid: 3d68c0bf7d8415f4fbd90017d0afec1a, type: 2}
+--- !u!114 &8267374612157329846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4529074579130086384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f99f8b539d9b8f64da1a9c7899c5e7f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Emberborn.Mechanics.ProjectileLauncher
+  launch_point: {fileID: 7149575230792717523}
+  launch_speed: 1
 --- !u!1 &4738014652014487158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1593,6 +1627,37 @@ Transform:
   - {fileID: 6994728860833530618}
   m_Father: {fileID: 8166730934081787604}
   m_LocalEulerAnglesHint: {x: -60.265728, y: 28.500095, z: 3.0830173}
+--- !u!1 &5557364189762367620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7149575230792717523}
+  m_Layer: 0
+  m_Name: ProjectileSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7149575230792717523
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5557364189762367620}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.1004728, y: 0.53055954, z: 0.5470925}
+  m_LocalScale: {x: 1.166425, y: 1.0390447, z: 1.0053668}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8579002508563003989}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5587221444695180086
 GameObject:
   m_ObjectHideFlags: 0
