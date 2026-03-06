@@ -4,6 +4,6 @@ namespace Emberborn.Interfaces
 {
 	public interface IFlammable
 	{
-		void OnFire();
+		void OnFire(object o);
 	}
 }

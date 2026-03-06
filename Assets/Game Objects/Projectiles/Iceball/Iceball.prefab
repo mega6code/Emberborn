@@ -8,9 +8,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2055232921137415136, guid: b652e2a989e662513a2905af4fd736b5, type: 3}
+      propertyPath: method_name
+      value: OnFreeze
+      objectReference: {fileID: 0}
     - target: {fileID: 2483106071751415044, guid: b652e2a989e662513a2905af4fd736b5, type: 3}
       propertyPath: m_Name
       value: Iceball
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483106071751415044, guid: b652e2a989e662513a2905af4fd736b5, type: 3}
+      propertyPath: m_TagString
+      value: Ice
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983167662204003806, guid: b652e2a989e662513a2905af4fd736b5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983167662204003806, guid: b652e2a989e662513a2905af4fd736b5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983167662204003806, guid: b652e2a989e662513a2905af4fd736b5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2983167662204003806, guid: b652e2a989e662513a2905af4fd736b5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18,7 +38,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2983167662204003806, guid: b652e2a989e662513a2905af4fd736b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.364
+      value: 1.42
       objectReference: {fileID: 0}
     - target: {fileID: 2983167662204003806, guid: b652e2a989e662513a2905af4fd736b5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -65,7 +85,8 @@ PrefabInstance:
       value: Ice
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5472720826631107202, guid: b652e2a989e662513a2905af4fd736b5, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b652e2a989e662513a2905af4fd736b5, type: 3}

@@ -9,6 +9,7 @@ TagManager:
   - Projectile
   - Fire
   - Ice
+  - Obstacle
   layers:
   - Default
   - TransparentFX

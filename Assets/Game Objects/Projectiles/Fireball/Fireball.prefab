@@ -8,9 +8,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2055232921137415136, guid: b652e2a989e662513a2905af4fd736b5, type: 3}
+      propertyPath: method_name
+      value: OnFire
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055232921137415136, guid: b652e2a989e662513a2905af4fd736b5, type: 3}
+      propertyPath: element_strength
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 2483106071751415044, guid: b652e2a989e662513a2905af4fd736b5, type: 3}
       propertyPath: m_Name
       value: Fireball
+      objectReference: {fileID: 0}
+    - target: {fileID: 2483106071751415044, guid: b652e2a989e662513a2905af4fd736b5, type: 3}
+      propertyPath: m_TagString
+      value: Fire
       objectReference: {fileID: 0}
     - target: {fileID: 2983167662204003806, guid: b652e2a989e662513a2905af4fd736b5, type: 3}
       propertyPath: m_LocalPosition.x

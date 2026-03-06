@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 4357351768626565194}
   - component: {fileID: 1499856990971829743}
   - component: {fileID: -125340798638816502}
+  - component: {fileID: 2055232921137415136}
   m_Layer: 0
   m_Name: Elementalball
-  m_TagString: Projectile
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,8 +33,7 @@ Transform:
   m_LocalPosition: {x: -2.03527, y: -0.364, z: 0.99527}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 4590331185574194158}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3860496639757301736
@@ -107,7 +107,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -121,7 +121,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2483106071751415044}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 0.1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -140,65 +140,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1001 &6546944953280766279
-PrefabInstance:
+--- !u!114 &2055232921137415136
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2983167662204003806}
-    m_Modifications:
-    - target: {fileID: 1236353717870826437, guid: 08c74bcf52576f94c8c7a0d5a52d7898, type: 3}
-      propertyPath: m_Name
-      value: Element
-      objectReference: {fileID: 0}
-    - target: {fileID: 7309142479072791209, guid: 08c74bcf52576f94c8c7a0d5a52d7898, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7309142479072791209, guid: 08c74bcf52576f94c8c7a0d5a52d7898, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7309142479072791209, guid: 08c74bcf52576f94c8c7a0d5a52d7898, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7309142479072791209, guid: 08c74bcf52576f94c8c7a0d5a52d7898, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7309142479072791209, guid: 08c74bcf52576f94c8c7a0d5a52d7898, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7309142479072791209, guid: 08c74bcf52576f94c8c7a0d5a52d7898, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7309142479072791209, guid: 08c74bcf52576f94c8c7a0d5a52d7898, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7309142479072791209, guid: 08c74bcf52576f94c8c7a0d5a52d7898, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7309142479072791209, guid: 08c74bcf52576f94c8c7a0d5a52d7898, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7309142479072791209, guid: 08c74bcf52576f94c8c7a0d5a52d7898, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 08c74bcf52576f94c8c7a0d5a52d7898, type: 3}
---- !u!4 &4590331185574194158 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7309142479072791209, guid: 08c74bcf52576f94c8c7a0d5a52d7898, type: 3}
-  m_PrefabInstance: {fileID: 6546944953280766279}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2483106071751415044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e15564b52dc80d9459aea32be6830e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Emberborn.Projectiles.ElementalProjectile
+  element_strength: 1
+  method_name: 

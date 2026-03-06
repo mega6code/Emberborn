@@ -4,6 +4,6 @@ namespace Emberborn.Interfaces
 {
 	public interface IFreezable
 	{
-		void OnFreeze();
+		void OnFreeze(object o);
 	}
 }

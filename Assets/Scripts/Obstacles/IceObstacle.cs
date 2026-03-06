@@ -1,58 +1,25 @@
 using System;
+using System.Collections.Generic;
 using Emberborn.Interfaces;
+using NUnit.Framework;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class IceObstacle : MonoBehaviour, IObstacle, IFreezable, IFlammable
 {
-    [SerializeField] private Vector3 min_scale;
-    [SerializeField] private Vector3 max_scale;
-    [SerializeField] private float scale_rate; //
-    private Vector3 default_scale;
+    [SerializeField] private UnityEvent<float> Frozen;
+    [SerializeField] private UnityEvent<float> Flamed;
 
-    private void Awake()
+    public void OnFreeze(object o)
     {
-        defaultScale = transform.localScale;
+        Frozen?.Invoke((float)o);
+        Debug.Log("FREEEEZE!!!");
     }
 
-    private void Update()
+    public void OnFire(object o)
     {
-        Debug.Log(transform.localScale);
-    }
-
-    private void AddScale(Vector3 scale)
-    {
-        transform.localScale += scale;
-    }
-
-    private bool IsScaleOverMax(Vector3 scale)
-    {
-        if (scale.x >= max_scale.x || scale.y >= max_scale.y || scale.z >= max_scale.z)
-        {
-            return true;
-        }
-        
-        return false;
-    }
-
-    private Vector3 CalculateScaleAmount()
-    {
-        transform.localScale ;
-        if ()
-        {
-            
-        }
-        return defaultScale * 0.25f;
-        
-    }
-    private void OnFreeze()
-    {
-        Vector3 scale_to_add = CalculateScaleAmount();
-        AddScale(scale_to_add);
-    }
-
-    public void OnFire()
-    {
-        throw new NotImplementedException();
+        Flamed?.Invoke((float)o);
+        Debug.Log("FIIIRREEEEEEE!!!");
     }
 }
