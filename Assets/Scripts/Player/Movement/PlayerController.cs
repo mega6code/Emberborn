@@ -121,12 +121,19 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    public void OnPlatform(Vector3 platfPosition)
+    {
+        playerVelocity = Vector3.zero;
+        controller.enabled = false;
+        transform.position = platfPosition;
+        controller.enabled = true;
+    }
     public void TeleportTo(Vector3 targetPos)
     {
-        // 1) Stop all motion so Update() doesn't keep pushing you
+        //top all motion that uppdate function is causing
         playerVelocity = Vector3.zero;
 
-        // 2) Disable controller so it doesn't block the position set
+        //disable controller so it doesnt block the position set
         controller.enabled = false;
         transform.position = targetPos;
         controller.enabled = true;
