@@ -1,4 +1,4 @@
-using Emberborn.Elements;
+using Emberborn.Player;
 using UnityEngine;
 using UnityEngine.InputSystem;
 [RequireComponent(typeof(CharacterController))] 
@@ -10,10 +10,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] InputActionReference movementControl;
     [SerializeField] InputActionReference jumpControl;
     [SerializeField] InputActionReference glideControl;
+    [SerializeField] InputActionReference interactControl;
 
     [SerializeField] InputActionReference abilityControl;
     [SerializeField] InputActionReference switchStateControl;
-    [SerializeField] InputActionReference interactControl;
+    //[SerializeField] InputActionReference interactControl;
 
     [SerializeField] AudioSource grassStep_audio;
     [SerializeField] AudioSource ambience_music;
@@ -40,9 +41,7 @@ public class PlayerController : MonoBehaviour
         movementControl.action.Enable();
         jumpControl.action.Enable();
         glideControl.action.Enable();
-        switchStateControl.action.Enable();
         interactControl.action.Enable();
-        abilityControl.action.Enable();
     }
 
     private void OnDisable()
@@ -50,15 +49,13 @@ public class PlayerController : MonoBehaviour
         movementControl.action.Disable();
         jumpControl.action.Disable();
         glideControl.action.Disable();
+        interactControl.action.Disable();
     }
     private void Start()
     {
         controller = gameObject.GetComponent<CharacterController>();
         cameraMainTransform = Camera.main.transform;
         animator = GetComponent<Animator>();
-
-        abilityControl.action.performed += OnAbility;
-        switchStateControl.action.performed += OnSwitchState;
 
     }
 
@@ -123,6 +120,17 @@ public class PlayerController : MonoBehaviour
         controller.Move(playerVelocity * Time.deltaTime);
         
     }
+
+    public void TeleportTo(Vector3 targetPos)
+    {
+        // 1) Stop all motion so Update() doesn't keep pushing you
+        playerVelocity = Vector3.zero;
+
+        // 2) Disable controller so it doesn't block the position set
+        controller.enabled = false;
+        transform.position = targetPos;
+        controller.enabled = true;
+    }
     public void OnGlide()
     {
         playerVelocity.y += glideGravity * Time.deltaTime;
@@ -143,17 +151,15 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsGlinding", false);
         animator.SetBool("IsJumping", false);
     }
-    public void OnAbility(InputAction.CallbackContext ctx)
+    public void OnAbility()
     {
 
         elementalStateManager.OnAbility();
-        Debug.Log("OnAbility");
     }
 
-    public void OnSwitchState(InputAction.CallbackContext ctx)
+    public void OnSwitchState()
     {
         elementalStateManager.OnChangeState();
-        Debug.Log("OnSwitchState");
     }
     public void FlapWing_Sound()
     {
