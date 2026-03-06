@@ -776,13 +776,13 @@ GameObject:
   - component: {fileID: 8579002508563003989}
   - component: {fileID: 1202421980292280061}
   - component: {fileID: 2240466208023636480}
-  - component: {fileID: 2459294699005001536}
   - component: {fileID: 4233158337416474869}
   - component: {fileID: 2981551621977319267}
   - component: {fileID: 8981580660898497012}
   - component: {fileID: 4749603011728268324}
   - component: {fileID: 4821725848370907930}
   - component: {fileID: 8267374612157329846}
+  - component: {fileID: 5958277052201756250}
   m_Layer: 20
   m_Name: Emby_Base
   m_TagString: Animal
@@ -858,35 +858,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0.45, z: 0.06}
---- !u!114 &2459294699005001536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4529074579130086384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fd7663f4e6b53349abef088941aab92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  animator: {fileID: 1202421980292280061}
-  movementControl: {fileID: 4099060358282427602, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  jumpControl: {fileID: -3440093267870110826, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  glideControl: {fileID: -4150274994127920272, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  interactControl: {fileID: 4461424669430907566, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  abilityControl: {fileID: -8076984762595263760, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  switchStateControl: {fileID: -5096580550102873975, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  grassStep_audio: {fileID: 4233158337416474869}
-  ambience_music: {fileID: 2981551621977319267}
-  flapWing_SFX: {fileID: 8981580660898497012}
-  landGrass_SFX: {fileID: 4749603011728268324}
-  playerSpeed: 4
-  jumpHeight: 1
-  gravityValue: -15
-  rotationSpeed: 25
-  elementalStateManager: {fileID: 4821725848370907930}
-  glideGravity: -7
 --- !u!82 &4233158337416474869
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1305,7 +1276,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Emberborn.Mechanics.ProjectileLauncher
   launch_point: {fileID: 7149575230792717523}
-  launch_speed: 1
+  launch_speed: 3
+--- !u!114 &5958277052201756250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4529074579130086384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e25e3e75d125fcb449a2fb2f8a9a1802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  animator: {fileID: 1202421980292280061}
+  movementControl: {fileID: 4099060358282427602, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  jumpControl: {fileID: -3440093267870110826, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  glideControl: {fileID: -4150274994127920272, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  interactControl: {fileID: 4461424669430907566, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  abilityControl: {fileID: 0}
+  switchStateControl: {fileID: 0}
+  grassStep_audio: {fileID: 4233158337416474869}
+  ambience_music: {fileID: 2981551621977319267}
+  flapWing_SFX: {fileID: 8981580660898497012}
+  landGrass_SFX: {fileID: 4749603011728268324}
+  playerSpeed: 2
+  jumpHeight: 1
+  gravityValue: -9.81
+  rotationSpeed: 4
+  elementalStateManager: {fileID: 4821725848370907930}
+  glideGravity: -2
 --- !u!1 &4738014652014487158
 GameObject:
   m_ObjectHideFlags: 0
