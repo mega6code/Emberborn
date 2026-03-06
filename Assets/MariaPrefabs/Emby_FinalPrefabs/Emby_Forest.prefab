@@ -782,7 +782,7 @@ GameObject:
   - component: {fileID: 8981580660898497012}
   - component: {fileID: 4749603011728268324}
   m_Layer: 20
-  m_Name: Emby3.0
+  m_Name: Emby_Forest
   m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -872,6 +872,8 @@ MonoBehaviour:
   jumpControl: {fileID: -3440093267870110826, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   glideControl: {fileID: -4150274994127920272, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   interactControl: {fileID: 4461424669430907566, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  abilityControl: {fileID: 0}
+  switchStateControl: {fileID: 0}
   grassStep_audio: {fileID: 4233158337416474869}
   ambience_music: {fileID: 2981551621977319267}
   flapWing_SFX: {fileID: 8981580660898497012}
@@ -880,6 +882,7 @@ MonoBehaviour:
   jumpHeight: 1
   gravityValue: -15
   rotationSpeed: 10
+  elementalStateManager: {fileID: 0}
   glideGravity: -7
 --- !u!82 &4233158337416474869
 AudioSource:
