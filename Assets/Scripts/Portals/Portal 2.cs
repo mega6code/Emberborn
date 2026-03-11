@@ -7,20 +7,20 @@ public class Portal2 : Portals
 
     private void Awake()
     {
-        //if (GameManager.Instance.Levelclears[0] == false)
-        //{
-           // this.gameObject.SetActive(false);
-        //}
+        this.gameObject.SetActive(false);
+
+        if (GameManager.Instance.Levelclears[0] == true)
+        {
+            this.gameObject.SetActive(true);
+        }
     }
     
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject == player)
         {
-            BeatLevel(1);
             SceneManager.LoadScene("Final Level");
             Debug.Log("Portal 2");
-
         }
     }
 }
