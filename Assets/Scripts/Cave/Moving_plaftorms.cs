@@ -1,3 +1,4 @@
+using Unity.Multiplayer.PlayMode;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -12,6 +13,9 @@ public class Moving_plaftorms : MonoBehaviour
     [SerializeField] Transform targetPoint;
 
     [SerializeField] float platformSpeed = 5f;
+
+    private Vector3 lastPosition;
+    private PlayerController player;
 
     void Start()
     {
@@ -28,6 +32,9 @@ public class Moving_plaftorms : MonoBehaviour
 
     void Update()
     {
+        //save current position before moving
+        Vector3 oldPosition = transform.position;
+
         transform.position = Vector3.MoveTowards(transform.position, targetPoint.position, platformSpeed * Time.deltaTime);
         //if the MovingPlatform isat a certain distance from the target point, we switch the other point to be the target
 
@@ -41,18 +48,43 @@ public class Moving_plaftorms : MonoBehaviour
             }
         }
 
+        //calculate how much platform moved this frame
+        Vector3 platformDelta = transform.position - oldPosition;
+
+        //move player with platform if player is standing on it
+        if (player != null)
+        {
+            player.OnPlatform(platformDelta);
+        }
+
+        lastPosition = transform.position;
+
     }
 
     private void OnTriggerStay(Collider other)
     {
         PlayerController player = other.GetComponentInParent<PlayerController>();
-        other.transform.SetParent(transform);
+        //player.OnPlatform(this.transform.position);
+        //transform.SetParent(other.transform);
+        //other.transform.SetParent(this.transform);
+        if (player != null)
+        {
+            this.player = player;
+        }
+
     }
 
     private void OnTriggerExit(Collider other)
     {
-        other.transform.SetParent(null);
-        
+        //other.transform.SetParent(null);
+
+        PlayerController player = other.GetComponentInParent<PlayerController>();
+
+        if (player != null && this.player == player)
+        {
+            this.player = null;
+        }
+
     }
 
 }

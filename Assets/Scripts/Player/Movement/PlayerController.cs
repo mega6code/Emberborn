@@ -72,6 +72,15 @@ public class PlayerController : MonoBehaviour
     {
         groundedPlayer = controller.isGrounded;
 
+        if (controller.isGrounded)
+        {
+            Debug.Log("isGrounded");
+        }
+        else if (!controller.isGrounded)
+        {
+            Debug.Log("is NOOOOT Grounded");
+        }
+
         if (!ambience_music.isPlaying)
         {
             ambience_music.Play();
@@ -109,14 +118,14 @@ public class PlayerController : MonoBehaviour
             grassStep_audio.Stop();
         }
         
-        // Changes the height position of the player..
+        //chnges the height position of the player..
         if (jumpControl.action.triggered && groundedPlayer)
         {
             OnJump();
         }
 
 
-        // Changes the height position of the player..
+        //changes the height position of the player..
         if (glideControl.action.IsPressed() && !groundedPlayer)
         {
             OnGlide();
@@ -130,12 +139,10 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    public void OnPlatform(Vector3 platfPosition)
+    public void OnPlatform(Vector3 platfDelta)
     {
-        playerVelocity = Vector3.zero;
-        controller.enabled = false;
-        transform.position = platfPosition;
-        controller.enabled = true;
+        //groundedPlayer = controller.isGrounded;
+        controller.Move(platfDelta);
     }
     public void TeleportTo(Vector3 targetPos)
     {
