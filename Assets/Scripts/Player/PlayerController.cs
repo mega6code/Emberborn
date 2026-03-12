@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour
     {
         groundedPlayer = controller.isGrounded;
 
+
         if (!ambience_music.isPlaying)
         {
             ambience_music.Play();

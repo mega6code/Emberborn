@@ -73,7 +73,7 @@ public class InventorySlotManager : MonoBehaviour
         }
     }*/
     public void CreateIcon(Item item, GameObject imageSlot)//creates a gameObject at the location of the slot 
-    {
+    {//add index to save the instantiated object
         Debug.Log("icon in Bar.");
 
         Transform location = imageSlot.GetComponent<Transform>();
