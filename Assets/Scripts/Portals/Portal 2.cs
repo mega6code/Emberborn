@@ -7,10 +7,10 @@ public class Portal2 : Portals
 
     private void Awake()
     {
-        if (GameManager.Instance.Levelclears[0] == false)
-        {
-            this.gameObject.SetActive(false);
-        }
+        //if (GameManager.Instance.Levelclears[0] == false)
+        //{
+           // this.gameObject.SetActive(false);
+        //}
     }
     
     void OnTriggerEnter(Collider other)

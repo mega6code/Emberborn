@@ -1639,6 +1639,7 @@ GameObject:
   - component: {fileID: 247294733}
   - component: {fileID: 247294732}
   - component: {fileID: 247294731}
+  - component: {fileID: 247294734}
   m_Layer: 0
   m_Name: CliffWater
   m_TagString: Untagged
@@ -1677,7 +1678,7 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
@@ -1741,6 +1742,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247294729}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &247294734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247294729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ba7876ff361da44b8725df86f981b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CheckPointsManager
+  player: {fileID: 8988107843310571369}
+  checkPoint: {fileID: 39441345}
 --- !u!1 &280021267
 GameObject:
   m_ObjectHideFlags: 0
@@ -5211,6 +5226,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2747941153633718768, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3197004665449378283, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.44011
@@ -5225,15 +5244,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3197004665449378283, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 34.0968
+      value: 34.09
       objectReference: {fileID: 0}
     - target: {fileID: 3197004665449378283, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.1508
+      value: 20.34
       objectReference: {fileID: 0}
     - target: {fileID: 3197004665449378283, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 178.8935
+      value: 178.91
       objectReference: {fileID: 0}
     - target: {fileID: 3197004665449378283, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10484,14 +10503,13 @@ GameObject:
   - component: {fileID: 1985315251}
   - component: {fileID: 1985315250}
   - component: {fileID: 1985315249}
-  - component: {fileID: 1985315253}
   m_Layer: 0
   m_Name: WaterCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1985315248
 Transform:
   m_ObjectHideFlags: 0
@@ -10585,20 +10603,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1985315247}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1985315253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1985315247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ba7876ff361da44b8725df86f981b30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CheckPointsManager
-  player: {fileID: 8988107843310571369}
-  checkPoint: {fileID: 39441345}
 --- !u!1001 &1985337325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11420,18 +11424,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2459294699005001536, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
-      propertyPath: gravityValue
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4237686924286529574, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
-      propertyPath: slotManager
-      value: 
-      objectReference: {fileID: 1478409464}
-    - target: {fileID: 9010581854081927096, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4529074579130086384, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
       propertyPath: m_Name
       value: Emby_Base
@@ -11491,6 +11483,18 @@ PrefabInstance:
     - target: {fileID: 8579002508563003989, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2459294699005001536, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
+      propertyPath: gravityValue
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237686924286529574, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
+      propertyPath: slotManager
+      value: 
+      objectReference: {fileID: 1478409464}
+    - target: {fileID: 9010581854081927096, guid: 1b3339cf29d8de04385820c8e15c28cc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 namespace Emberborn.Elements
@@ -82,11 +83,21 @@ namespace Emberborn.Elements
             AddElement(e_types);
         }
 
-        public void OnAbility()
+        public void OnAbility(int ability_num)
         {
             if(current_state != null)
             {
-                current_state.ActivateAbility(this.gameObject);
+                switch (ability_num)
+                {
+                    case 1:
+                        current_state.ActivateAbility1(this.gameObject);
+                        break;
+                    case 2:
+                        current_state.ActivateAbility2(this.gameObject);
+                        break;
+                    default:
+                        break;
+                }      
             }
             else
             {

@@ -16,8 +16,9 @@ namespace Emberborn.Elements
         /// to be able to access the gameObject its apart of.
         /// </summary>
         /// <param name="parent_game_object"></param>
-        public abstract void ActivateAbility(GameObject parent_game_object);       
+        public abstract void ActivateAbility1(GameObject parent_game_object);
+        public abstract void ActivateAbility2(GameObject parent_game_object);
         #endregion
-        
+
     }
 }
