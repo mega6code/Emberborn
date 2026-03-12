@@ -169,7 +169,7 @@ public class PlayerController : MonoBehaviour
     }
     public void OnAbility(InputAction.CallbackContext ctx)
     {
-        elementalStateManager.OnAbility();
+        elementalStateManager.OnAbility(1);
     }
 
     public void OnSwitchState(InputAction.CallbackContext ctx)
