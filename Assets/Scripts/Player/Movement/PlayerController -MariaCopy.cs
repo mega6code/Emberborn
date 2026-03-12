@@ -6,7 +6,7 @@
 //{
 
 //    [SerializeField] Animator animator;
-    
+
 //    [SerializeField] InputActionReference movementControl;
 //    [SerializeField] InputActionReference jumpControl;
 //    [SerializeField] InputActionReference glideControl;
@@ -42,6 +42,14 @@
 //        jumpControl.action.Enable();
 //        glideControl.action.Enable();
 //        interactControl.action.Enable();
+//tbd later
+//movementControl = InputSystem.actions.FindAction("Player/Movement");
+//jumpControl = InputSystem.actions.FindAction("Player/Jump");
+//using UnityEngine.InputSystem;
+
+//InputSystem.actions.FindAction("Player/Ability1").performed += OnAbility;
+//InputSystem.actions.FindAction("Player/AbilitySwitch").performed += OnSwitchState;
+
 //    }
 
 //    private void OnDisable()
@@ -50,7 +58,12 @@
 //        jumpControl.action.Disable();
 //        glideControl.action.Disable();
 //        interactControl.action.Disable();
+
+//InputSystem.actions.FindAction("Player/Ability1").performed -= OnAbility;
+//InputSystem.actions.FindAction("Player/AbilitySwitch").performed -= OnSwitchState;
 //    }
+
+
 //    private void Start()
 //    {
 //        controller = gameObject.GetComponent<CharacterController>();
@@ -62,6 +75,16 @@
 //    void Update()
 //    {
 //        groundedPlayer = controller.isGrounded;
+
+
+//if (controller.isGrounded)
+//{
+// Debug.Log("isGrounded");
+// }
+//else if (!controller.isGrounded)
+//{
+// Debug.Log("is NOOOOT Grounded");
+//}
 
 //        if (!ambience_music.isPlaying)
 //        {
@@ -99,7 +122,7 @@
 //            animator.SetBool("IsWalking", false);
 //            grassStep_audio.Stop();
 //        }
-        
+
 //        // Changes the height position of the player..
 //        if (jumpControl.action.triggered && groundedPlayer)
 //        {
@@ -118,7 +141,7 @@
 //        }
 
 //        controller.Move(playerVelocity * Time.deltaTime);
-        
+
 //    }
 
 //    public void OnPlatform(Vector3 platfPosition)
@@ -128,6 +151,14 @@
 //        transform.position = platfPosition;
 //        controller.enabled = true;
 //    }
+
+        //public void OnPlatform(Vector3 platfDelta)
+        //{
+               //groundedPlayer = controller.isGrounded;
+            //controller.Move(platfDelta);
+        //}
+
+
 //    public void TeleportTo(Vector3 targetPos)
 //    {
 //        //top all motion that uppdate function is causing
@@ -182,5 +213,5 @@
 //            landGrass_SFX.PlayOneShot(landGrass_SFX.clip);
 //        }
 //    }
-    
+
 //}
