@@ -19,6 +19,7 @@ public class Portal2 : Portals
     {
         if (other.gameObject == player)
         {
+            BeatLevel(1);
             SceneManager.LoadScene("Final Level");
             Debug.Log("Portal 2");
         }

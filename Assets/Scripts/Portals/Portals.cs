@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Portals : MonoBehaviour
 {
-    public static Action<int> levelBeaten;
+    public static event Action<int> levelBeaten;
 
     public void BeatLevel(int i)
     {
