@@ -123,12 +123,10 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void OnPlatform(Vector3 platfPosition)
+    public void OnPlatform(Vector3 platfDelta)
     {
-        playerVelocity = Vector3.zero;
-        controller.enabled = false;
-        transform.position = platfPosition;
-        controller.enabled = true;
+        //groundedPlayer = controller.isGrounded;
+        controller.Move(platfDelta);
     }
 
     public void TeleportTo(Vector3 targetPos)
