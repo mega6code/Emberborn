@@ -1,63 +1,56 @@
+using System;
 using Emberborn.Elements;
 using UnityEngine;
 using UnityEngine.InputSystem;
-[RequireComponent(typeof(CharacterController))] 
+[RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
-
+    #region Fields
+    //Serialized References
     [SerializeField] Animator animator;
-    
-    [SerializeField] InputActionReference movementControl;
-    [SerializeField] InputActionReference jumpControl;
-    [SerializeField] InputActionReference glideControl;
-    [SerializeField] InputActionReference interactControl;
-
-    [SerializeField] InputActionReference abilityControl;
-    [SerializeField] InputActionReference switchStateControl;
-    //[SerializeField] InputActionReference interactControl;
-
+    [SerializeField] private ElementalStateManager elementalStateManager;
     [SerializeField] AudioSource grassStep_audio;
     [SerializeField] AudioSource ambience_music;
     [SerializeField] AudioSource flapWing_SFX;
     [SerializeField] AudioSource landGrass_SFX;
 
+    //Serialized Values
     [SerializeField] private float playerSpeed = 2.0f;
     [SerializeField] private float jumpHeight = 1.0f;
     [SerializeField] private float gravityValue = -9.81f;
     [SerializeField] private float rotationSpeed = 4f;
+    [SerializeField] private float glideGravity = -2f;
 
-
+    //fields
+    InputAction movementControl;
+    InputAction jumpControl;
+    InputAction glideControl;
     private CharacterController controller;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
     private Transform cameraMainTransform;
+    #endregion
 
-    [SerializeField] private ElementalStateManager elementalStateManager;
-
-    [SerializeField] private float glideGravity = -2f;
-
+    #region Methods
     private void OnEnable()
     {
-        movementControl.action.Enable();
-        jumpControl.action.Enable();
-        glideControl.action.Enable();
-        interactControl.action.Enable();
+        //Getting the action references from our InputActionAsset singleton 
+        movementControl = InputSystem.actions.FindAction("Player/Movement");
+        jumpControl = InputSystem.actions.FindAction("Player/Jump");
+        glideControl = InputSystem.actions.FindAction("Player/Glide");
 
-        //tbd later
-        //movementControl = InputSystem.actions.FindAction("Player/Movement");
-        //jumpControl = InputSystem.actions.FindAction("Player/Jump");
-        InputSystem.actions.FindAction("Player/Ability1").performed += OnAbility;
+        //Attaching methods to our action's events
+        InputSystem.actions.FindAction("Player/Interact").performed += OnInteract;
+        InputSystem.actions.FindAction("Player/Ability1").performed += OnAbility1;
+        InputSystem.actions.FindAction("Player/Ability2").performed += OnAbility2;
         InputSystem.actions.FindAction("Player/AbilitySwitch").performed += OnSwitchState;
     }
 
     private void OnDisable()
     {
-        movementControl.action.Disable();
-        jumpControl.action.Disable();
-        glideControl.action.Disable();
-        interactControl.action.Disable();
-
-        InputSystem.actions.FindAction("Player/Ability1").performed -= OnAbility;
+        InputSystem.actions.FindAction("Player/Interact").performed -= OnInteract;
+        InputSystem.actions.FindAction("Player/Ability1").performed -= OnAbility1;
+        InputSystem.actions.FindAction("Player/Ability2").performed -= OnAbility2;
         InputSystem.actions.FindAction("Player/AbilitySwitch").performed -= OnSwitchState;
     }
     private void Start()
@@ -84,16 +77,16 @@ public class PlayerController : MonoBehaviour
         }
 
         //movement
-        Vector2 movement = movementControl.action.ReadValue<Vector2>();
+        Vector2 movement = movementControl.ReadValue<Vector2>();
         Vector3 move = new Vector3(movement.x, 0, movement.y);
-        move = cameraMainTransform.forward * move.z + cameraMainTransform.right * move.x ;
+        move = cameraMainTransform.forward * move.z + cameraMainTransform.right * move.x;
         move.y = 0f;
         controller.Move(move * Time.deltaTime * playerSpeed);
 
 
         if (movement != Vector2.zero)
         {
-            float targetAngle = Mathf.Atan2(movement.x, movement.y) * Mathf.Rad2Deg +cameraMainTransform.eulerAngles.y;
+            float targetAngle = Mathf.Atan2(movement.x, movement.y) * Mathf.Rad2Deg + cameraMainTransform.eulerAngles.y;
             Quaternion rotation = Quaternion.Euler(0f, targetAngle, 0f);
             transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * rotationSpeed);
 
@@ -108,16 +101,16 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("IsWalking", false);
             grassStep_audio.Stop();
         }
-        
+
         // Changes the height position of the player..
-        if (jumpControl.action.triggered && groundedPlayer)
+        if (jumpControl.triggered && groundedPlayer)
         {
             OnJump();
         }
 
 
         // Changes the height position of the player..
-        if (glideControl.action.IsPressed() && !groundedPlayer)
+        if (glideControl.IsPressed() && !groundedPlayer)
         {
             OnGlide();
         }
@@ -127,16 +120,15 @@ public class PlayerController : MonoBehaviour
         }
 
         controller.Move(playerVelocity * Time.deltaTime);
-        
+
     }
 
-    public void OnPlatform(Vector3 platfPosition)
+    public void OnPlatform(Vector3 platfDelta)
     {
-        playerVelocity = Vector3.zero;
-        controller.enabled = false;
-        transform.position = platfPosition;
-        controller.enabled = true;
+        //groundedPlayer = controller.isGrounded;
+        controller.Move(platfDelta);
     }
+
     public void TeleportTo(Vector3 targetPos)
     {
         //top all motion that uppdate function is causing
@@ -160,6 +152,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsJumping", true);
         animator.SetBool("IsGlinding", false);
     }
+
     public void OnIdle()
     {
         playerVelocity.y = 0f;
@@ -167,9 +160,17 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsGlinding", false);
         animator.SetBool("IsJumping", false);
     }
-    public void OnAbility(InputAction.CallbackContext ctx)
+    private void OnInteract(InputAction.CallbackContext context)
     {
-        elementalStateManager.OnAbility();
+        throw new NotImplementedException();
+    }
+    public void OnAbility1(InputAction.CallbackContext ctx)
+    {
+        elementalStateManager.OnAbility(1);
+    }
+    private void OnAbility2(InputAction.CallbackContext context)
+    {
+        elementalStateManager.OnAbility(2);
     }
 
     public void OnSwitchState(InputAction.CallbackContext ctx)
@@ -190,5 +191,6 @@ public class PlayerController : MonoBehaviour
             landGrass_SFX.PlayOneShot(landGrass_SFX.clip);
         }
     }
-    
+
 }
+#endregion
