@@ -7,7 +7,6 @@ public class PuzzleAlter : MonoBehaviour
     //[SerializeField] InputActionReference interactControl;
 
     [SerializeField] Inventory playerInventory;//reference to the player inventory
-    [SerializeField] InputActionReference interactControl;
     private Item itemRequired; //Place which variant of item alter needs
 
     public bool alterActivated;
@@ -27,16 +26,15 @@ public class PuzzleAlter : MonoBehaviour
 
         location = objectSpawn.GetComponent<Transform>();
     }
-
-    void Update()
+    private void OnEnable()
     {
-        if (interactControl.action.triggered && inRange == true)
-        {
-            Debug.Log("Player interacted with item");
-            Debug.Log("alter active: " + alterActivated);
-            OnInteract();
-        }
+        InputSystem.actions.FindAction("Player/Interact").performed += OnInteract;
     }
+    private void OnDisable()
+    {
+        InputSystem.actions.FindAction("Player/Interact").performed -= OnInteract;
+    }
+
     private void OnTriggerEnter(Collider other)//player enters in range 
     {
         if (other.CompareTag("Animal"))
@@ -51,11 +49,12 @@ public class PuzzleAlter : MonoBehaviour
             inRange = false;
         }
     }
-    public void OnInteract()//when player presses the interact button 
+    public void OnInteract(InputAction.CallbackContext context)//when player presses the interact button 
     {
         //add prefab to alter
-        if (playerInventory.HasItem(itemRequired))
+        if (playerInventory.HasItem(itemRequired) && inRange == true)
         {
+            Debug.Log("Player interacted with item");
             alterActivated = true;
             Debug.Log("alter active: " + alterActivated);
             playerInventory.PlaceItem(itemRequired, location);

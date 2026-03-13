@@ -85,6 +85,7 @@ public class Inventory : MonoBehaviour
         {
 
             Instantiate(targetItem.prefab, location.position, location.rotation);
+            slotManager.RemoveIcon(targetItem);
             playerItems.Remove(targetItem);
             Debug.Log("targetItem: " + targetItem.name + " has been placed."); 
 

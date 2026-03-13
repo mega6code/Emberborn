@@ -13,10 +13,14 @@ public class InventorySlotManager : MonoBehaviour
     private bool ImSlot2;
     private bool ImSlot3;
 
-    //stores instantiated items
-    GameObject icon1;
-    GameObject icon2;
-    GameObject icon3;
+    //stores instantiated items and the gameObject instantiated
+    Item index1;
+    Item index2;
+    Item index3;
+
+    GameObject instantiated1;
+    GameObject instantiated2;
+    GameObject instantiated3;
 
 
     private void Awake()
@@ -32,19 +36,19 @@ public class InventorySlotManager : MonoBehaviour
         if (ImSlot1 == false)
         {
             Debug.Log("In slot 1.");
-            CreateIcon(item, ImageSlot1);
+            CreateIcon(item, ImageSlot1, 1);
             this.ImSlot1 = true;
         }
         else if (ImSlot2 == false)
         {
             Debug.Log("In slot 2.");
-            CreateIcon(item, ImageSlot2);
+            CreateIcon(item, ImageSlot2, 2);
             this.ImSlot2 = true;
         }
         else if (ImSlot3 == false)
         {
             Debug.Log("In slot 3.");
-            CreateIcon (item, ImageSlot3);
+            CreateIcon (item, ImageSlot3, 3);
             this.ImSlot3 = true;
         }
         else
@@ -53,32 +57,46 @@ public class InventorySlotManager : MonoBehaviour
         }
     }
     
-    /*public void RemoveIcon(Item item)
+    public void RemoveIcon(Item itemToRemove)
     {
-        if ()
+        if (itemToRemove.name == index1.name)
         {
-
+            Destroy(instantiated1);
         }
-        else if ()
+        else if (itemToRemove.name == index2.name)
         {
-
+            Destroy (instantiated2);
         }
-        else if ()
+        else if (itemToRemove.name == index3.name)
         {
-
+            Destroy(instantiated3);
         }
         else
         {
-            Debug.Log("Could not remove: " + item.name + "From the UI bar");
+            Debug.Log("Could not remove: " + itemToRemove.name + "From the UI bar");
         }
-    }*/
-    public void CreateIcon(Item item, GameObject imageSlot)//creates a gameObject at the location of the slot 
+    }
+    public void CreateIcon(Item item, GameObject imageSlot, int index)//creates a gameObject at the location of the slot 
     {//add index to save the instantiated object
         Debug.Log("icon in Bar.");
 
         Transform location = imageSlot.GetComponent<Transform>();
 
-        Instantiate(item.icon, location);
+        switch (index)
+        {
+            case 1:
+                index1 = item;
+                instantiated1 = Instantiate(item.icon, location);
+                break;
+            case 2:
+                index2 = item;
+                instantiated2 = Instantiate(item.icon, location);
+                break;
+            case 3:
+                index3 = item;
+                instantiated3 = Instantiate(item.icon, location);
+                break;
+        }
 
     }
     

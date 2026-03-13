@@ -436,6 +436,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &301294000 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4237686924286529574, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
+  m_PrefabInstance: {fileID: 1357105816}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09015beb040e7994898411cace456a40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Inventory
 --- !u!224 &372542407 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4503935920351826960, guid: a1b51fa7dabc2024784a1281a7021ab8, type: 3}
@@ -705,7 +716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01ebd85e8447b9a4f81eb9cb4f7e3bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleAlter
-  playerInventory: {fileID: 0}
+  playerInventory: {fileID: 301294000}
   interactControl: {fileID: 4461424669430907566, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   alterActivated: 0
   objectSpawn: {fileID: 1184403001}
@@ -1707,7 +1718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01ebd85e8447b9a4f81eb9cb4f7e3bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleAlter
-  playerInventory: {fileID: 0}
+  playerInventory: {fileID: 301294000}
   interactControl: {fileID: 4461424669430907566, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   alterActivated: 0
   objectSpawn: {fileID: 1122585895}
@@ -2204,7 +2215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01ebd85e8447b9a4f81eb9cb4f7e3bd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleAlter
-  playerInventory: {fileID: 0}
+  playerInventory: {fileID: 301294000}
   interactControl: {fileID: 4461424669430907566, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   alterActivated: 0
   objectSpawn: {fileID: 1271990691}
