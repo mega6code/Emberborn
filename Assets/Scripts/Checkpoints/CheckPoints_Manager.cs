@@ -3,7 +3,6 @@ using UnityEngine.UIElements;
 
 public class CheckPointsManager : MonoBehaviour
 {
-    [SerializeField] private GameObject player; 
     [SerializeField] private Transform checkPoint;
 
     private void OnTriggerEnter(Collider other)

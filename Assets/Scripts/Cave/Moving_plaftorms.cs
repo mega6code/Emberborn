@@ -15,7 +15,7 @@ public class Moving_plaftorms : MonoBehaviour
     [SerializeField] float platformSpeed = 5f;
 
     private Vector3 lastPosition;
-    private PlayerController player;
+    private PlayerController playerController;
 
     void Start()
     {
@@ -38,23 +38,24 @@ public class Moving_plaftorms : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, targetPoint.position, platformSpeed * Time.deltaTime);
         //if the MovingPlatform isat a certain distance from the target point, we switch the other point to be the target
 
-        if (Vector3.Distance(transform.position, targetPoint.position) < 2f)
+        if (Vector3.Distance(transform.position, targetPoint.position) < 1f)
         {
             targetPoint = point_2;
 
-            if (Vector3.Distance(transform.position, targetPoint.position) < 2f)
+            if (Vector3.Distance(transform.position, targetPoint.position) < 1f)
             {
                 targetPoint = point_1;
             }
         }
 
+
         //calculate how much platform moved this frame
         Vector3 platformDelta = transform.position - oldPosition;
 
         //move player with platform if player is standing on it
-        if (player != null)
+        if (playerController != null)
         {
-            player.OnPlatform(platformDelta);
+            playerController.OnPlatform(platformDelta);
         }
 
         lastPosition = transform.position;
@@ -63,13 +64,14 @@ public class Moving_plaftorms : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        PlayerController player = other.GetComponentInParent<PlayerController>();
+        PlayerController playerController = other.GetComponentInParent<PlayerController>();
         //player.OnPlatform(this.transform.position);
         //transform.SetParent(other.transform);
         //other.transform.SetParent(this.transform);
-        if (player != null)
+
+        if (playerController != null)
         {
-            this.player = player;
+            this.playerController = playerController;
         }
 
     }
@@ -78,11 +80,11 @@ public class Moving_plaftorms : MonoBehaviour
     {
         //other.transform.SetParent(null);
 
-        PlayerController player = other.GetComponentInParent<PlayerController>();
+        PlayerController playerController = other.GetComponentInParent<PlayerController>();
 
-        if (player != null && this.player == player)
+        if (playerController != null && this.playerController == playerController)
         {
-            this.player = null;
+            this.playerController = null;
         }
 
     }
