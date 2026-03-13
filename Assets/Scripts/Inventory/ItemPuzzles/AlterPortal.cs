@@ -34,7 +34,6 @@ public class AlterPortal : Portals
     }
     private void ActivatePortal()
     {
-        BeatLevel(1);
         portal.SetActive(true);
         Debug.Log("Portal activate.");
     }
