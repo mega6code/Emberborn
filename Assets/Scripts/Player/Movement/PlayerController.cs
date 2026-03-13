@@ -58,12 +58,21 @@ public class PlayerController : MonoBehaviour
         controller = gameObject.GetComponent<CharacterController>();
         cameraMainTransform = Camera.main.transform;
         animator = GetComponent<Animator>();
-
+        groundedPlayer = controller.isGrounded;
     }
 
     void Update()
     {
         groundedPlayer = controller.isGrounded;
+
+        if (groundedPlayer)
+        {
+            Debug.Log("groundeddddd");
+        }
+        else if (!groundedPlayer)
+        {
+            Debug.Log("NOOOOT grounded");
+        }
 
         if (!ambience_music.isPlaying)
         {
@@ -127,6 +136,7 @@ public class PlayerController : MonoBehaviour
     {
         //groundedPlayer = controller.isGrounded;
         controller.Move(platfDelta);
+        //controller.Move(playerVelocity * Time.deltaTime);
     }
 
     public void TeleportTo(Vector3 targetPos)
