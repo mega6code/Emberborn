@@ -12,6 +12,7 @@ namespace Emberborn.Projectiles
         private void OnCollisionEnter(Collision collision)
         {
             collision.gameObject.BroadcastMessage(method_name, element_strength, SendMessageOptions.DontRequireReceiver);
+            Destroy(gameObject);
         }
     }
 }
