@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1040892484736932571}
   - component: {fileID: 2727615214225187397}
   m_Layer: 0
-  m_Name: Cylinder.012
+  m_Name: Portal Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,8 @@ Transform:
   m_LocalPosition: {x: 0.005476713, y: 0.011342049, z: -0.02041933}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4615672712441052782}
   m_Father: {fileID: 3497897995376279553}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1661837526864408237
@@ -127,7 +128,7 @@ GameObject:
   - component: {fileID: 5130696958134807842}
   - component: {fileID: 5216912328395785507}
   m_Layer: 0
-  m_Name: Portal 2
+  m_Name: The Actual Portal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -141,12 +142,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8563061336884272745}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.003254013, y: 1.4219462, z: -0.025831074}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0022247757, y: 1.4106054, z: -0.0054160245}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3497897995376279553}
+  m_Father: {fileID: 504907254682973904}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5639743538190964329
 MeshFilter:
@@ -269,6 +270,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 504907254682973904}
-  - {fileID: 4615672712441052782}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
