@@ -14,6 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final Level.unity
     guid: 1cdfcf5533cab464aa11c1189d385316
+  - enabled: 1
+    path: Assets/Scenes/Level2/Cave Scene.unity
+    guid: 08303352f4bf97744ba0d0cf2bb920bd
+  - enabled: 1
+    path: Assets/Scenes/Level2/Ice Scene.unity
+    guid: c2896e06cf42a3744983294fbd9530ce
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AlterPortal : MonoBehaviour
+public class AlterPortal : Portals
 {
 
     [SerializeField] GameObject alter1;
@@ -11,6 +11,8 @@ public class AlterPortal : MonoBehaviour
     private bool activation2;
     private bool activation3;
 
+    public GameObject portal;
+
     private void Awake()
     {
         activation1 = alter1.GetComponent<PuzzleAlter>().alterActivated;
@@ -19,6 +21,7 @@ public class AlterPortal : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("trigger portal please");
         CheckActivation();
 
         if (other.CompareTag("Animal"))
@@ -31,7 +34,8 @@ public class AlterPortal : MonoBehaviour
     }
     private void ActivatePortal()
     {
-        Debug.Log("Player has been transported to second area.");
+        portal.SetActive(true);
+        Debug.Log("Portal activate.");
     }
     private void CheckActivation()
     {

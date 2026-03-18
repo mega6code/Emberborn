@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
         glideControl = InputSystem.actions.FindAction("Player/Glide");
 
         //Attaching methods to our action's events
-        InputSystem.actions.FindAction("Player/Interact").performed += OnInteract;
+        //InputSystem.actions.FindAction("Player/Interact").performed += OnInteract;
         InputSystem.actions.FindAction("Player/Ability1").performed += OnAbility1;
         InputSystem.actions.FindAction("Player/Ability2").performed += OnAbility2;
         InputSystem.actions.FindAction("Player/AbilitySwitch").performed += OnSwitchState;
@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnDisable()
     {
-        InputSystem.actions.FindAction("Player/Interact").performed -= OnInteract;
+        //InputSystem.actions.FindAction("Player/Interact").performed -= OnInteract;
         InputSystem.actions.FindAction("Player/Ability1").performed -= OnAbility1;
         InputSystem.actions.FindAction("Player/Ability2").performed -= OnAbility2;
         InputSystem.actions.FindAction("Player/AbilitySwitch").performed -= OnSwitchState;
@@ -64,6 +64,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         groundedPlayer = controller.isGrounded;
+
 
         if (!ambience_music.isPlaying)
         {
@@ -160,10 +161,10 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsGlinding", false);
         animator.SetBool("IsJumping", false);
     }
-    private void OnInteract(InputAction.CallbackContext context)
+    /*private void OnInteract(InputAction.CallbackContext context)
     {
-        throw new NotImplementedException();
-    }
+       
+    }*/
     public void OnAbility1(InputAction.CallbackContext ctx)
     {
         elementalStateManager.OnAbility(1);
