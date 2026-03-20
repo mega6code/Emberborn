@@ -11,9 +11,8 @@ namespace Emberborn.Elements
 
         #region Methods
         /// <summary>
-        /// Activates the elemental state's ability,
-        /// and takes its parent's gameObject reference as a parameter
-        /// to be able to access the gameObject its apart of.
+        /// Activates the ElementalState's ability. Takes parent's gameObject reference as a parameter 
+        /// to access the GameObject its apart of.
         /// </summary>
         /// <param name="parent_game_object"></param>
         public abstract void ActivateAbility1(GameObject parent_game_object);

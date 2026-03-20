@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2055232921137415136}
   m_Layer: 0
   m_Name: Elementalball
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,7 +105,7 @@ SphereCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 96
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -152,5 +152,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e15564b52dc80d9459aea32be6830e4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Emberborn.Projectiles.ElementalProjectile
-  element_strength: 1
-  method_name: 
+  type: 0
+  strength: 1

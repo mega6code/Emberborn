@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
         //Attaching methods to our action's events
         //InputSystem.actions.FindAction("Player/Interact").performed += OnInteract;
         InputSystem.actions.FindAction("Player/Ability1").performed += OnAbility1;
-        InputSystem.actions.FindAction("Player/Ability2").performed += OnAbility2;
+        //InputSystem.actions.FindAction("Player/Ability2").performed += OnAbility2;
         InputSystem.actions.FindAction("Player/AbilitySwitch").performed += OnSwitchState;
     }
 
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
     {
         //InputSystem.actions.FindAction("Player/Interact").performed -= OnInteract;
         InputSystem.actions.FindAction("Player/Ability1").performed -= OnAbility1;
-        InputSystem.actions.FindAction("Player/Ability2").performed -= OnAbility2;
+        //InputSystem.actions.FindAction("Player/Ability2").performed -= OnAbility2;
         InputSystem.actions.FindAction("Player/AbilitySwitch").performed -= OnSwitchState;
     }
     private void Start()
@@ -121,6 +121,12 @@ public class PlayerController : MonoBehaviour
         }
 
         controller.Move(playerVelocity * Time.deltaTime);
+
+        //JohnStuff vvv
+        if (InputSystem.actions.FindAction("Player/Ability2").IsPressed())
+        {
+            OnAbility2(new InputAction.CallbackContext());
+        } 
 
     }
 

@@ -16,10 +16,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Iceball
       objectReference: {fileID: 0}
-    - target: {fileID: 2483106071751415044, guid: b652e2a989e662513a2905af4fd736b5, type: 3}
-      propertyPath: m_TagString
-      value: Ice
-      objectReference: {fileID: 0}
     - target: {fileID: 2983167662204003806, guid: b652e2a989e662513a2905af4fd736b5, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.4

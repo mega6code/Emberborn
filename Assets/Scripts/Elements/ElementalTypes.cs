@@ -2,7 +2,7 @@
 {
     public enum ElementalTypes
     {
-        Fire = 0,
-        Ice = 1
+        Ice = 0,
+        Fire = 1
     }
 }
