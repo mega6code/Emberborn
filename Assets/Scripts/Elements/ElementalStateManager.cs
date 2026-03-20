@@ -9,9 +9,8 @@ namespace Emberborn.Elements
     {
         #region Fields
         //serialized fields
-        [SerializeField] 
-        private List<ElementalTypes> collected_elements = new List<ElementalTypes>(); //Emby's elements!!!!!!
-        [SerializeField]private ElementalState current_state = null;
+        [SerializeField] private List<ElementalTypes> collected_elements = new List<ElementalTypes>(); //Emby's elements!!!!!!
+        [SerializeField] private ElementalState current_state = null;
         [SerializeField] private ElementalState[] allElements;
 
         //other fields
@@ -64,10 +63,10 @@ namespace Emberborn.Elements
 
             switch (collected_elements[collected_elem_index])
             {
-                case ElementalTypes.Fire:
+                case ElementalTypes.Ice:
                     next_state = allElements[0];
                     break;
-                case ElementalTypes.Ice:
+                case ElementalTypes.Fire:
                     next_state = allElements[1];
                     break;
             }
