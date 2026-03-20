@@ -58,14 +58,12 @@ public class Moving_plaftorms : MonoBehaviour
             playerController.OnPlatform(platformDelta);
         }
 
-        lastPosition = transform.position;
-
     }
 
     private void OnTriggerStay(Collider other)
     {
         PlayerController playerController = other.GetComponentInParent<PlayerController>();
-        //player.OnPlatform(this.transform.position);
+        //playerController.OnPlatform(this.transform.position);
         //transform.SetParent(other.transform);
         //other.transform.SetParent(this.transform);
 
