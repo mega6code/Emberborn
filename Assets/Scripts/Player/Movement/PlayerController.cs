@@ -1,5 +1,7 @@
 using System;
 using Emberborn.Elements;
+using Unity.VisualScripting;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.InputSystem;
 [RequireComponent(typeof(CharacterController))]
@@ -13,6 +15,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] AudioSource ambience_music;
     [SerializeField] AudioSource flapWing_SFX;
     [SerializeField] AudioSource landGrass_SFX;
+    [SerializeField ]private LayerMask groundLayer;
 
     //Serialized Values
     [SerializeField] private float playerSpeed = 2.0f;
@@ -20,6 +23,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float gravityValue = -9.81f;
     [SerializeField] private float rotationSpeed = 4f;
     [SerializeField] private float glideGravity = -2f;
+    [SerializeField] private Vector3 groundDistance;
 
     //fields
     InputAction movementControl;
@@ -59,11 +63,13 @@ public class PlayerController : MonoBehaviour
         cameraMainTransform = Camera.main.transform;
         animator = GetComponent<Animator>();
         groundedPlayer = controller.isGrounded;
+        //groundedPlayer = CheckGround();
     }
 
     void Update()
     {
         groundedPlayer = controller.isGrounded;
+        //groundedPlayer = CheckGround();
 
         if (groundedPlayer)
         {
@@ -149,6 +155,13 @@ public class PlayerController : MonoBehaviour
         transform.position = targetPos;
         controller.enabled = true;
     }
+
+    /*public bool CheckGround()
+    {
+        
+        
+        return Physics.Raycast(transform.position, Vector3.down, groundLayer);
+    }*/
     public void OnGlide()
     {
         playerVelocity.y += glideGravity * Time.deltaTime;
