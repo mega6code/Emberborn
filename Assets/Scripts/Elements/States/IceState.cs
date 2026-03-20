@@ -14,7 +14,7 @@ namespace Emberborn.Elements
 
         public override void ActivateAbility2(GameObject parent_game_object)
         {
-            throw new System.NotImplementedException();
+            parent_game_object.GetComponent<DragonBreath>().ActiveBreath(ElementalTypes.Ice);
         }
     }
 }

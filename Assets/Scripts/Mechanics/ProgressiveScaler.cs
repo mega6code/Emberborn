@@ -7,28 +7,22 @@ public class ProgressiveScaler : MonoBehaviour
     #region Fields
     [SerializeField] private Vector3 min_scale;
     [SerializeField] private Vector3 max_scale;
-    [SerializeField] private float scale_rate;
-
+    [SerializeField] private float upscale_rate = 1;
+    [SerializeField] private float downscale_rate = 1;
     [SerializeField] private Vector3 target_scale;
-    //private Vector3 current_scale;
-    //private Vector3 default_scale;
     #endregion
 
     #region Properties
     #endregion
 
     #region Methods
-    private void Awake()
-    {
-        //default_scale = transform.localScale;
-    }
     private void Start()
     {
         target_scale = transform.localScale;
     }
     void Update()
     {
-        //current_scale = transform.localScale;
+
         Vector3 scale_to_set = new Vector3();
 
         //Debug.Log($"Beforebefore local = {transform.localScale}");
@@ -37,7 +31,9 @@ public class ProgressiveScaler : MonoBehaviour
         
             for (int i = 0; i < 3; i++)
             {
-                if (Math.Round(transform.localScale[i], 2) != Math.Round(target_scale[i], 2))
+                double result = Math.Round(transform.localScale[i], 3) - Math.Round(target_scale[i], 3);
+
+                if (Math.Abs(result) > 0.1)
                 {
                     //Debug.Log($"Before = {transform.localScale[i]}");
 
@@ -59,18 +55,24 @@ public class ProgressiveScaler : MonoBehaviour
         int sign = Math.Sign(target_scale[index] - transform.localScale[index]); //decides whether its a up-scale or down-scale
         Debug.Log($"sign = {sign}");
 
-        float amount_to_add = (sign * scale_rate * Time.deltaTime);
+        float amount_to_add = (sign * Time.deltaTime);
         Debug.Log($"Amount to add = {amount_to_add}");
 
         switch (sign) //checks if its over OR under the target scale
         {
             case -1: //for down-scaling
+
+                amount_to_add = amount_to_add * downscale_rate;
+
                 if ((amount_to_add + transform.localScale[index]) < target_scale[index])
                 {
                     amount_to_add = (transform.localScale[index] - target_scale[index]);
                 }
                 break; 
             case 1: //for up-scaling
+
+                amount_to_add = amount_to_add * upscale_rate;
+
                 if ((amount_to_add + transform.localScale[index]) > target_scale[index])
                 {
                     amount_to_add = (target_scale[index] - transform.localScale[index]);
