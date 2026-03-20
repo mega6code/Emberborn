@@ -23,12 +23,12 @@ public class ElementalAssetSwap : MonoBehaviour
             {
                 Debug.Log("No power up yet");
             }
-            else if (state.collected_elem_index == 0)
+            else if (state.Collected_elem_index == 0)
             {
                 Debug.Log("You are in ice mode");
                 SwapAsset(iceImage);
             }
-            else if (state.collected_elem_index == 1)
+            else if (state.Collected_elem_index == 1)
             {
                 Debug.Log("You are in fire mode");
                 SwapAsset(fireImage);

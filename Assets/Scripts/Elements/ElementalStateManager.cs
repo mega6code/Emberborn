@@ -10,15 +10,16 @@ namespace Emberborn.Elements
         #region Fields
         //serialized fields
         [SerializeField] private List<ElementalTypes> collected_elements = new List<ElementalTypes>(); //Emby's elements!!!!!!
-        [SerializeField] private ElementalState current_state = null;
         [SerializeField] private ElementalState[] allElements;
 
         //other fields
+        private ElementalState current_state = null;
         private int collected_elem_index = 0; //to keep track of which collected element is being used for the state
         #endregion
 
         #region Properties
-        public ElementalState Current_state { get => current_state;} //in case u need to check Emby's state outside of this class
+        public ElementalState Current_state { get => current_state;}
+        public int Collected_elem_index { get => collected_elem_index;}//in case u need to check Emby's state outside of this class
         #endregion
 
         #region Methods
