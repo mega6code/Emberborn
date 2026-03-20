@@ -23,6 +23,7 @@ public class Fake_platforms : MonoBehaviour
         if (platformAnim != null && platformRB != null)
         {
             platformAnim.Play();
+
             platformRB.useGravity = true;
         }
     }
@@ -32,10 +33,11 @@ public class Fake_platforms : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            platformRB.linearVelocity = Vector3.zero;
+            platform.SetActive(false);
+            /*platformRB.linearVelocity = Vector3.zero;
             platformRB.angularVelocity = Vector3.zero;
             transform.position = initialPosition;
-            platformRB.useGravity = false;
+            platformRB.useGravity = false;*/
         }
     }
 }
