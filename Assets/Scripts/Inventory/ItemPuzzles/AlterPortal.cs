@@ -21,6 +21,7 @@ public class AlterPortal : Portals
     }
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("trigger portal please");
         CheckActivation();
 
         if (other.CompareTag("Animal"))
