@@ -3602,6 +3602,38 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &450553425 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8885951714253477513, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
+  m_PrefabInstance: {fileID: 3281823958063967680}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &450553427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450553425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8121ef7e962ae214cb878f57b47d79c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ElementalAssetSwap
+  currentImage: {fileID: 450553428}
+  state: {fileID: 8988107843310571370}
+  iceImage: {fileID: 2800000, guid: 00477261a89b4ab45927b254b5060fcd, type: 3}
+  fireImage: {fileID: 2800000, guid: 2c4fca50ee321d442a6160b99d90cc3c, type: 3}
+--- !u!114 &450553428 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4793475539905729066, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
+  m_PrefabInstance: {fileID: 3281823958063967680}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450553425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
 --- !u!1 &450870171
 GameObject:
   m_ObjectHideFlags: 0
@@ -17312,7 +17344,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8885951714253477513, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 450553427}
   m_SourcePrefab: {fileID: 100100000, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
 --- !u!1001 &8988107843310571368
 PrefabInstance:
@@ -17346,6 +17381,22 @@ PrefabInstance:
       propertyPath: 'collected_elements.Array.data[0]'
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5278107661867187795, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5278107661867187795, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0be3655e1dfa0684cb4b02525b1d6328, type: 2}
+    - target: {fileID: 5278107661867187795, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c00c2e24002f07f4da31df497623d7ac, type: 2}
+    - target: {fileID: 5278107661867187795, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 147eaf26bcdb6024cb5aec3f12395999, type: 2}
     - target: {fileID: 8267374612157329846, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
       propertyPath: launch_speed
       value: 3
@@ -17412,6 +17463,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4529074579130086384, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
   m_PrefabInstance: {fileID: 8988107843310571368}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8988107843310571370 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4821725848370907930, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
+  m_PrefabInstance: {fileID: 8988107843310571368}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8988107843310571369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2009e14796113dc489b17d0557e7101c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Emberborn.Elements.ElementalStateManager
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
