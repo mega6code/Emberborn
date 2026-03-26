@@ -1,5 +1,7 @@
 using System;
 using Emberborn.Elements;
+using Unity.VisualScripting;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.InputSystem;
 [RequireComponent(typeof(CharacterController))]
@@ -13,6 +15,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] AudioSource ambience_music;
     [SerializeField] AudioSource flapWing_SFX;
     [SerializeField] AudioSource landGrass_SFX;
+    [SerializeField ]private LayerMask groundLayer;
 
     //Serialized Values
     [SerializeField] private float playerSpeed = 2.0f;
@@ -20,6 +23,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float gravityValue = -9.81f;
     [SerializeField] private float rotationSpeed = 4f;
     [SerializeField] private float glideGravity = -2f;
+    [SerializeField] private Vector3 groundDistance;
 
     //fields
     InputAction movementControl;
@@ -40,7 +44,7 @@ public class PlayerController : MonoBehaviour
         glideControl = InputSystem.actions.FindAction("Player/Glide");
 
         //Attaching methods to our action's events
-        //InputSystem.actions.FindAction("Player/Interact").performed += OnInteract;
+        InputSystem.actions.FindAction("Player/Interact").performed += OnInteract;
         InputSystem.actions.FindAction("Player/Ability1").performed += OnAbility1;
         //InputSystem.actions.FindAction("Player/Ability2").performed += OnAbility2;
         InputSystem.actions.FindAction("Player/AbilitySwitch").performed += OnSwitchState;
@@ -48,7 +52,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnDisable()
     {
-        //InputSystem.actions.FindAction("Player/Interact").performed -= OnInteract;
+        InputSystem.actions.FindAction("Player/Interact").performed -= OnInteract;
         InputSystem.actions.FindAction("Player/Ability1").performed -= OnAbility1;
         //InputSystem.actions.FindAction("Player/Ability2").performed -= OnAbility2;
         InputSystem.actions.FindAction("Player/AbilitySwitch").performed -= OnSwitchState;
@@ -58,13 +62,23 @@ public class PlayerController : MonoBehaviour
         controller = gameObject.GetComponent<CharacterController>();
         cameraMainTransform = Camera.main.transform;
         animator = GetComponent<Animator>();
-
+        groundedPlayer = controller.isGrounded;
+        //groundedPlayer = CheckGround();
     }
 
     void Update()
     {
         groundedPlayer = controller.isGrounded;
+        //groundedPlayer = CheckGround();
 
+        if (groundedPlayer)
+        {
+            Debug.Log("groundeddddd");
+        }
+        else if (!groundedPlayer)
+        {
+            Debug.Log("NOOOOT grounded");
+        }
 
         if (!ambience_music.isPlaying)
         {
@@ -134,6 +148,7 @@ public class PlayerController : MonoBehaviour
     {
         //groundedPlayer = controller.isGrounded;
         controller.Move(platfDelta);
+        //controller.Move(playerVelocity * Time.deltaTime);
     }
 
     public void TeleportTo(Vector3 targetPos)
@@ -146,6 +161,13 @@ public class PlayerController : MonoBehaviour
         transform.position = targetPos;
         controller.enabled = true;
     }
+
+    /*public bool CheckGround()
+    {
+        
+        
+        return Physics.Raycast(transform.position, Vector3.down, groundLayer);
+    }*/
     public void OnGlide()
     {
         playerVelocity.y += glideGravity * Time.deltaTime;
@@ -167,10 +189,10 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsGlinding", false);
         animator.SetBool("IsJumping", false);
     }
-    /*private void OnInteract(InputAction.CallbackContext context)
+    private void OnInteract(InputAction.CallbackContext context)
     {
-       
-    }*/
+        throw new NotImplementedException();
+    }
     public void OnAbility1(InputAction.CallbackContext ctx)
     {
         elementalStateManager.OnAbility(1);

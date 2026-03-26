@@ -4,19 +4,19 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Point1
   - Animal
+  - MovingPlaftorm
+  - Point1
   - Ice
   - Fire
-  - MovingPlaftorm
-  - Floor
+  - Ground
   - Obstacle
   - Projectile
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - Characters
