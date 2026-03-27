@@ -12,6 +12,7 @@ TagManager:
   - Ground
   - Obstacle
   - Projectile
+  - Floor
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Water
   - UI
   - Characters
-  - 
+  - GroundSurface
   - 
   - 
   - 

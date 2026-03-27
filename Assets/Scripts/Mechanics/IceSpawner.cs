@@ -1,15 +1,12 @@
 using Emberborn.Interfaces;
 using UnityEngine;
 
-public class IceSpawner : MonoBehaviour, IFreezable
+public class IceSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject ice;
-    public void SpawnIce()
+    [SerializeField] private Vector3 spawning_position_offset = Vector3.zero;
+    public void SpawnIce(Vector3 point)
     {
-        Instantiate(ice);
-    }
-    public void OnFreeze(object o)
-    {
-        
+        Instantiate(ice, (point + spawning_position_offset), ice.transform.rotation);
     }
 }

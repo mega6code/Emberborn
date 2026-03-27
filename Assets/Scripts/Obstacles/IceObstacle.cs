@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Emberborn.Elements;
 using Emberborn.Interfaces;
 using NUnit.Framework;
 using TMPro;
@@ -11,15 +12,15 @@ public class IceObstacle : MonoBehaviour, IObstacle, IFreezable, IFlammable
     [SerializeField] private UnityEvent<float> Frozen;
     [SerializeField] private UnityEvent<float> Flamed;
 
-    public void OnFreeze(object o)
+    public void OnFreeze(PureElementMessageObjects message_objects)
     {
-        Frozen?.Invoke((float)o);
+        Frozen?.Invoke(message_objects.strength);
         Debug.Log("FREEEEZE!!!");
     }
 
-    public void OnFire(object o)
+    public void OnFire(PureElementMessageObjects message_objects)
     {
-        Flamed?.Invoke((float)o);
+        Flamed?.Invoke(message_objects.strength);
         Debug.Log("FIIIRREEEEEEE!!!");
     }
 }
