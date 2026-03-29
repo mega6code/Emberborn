@@ -1,9 +1,10 @@
+using Emberborn.Elements;
 using UnityEngine;
 
 namespace Emberborn.Interfaces
 {
 	public interface IFlammable
 	{
-		void OnFire(object o);
+		void OnFire(PureElementMessageObjects message_objects);
 	}
 }
