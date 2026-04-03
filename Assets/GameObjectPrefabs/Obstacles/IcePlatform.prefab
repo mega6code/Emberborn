@@ -112,6 +112,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IcePlatform
       objectReference: {fileID: 0}
+    - target: {fileID: 7089048035044917550, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7864e0e6c9b9b1f4782230330aadc40e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
