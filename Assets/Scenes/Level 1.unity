@@ -9517,6 +9517,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCSpeak
   player: {fileID: 8988107843310571369}
+  textbox: {fileID: 0}
+  subtitles1: {fileID: 0}
+  subtitles2: {fileID: 0}
+  subtitles3: {fileID: 0}
 --- !u!82 &1126913112
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15018,6 +15022,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCSpeak
   player: {fileID: 8988107843310571369}
+  textbox: {fileID: 0}
+  subtitles1: {fileID: 0}
+  subtitles2: {fileID: 0}
+  subtitles3: {fileID: 0}
 --- !u!135 &1839528818
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -17562,7 +17570,7 @@ PrefabInstance:
       objectReference: {fileID: 8988107843310571374}
     - target: {fileID: 1753563701188476098, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 78.85657
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1753563701188476098, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -17570,7 +17578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1753563701188476098, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 111.57013
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1753563701188476098, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
       propertyPath: m_LocalRotation.w
