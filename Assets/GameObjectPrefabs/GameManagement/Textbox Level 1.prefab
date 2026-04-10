@@ -27,14 +27,14 @@ RectTransform:
   m_GameObject: {fileID: 2229513811827163522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.92, y: 2.2544117, z: 2.2544117}
+  m_LocalScale: {x: 1.36, y: 3.3326087, z: 3.3326087}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5381563602226376582}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -339.24, y: 0}
+  m_AnchoredPosition: {x: -461.23, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8532621812121572843
@@ -164,14 +164,14 @@ RectTransform:
   m_GameObject: {fileID: 2376462288331228977}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.08, y: 3.0058823, z: 3.0058823}
+  m_LocalScale: {x: 1.6, y: 4.453159, z: 4.453159}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5381563602226376582}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 11.21, y: 50.85}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1138639881419406839
@@ -291,7 +291,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5381563602226376582
 RectTransform:
   m_ObjectHideFlags: 0
@@ -382,7 +382,7 @@ RectTransform:
   m_GameObject: {fileID: 7036737663322189145}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.08, y: 3.0058823, z: 3.0058823}
+  m_LocalScale: {x: 1.4, y: 3.896514, z: 3.896514}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5381563602226376582}
@@ -420,7 +420,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "We're studying a rare medical herb \nand \ncan't let anyone pass yet!"
+  m_text: "We're studying a rare medical herb \nand can't let anyone pass yet!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -519,14 +519,14 @@ RectTransform:
   m_GameObject: {fileID: 8346400817746988015}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.92, y: 2.2544117, z: 2.2544117}
+  m_LocalScale: {x: 1.6, y: 3.9207158, z: 3.9207158}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5381563602226376582}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -259.33, y: 0}
+  m_AnchoredPosition: {x: -491.76, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3936641792693913523
@@ -658,14 +658,14 @@ RectTransform:
   m_GameObject: {fileID: 8571621435593484047}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.05, y: 2.2544117, z: 2.2544117}
+  m_LocalScale: {x: 1.46, y: 3.657157, z: 3.657157}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5381563602226376582}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -339.24, y: 0}
+  m_AnchoredPosition: {x: 0, y: 22.41}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8395813754361073729
@@ -762,7 +762,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 2.6825867, y: 0, z: -709.39215, w: 0}
+  m_margin: {x: -347.6401, y: 0, z: -384.70258, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -795,14 +795,14 @@ RectTransform:
   m_GameObject: {fileID: 9085362106535418820}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.08, y: 3.0058823, z: 3.0058823}
+  m_LocalScale: {x: 1.2, y: 3.3398693, z: 3.3398693}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5381563602226376582}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 267}
+  m_AnchoredPosition: {x: 38.32, y: 183.52}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6370548035285619677
@@ -833,9 +833,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You''ll have to find
-
-    another way to cross.
+  m_text: 'You''ll have to find another way to cross.
 
     Sorry.'
   m_isRightToLeft: 0
@@ -903,7 +901,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -570.7451, y: 0, z: -569.4009, w: 0}
+  m_margin: {x: -645.50903, y: 0, z: -569.4009, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

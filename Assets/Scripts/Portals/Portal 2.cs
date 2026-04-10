@@ -15,10 +15,10 @@ public class Portal2 : Portals
 
         portalVFX.SetActive(false);
 
-        /*if (GameManager.Instance.Levelclears[0] == true)
+        if (GameManager.Instance.Levelclears[0] == true)
         {
             portalVFX.SetActive(true);
-        }*/
+        }
     }
     
     void OnTriggerEnter(Collider other)
