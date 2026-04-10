@@ -12,6 +12,10 @@ public class GameManager : MonoBehaviour
 
     public void Awake()
     {
+        //Changing the visibility of the cursor and locking its position to the screen
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
         if (instance == null)
         {
             instance = this;

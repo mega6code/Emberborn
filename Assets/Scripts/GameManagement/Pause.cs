@@ -32,6 +32,10 @@ public class Pause : MonoBehaviour
     {
         Debug.Log("escape pressed");
 
+        //Changing the visibility of the cursor and unlocking its position to the screen
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
         if (pauseMenu.activeSelf == false)
         {
             Debug.Log("Game should pause");
@@ -44,6 +48,10 @@ public class Pause : MonoBehaviour
     {
         if (pauseMenu.activeSelf == true)
         {
+            //Changing the visibility of the cursor and locking its position to the screen
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+
             Debug.Log("Game should unpause");
             pauseMenu.SetActive(false);
             gameUnPaused?.Invoke();
