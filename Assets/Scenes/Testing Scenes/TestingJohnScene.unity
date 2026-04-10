@@ -174,7 +174,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4529074579130086384, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1793046357}
   m_SourcePrefab: {fileID: 100100000, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
 --- !u!1 &138761600
 GameObject:
@@ -582,6 +585,58 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &1770884541 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8820461618464178043, guid: ef9af6cb8a0f79e45b5e4c9057b246df, type: 3}
+  m_PrefabInstance: {fileID: 7658676168522847593}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1770884542 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1640257807481248612, guid: ef9af6cb8a0f79e45b5e4c9057b246df, type: 3}
+  m_PrefabInstance: {fileID: 7658676168522847593}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770884541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c945333cf0ca7e542bb33b7b6d153c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProgressiveScaler
+--- !u!114 &1770884549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770884541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fa5b61514c62c046ba31e6c24f9006a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Emberborn.Mechanics.AutoMelt
+  progressiveScaler: {fileID: 1770884542}
+  maxTimer: 3
+--- !u!1 &1793046356 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4529074579130086384, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
+  m_PrefabInstance: {fileID: 29555996}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1793046357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793046356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87bba4b9cafb02c448b73b4f5de2a572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStamina
+  staminaFill: {fileID: 0}
+  Stamina: 100
+  MaxStamina: 100
+  GlideCost: 15
+  StaminaRecovery: 10
 --- !u!1001 &2359472502255193891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -699,6 +754,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7969857184125447658, guid: ef9af6cb8a0f79e45b5e4c9057b246df, type: 3}
+      propertyPath: freeze_resistance
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969857184125447658, guid: ef9af6cb8a0f79e45b5e4c9057b246df, type: 3}
+      propertyPath: destroy_when_minimum_reached
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8820461618464178043, guid: ef9af6cb8a0f79e45b5e4c9057b246df, type: 3}
       propertyPath: m_Name
       value: IceCube
@@ -706,7 +769,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8820461618464178043, guid: ef9af6cb8a0f79e45b5e4c9057b246df, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1770884549}
   m_SourcePrefab: {fileID: 100100000, guid: ef9af6cb8a0f79e45b5e4c9057b246df, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

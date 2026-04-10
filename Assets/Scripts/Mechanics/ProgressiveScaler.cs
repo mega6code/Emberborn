@@ -5,14 +5,29 @@ using UnityEngine;
 public class ProgressiveScaler : MonoBehaviour
 {
     #region Fields
+    [Header("Scale Limits")]
     [SerializeField] private Vector3 min_scale;
     [SerializeField] private Vector3 max_scale;
+
+    [Header("Scale Rate")]
+    [Tooltip("Rate = amount of units it will scale per every 1 second")]
     [SerializeField] private float upscale_rate = 1;
+    [Tooltip("Rate = amount of units it will scale per every 1 second")]
     [SerializeField] private float downscale_rate = 1;
+
+    [Space]
+    [Header("| DEBUGGING ONLY |")]
     [SerializeField] private Vector3 target_scale;
+
+    private bool check_size_limits = false;
     #endregion
 
     #region Properties
+    #endregion
+
+    #region Events
+    public event Action minimumScaleReached;
+    public event Action maximumScaleReached;
     #endregion
 
     #region Methods
@@ -22,30 +37,60 @@ public class ProgressiveScaler : MonoBehaviour
     }
     void Update()
     {
-
         Vector3 scale_to_set = new Vector3();
+        int min_check = 0;
+        int max_check = 0;
 
-        //Debug.Log($"Beforebefore local = {transform.localScale}");
-        //Debug.Log($"Beforebefore target = {target_scale}");
-
-        
-            for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 3; i++)
+        {
+            if (IsFloatsInRange(transform.localScale[i], target_scale[i])) //is the size at target size yet?
             {
-                double result = Math.Round(transform.localScale[i], 3) - Math.Round(target_scale[i], 3);
+                //if yes, time to check if we need to check
 
-                if (Math.Abs(result) > 0.1)
+                if (check_size_limits)
                 {
-                    //Debug.Log($"Before = {transform.localScale[i]}");
+                    //if yes, time to check!!!!!! (the min/max limits)
 
-                    scale_to_set[i] = GetAmountToAdd(i);
-
-                    //Debug.Log($"After = {transform.localScale[i]}");
+                    if (IsFloatsInRange(transform.localScale[i], min_scale[i])) //is the size at minimum size yet?
+                    {
+                        min_check++;
+                    }
+                    if (IsFloatsInRange(transform.localScale[i], max_scale[i])) //is the size at maximum size yet?
+                    {
+                        max_check++;
+                    } 
                 }
+                continue;
             }
-            transform.localScale += scale_to_set;
+            else
+            {
+                scale_to_set[i] = GetAmountToAdd(i); //if no, keep doing what u doing
+            }
+        }
 
+        transform.localScale += scale_to_set;
+
+        if (min_check == 3)
+        {
+            minimumScaleReached?.Invoke();
+        }
+
+        if (max_check == 3)
+        {
+            maximumScaleReached?.Invoke();
+        }
     }
 
+    private bool IsFloatsInRange(float f1, float f2, float range = 0.1f, int rounding = 3)
+    {
+        double result = Math.Round(f1, rounding) - Math.Round(f2, rounding);
+
+        if (Math.Abs(result) > range)
+        {
+            return false;
+        }
+        return true;
+    }
     /// <summary>
     /// Gets the amount to add to the Vector element
     /// </summary>
@@ -92,24 +137,35 @@ public class ProgressiveScaler : MonoBehaviour
     public void ChangeTargetScale(float scale)
     {
         Vector3 temp_scale = target_scale + new Vector3(scale, scale, scale);
+        int min_check = 0;
+        int max_check = 0;
 
         for (int i = 0; i < 3; i++)
         {
             if (temp_scale[i] < min_scale[i]) //checks if its under minimum scale
             {
                 temp_scale[i] = min_scale[i];
+                min_check++;
             }
             else if (temp_scale[i] > max_scale[i]) //checks if its over max scale
             {
                 temp_scale[i] = max_scale[i];
+                max_check++;
             }
         }
 
         target_scale = temp_scale;
-    }
-    #endregion
 
-    #region Events
+        if (min_check == 3 || max_check == 3)
+        {
+            check_size_limits = true;
+        }
+        else 
+        {
+            check_size_limits = false;
+        }
+
+    }
     #endregion
 }
 
