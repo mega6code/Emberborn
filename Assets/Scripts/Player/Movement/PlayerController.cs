@@ -1,7 +1,6 @@
 using System;
 using Emberborn.Elements;
 using Unity.VisualScripting;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.InputSystem;
 [RequireComponent(typeof(CharacterController))]
@@ -33,6 +32,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 playerVelocity;
     private bool groundedPlayer;
     private Transform cameraMainTransform;
+    public Interactor interactor;
+
     #endregion
 
     #region Methods
@@ -191,7 +192,7 @@ public class PlayerController : MonoBehaviour
     }
     private void OnInteract(InputAction.CallbackContext context)
     {
-        throw new NotImplementedException();
+        interactor.Interact();
     }
     public void OnAbility1(InputAction.CallbackContext ctx)
     {

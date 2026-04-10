@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PuzzleAlter : MonoBehaviour
+public class PuzzleAlter : MonoBehaviour, IInteractable
 {
     
     //[SerializeField] InputActionReference interactControl;
@@ -10,7 +10,6 @@ public class PuzzleAlter : MonoBehaviour
     private Item itemRequired; //Place which variant of item alter needs
 
     public bool alterActivated;
-    private bool inRange;
 
     [SerializeField] GameObject objectSpawn;// a collider when the gem should spawn when place on the alter
     private Transform location;
@@ -19,47 +18,21 @@ public class PuzzleAlter : MonoBehaviour
     {
 
         //player in range of alter
-        inRange = false;
         alterActivated = false;
         //get component that the alter needs to later compare with player inventory
         itemRequired = GetComponent<RequiredItem>().ItemCollect();
 
         location = objectSpawn.GetComponent<Transform>();
     }
-    private void OnEnable()
-    {
-        InputSystem.actions.FindAction("Player/Interact").performed += OnInteract;
-    }
-    private void OnDisable()
-    {
-        InputSystem.actions.FindAction("Player/Interact").performed -= OnInteract;
-    }
 
-    private void OnTriggerEnter(Collider other)//player enters in range 
+    public void Interact()
     {
-        if (other.CompareTag("Animal"))
+        if (playerInventory.HasItem(itemRequired))
         {
-            inRange = true;
-        }
-    }
-    private void OnTriggerExit(Collider other)//player leaves the interactable range of alter
-    {
-        if (other.CompareTag("Animal"))
-        {
-            inRange = false;
-        }
-    }
-    public void OnInteract(InputAction.CallbackContext context)//when player presses the interact button 
-    {
-        //add prefab to alter
-        if (playerInventory.HasItem(itemRequired) && inRange == true)
-        {
-            Debug.Log("Player interacted with item");
+            Debug.Log($"Player interacted with {gameObject.name}");
             alterActivated = true;
             Debug.Log("alter active: " + alterActivated);
             playerInventory.PlaceItem(itemRequired, location);
         }
-        //remove item from player inventory
     }
-
 }
