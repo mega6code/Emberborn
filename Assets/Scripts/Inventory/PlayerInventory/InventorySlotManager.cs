@@ -59,21 +59,21 @@ public class InventorySlotManager : MonoBehaviour
     
     public void RemoveIcon(Item itemToRemove)
     {
-        if (itemToRemove.name == index1.name)
+        if (itemToRemove.itemName == index1.itemName)
         {
             Destroy(instantiated1);
         }
-        else if (itemToRemove.name == index2.name)
+        else if (itemToRemove.itemName == index2.itemName)
         {
             Destroy (instantiated2);
         }
-        else if (itemToRemove.name == index3.name)
+        else if (itemToRemove.itemName == index3.itemName)
         {
             Destroy(instantiated3);
         }
         else
         {
-            Debug.Log("Could not remove: " + itemToRemove.name + "From the UI bar");
+            Debug.Log("Could not remove: " + itemToRemove.itemName + "From the UI bar");
         }
     }
     public void CreateIcon(Item item, GameObject imageSlot, int index)//creates a gameObject at the location of the slot 

@@ -9,7 +9,7 @@ using UnityEngine.UI;
     {
 
          
-         public string name;
+         public string itemName;
          public GameObject prefab;
          public GameObject icon;
            

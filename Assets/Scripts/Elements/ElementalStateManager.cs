@@ -18,8 +18,8 @@ namespace Emberborn.Elements
         #endregion
 
         #region Properties
-        public ElementalState Current_state { get => current_state;}
-        public int Collected_elem_index { get => collected_elem_index;}//in case u need to check Emby's state outside of this class
+        public ElementalState Current_state { get => current_state;} //in case u need to check Emby's state outside of this class
+        public int Collected_elem_index { get => collected_elem_index;} 
         #endregion
 
         #region Methods
@@ -66,9 +66,11 @@ namespace Emberborn.Elements
             {
                 case ElementalTypes.Ice:
                     next_state = allElements[0];
+                    changedState?.Invoke(collected_elements[collected_elem_index]);
                     break;
                 case ElementalTypes.Fire:
                     next_state = allElements[1];
+                    changedState?.Invoke(collected_elements[collected_elem_index]);
                     break;
             }
 
@@ -122,6 +124,13 @@ namespace Emberborn.Elements
             }
             
         }
+
         #endregion
+
+        #region Events
+        public event Action<ElementalTypes> changedState;
+        #endregion
+
     } 
+
 }
