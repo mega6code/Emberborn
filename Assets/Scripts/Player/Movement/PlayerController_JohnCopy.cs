@@ -29,6 +29,7 @@ public class PlayerController_JohnCopy : MonoBehaviour
     private Vector3 playerVelocity;
     private bool groundedPlayer;
     private Transform cameraMainTransform;
+    public Interactor interactor;
     #endregion
 
     #region Methods
@@ -164,7 +165,7 @@ public class PlayerController_JohnCopy : MonoBehaviour
     }
     private void OnInteract(InputAction.CallbackContext context)
     {
-        throw new NotImplementedException();
+        interactor.Interact();
     }
     public void OnAbility1(InputAction.CallbackContext ctx)
     {

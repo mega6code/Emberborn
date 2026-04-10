@@ -50,16 +50,16 @@ public class StateMeshChange : MonoBehaviour
     private void SetNormalState()
     {
         embyMesh.material.SetTexture("_Albedo", embyGreen);
-        Debug.Log("Normal state MEsh active");
+        Debug.Log("Normal state Mesh active");
     }
     public void SetIceState()
     {
         embyMesh.material.SetTexture("_Albedo", embyBlue);
-        Debug.Log("Ice state MEsh active");
+        Debug.Log("Ice state Mesh active");
     }
     public void SetFireState()
     {
         embyMesh.material.SetTexture("_Albedo", embyRed);
-        Debug.Log("Fire state MEsh active");
+        Debug.Log("Fire state Mesh active");
     }
 }

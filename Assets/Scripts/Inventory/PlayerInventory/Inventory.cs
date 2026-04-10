@@ -31,7 +31,7 @@ public class Inventory : MonoBehaviour
             Item item = other.GetComponent<ItemObject>().ItemCollect();// gets the specific itemData in game object
             GameObject prefab = other.gameObject;//gets the GameObject that the player collided with
 
-            //Debug.Log("Prefab name: " + prefab.name);
+            //Debug.Log("Prefab itemName: " + prefab.itemName);
 
             Additem(prefab, item);
         }
@@ -41,7 +41,7 @@ public class Inventory : MonoBehaviour
         if (playerItems.Count < 3)// makes sure player can only pick up 3 items 
         {
             
-            Debug.Log(item.name + " has been added to inventory");
+            Debug.Log(item.itemName + " has been added to inventory");
             playerItems.Add(item);
 
             //turning off the following components so gem is not Visible
@@ -66,16 +66,16 @@ public class Inventory : MonoBehaviour
         {
             foreach (Item items in playerItems)
             {
-                if (items.name == targetItem.name)
+                if (items.itemName == targetItem.itemName)
                 {
-                    Debug.Log("Item: " + targetItem.name + " is in inventory");
+                    Debug.Log("Item: " + targetItem.itemName + " is in inventory");
                    return true;
                     
                 }
             }
             
         }
-        Debug.Log("target targetItem is not in inventory: " + targetItem.name);
+        Debug.Log("target targetItem is not in inventory: " + targetItem.itemName);
         return false;
     }
 
@@ -87,7 +87,7 @@ public class Inventory : MonoBehaviour
             Instantiate(targetItem.prefab, location.position, location.rotation);
             slotManager.RemoveIcon(targetItem);
             playerItems.Remove(targetItem);
-            Debug.Log("targetItem: " + targetItem.name + " has been placed."); 
+            Debug.Log("targetItem: " + targetItem.itemName + " has been placed."); 
 
         }
 

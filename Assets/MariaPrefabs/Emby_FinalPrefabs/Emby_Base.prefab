@@ -849,6 +849,8 @@ GameObject:
   - component: {fileID: 408051550616259495}
   - component: {fileID: 5958277052201756250}
   - component: {fileID: 8051572158616654183}
+  - component: {fileID: 1234631771360418435}
+  - component: {fileID: 1293986131576350895}
   m_Layer: 6
   m_Name: Emby_Base
   m_TagString: Animal
@@ -1385,6 +1387,7 @@ MonoBehaviour:
   rotationSpeed: 4
   glideGravity: -2
   groundDistance: {x: 0, y: 0, z: 0}
+  interactor: {fileID: 1293986131576350895}
 --- !u!114 &8051572158616654183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1401,6 +1404,35 @@ MonoBehaviour:
   embyGreen: {fileID: 2800000, guid: 9cb93de60b8983a438d0738f2ca88965, type: 3}
   embyBlue: {fileID: 2800000, guid: a58633dd897c1104a97cb0738f045306, type: 3}
   embyRed: {fileID: 2800000, guid: 91071586888de2b40a0b72c7cd638c15, type: 3}
+--- !u!114 &1234631771360418435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4529074579130086384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d25de33d77de64c9ed102bd4ccc23d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Raycaster
+  validLayers:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!114 &1293986131576350895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4529074579130086384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e3a4a1459398d543b5e265b018d075a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactor
+  raycaster: {fileID: 1234631771360418435}
+  raycastDistance: 1
 --- !u!1 &4738014652014487158
 GameObject:
   m_ObjectHideFlags: 0
