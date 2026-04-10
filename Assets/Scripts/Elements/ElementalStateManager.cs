@@ -24,9 +24,9 @@ namespace Emberborn.Elements
 
         #region Methods
         /// <summary>
-        /// adds element to Emby's elements
+        /// Adds element to Emby's elements
         /// </summary>
-        private void AddElement(ElementalTypes e_type)
+        public void AddElement(ElementalTypes e_type)
         {
             if (!collected_elements.Contains(e_type))
             {
