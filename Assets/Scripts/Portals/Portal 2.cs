@@ -1,18 +1,24 @@
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Portal2 : Portals
 {
     public GameObject player;
+    private GameObject portalVFX;
 
     private void Awake()
     {
-        this.gameObject.SetActive(false);
+        //getting the VFX for portal from the child - Sam
+        Transform child = transform.GetChild(0);
+        portalVFX = child.gameObject;
 
-        if (GameManager.Instance.Levelclears[0] == true)
+        portalVFX.SetActive(false);
+
+        /*if (GameManager.Instance.Levelclears[0] == true)
         {
-            this.gameObject.SetActive(true);
-        }
+            portalVFX.SetActive(true);
+        }*/
     }
     
     void OnTriggerEnter(Collider other)
