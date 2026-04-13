@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6644911907442378861
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5011700156489546845, guid: eaab32b9a1a47e5478246dca9c673634, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.479004
+      objectReference: {fileID: 0}
+    - target: {fileID: 5011700156489546845, guid: eaab32b9a1a47e5478246dca9c673634, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.6476192
+      objectReference: {fileID: 0}
+    - target: {fileID: 5011700156489546845, guid: eaab32b9a1a47e5478246dca9c673634, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.4938354
+      objectReference: {fileID: 0}
+    - target: {fileID: 5011700156489546845, guid: eaab32b9a1a47e5478246dca9c673634, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.12905528
+      objectReference: {fileID: 0}
+    - target: {fileID: 5011700156489546845, guid: eaab32b9a1a47e5478246dca9c673634, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5011700156489546845, guid: eaab32b9a1a47e5478246dca9c673634, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.99163747
+      objectReference: {fileID: 0}
+    - target: {fileID: 5011700156489546845, guid: eaab32b9a1a47e5478246dca9c673634, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5011700156489546845, guid: eaab32b9a1a47e5478246dca9c673634, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5011700156489546845, guid: eaab32b9a1a47e5478246dca9c673634, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 165.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5011700156489546845, guid: eaab32b9a1a47e5478246dca9c673634, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291103349771323983, guid: eaab32b9a1a47e5478246dca9c673634, type: 3}
+      propertyPath: textTime2
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5676490537975441127, guid: eaab32b9a1a47e5478246dca9c673634, type: 3}
+      propertyPath: m_Name
+      value: Jean-Luc Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052479671838913948, guid: eaab32b9a1a47e5478246dca9c673634, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052479671838913948, guid: eaab32b9a1a47e5478246dca9c673634, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 054444a804a32f94592cd2bd516a38ec, type: 3}
+    - target: {fileID: 8052479671838913948, guid: eaab32b9a1a47e5478246dca9c673634, type: 3}
+      propertyPath: MaxDistance
+      value: 3.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052479671838913948, guid: eaab32b9a1a47e5478246dca9c673634, type: 3}
+      propertyPath: MinDistance
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052479671838913948, guid: eaab32b9a1a47e5478246dca9c673634, type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052479671838913948, guid: eaab32b9a1a47e5478246dca9c673634, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8052479671838913948, guid: eaab32b9a1a47e5478246dca9c673634, type: 3}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 1.1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eaab32b9a1a47e5478246dca9c673634, type: 3}

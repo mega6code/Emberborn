@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8532621812121572843}
   - component: {fileID: 6862720697589851053}
   m_Layer: 5
-  m_Name: Jorgen Dialogue 2
+  m_Name: Jean-Luc Dialogue 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154,7 +154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5381563602226376582
 RectTransform:
   m_ObjectHideFlags: 0
@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 3936641792693913523}
   - component: {fileID: 820597545272348347}
   m_Layer: 5
-  m_Name: Jorgen Dialogue 3
+  m_Name: Jean-Luc Dialogue 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -366,12 +366,12 @@ GameObject:
   - component: {fileID: 8395813754361073729}
   - component: {fileID: 5987255698265272315}
   m_Layer: 5
-  m_Name: Jorgen Dialogue 1
+  m_Name: Jean-Luc Dialogue 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &799508571525038807
 RectTransform:
   m_ObjectHideFlags: 0
@@ -419,7 +419,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hey there you weird dog
+  m_text: Oh hello big lizard
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
