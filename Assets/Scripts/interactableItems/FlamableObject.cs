@@ -13,13 +13,13 @@ public class FlamableObject : MonoBehaviour , IFreezable, IFlammable
     }
 
 
-    public void OnFreeze(PureElementMessageObjects message_objects)//fire extinguisher
+    public void OnFreeze(PureElementData message_objects)//fire extinguisher
     {
         FireVisuals.SetActive(false);
         changeActiveState(false);
     }
 
-    public void OnFire(PureElementMessageObjects message_objects)//lights the torch
+    public void OnFire(PureElementData message_objects)//lights the torch
     {
         FireVisuals.SetActive(true); 
         changeActiveState(true);

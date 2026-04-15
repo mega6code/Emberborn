@@ -33,7 +33,6 @@ public class PlayerController : MonoBehaviour
     private bool groundedPlayer;
     private Transform cameraMainTransform;
     public Interactor interactor;
-
     #endregion
 
     #region Methods
@@ -124,11 +123,10 @@ public class PlayerController : MonoBehaviour
             OnJump();
         }
 
-
         // Changes the height position of the player..
-        if (glideControl.IsPressed() && !groundedPlayer)
+        if (glideControl.IsPressed() && !groundedPlayer && playerVelocity.y < 0)
         {
-            OnGlide();
+            OnGlide();          
         }
         else
         {

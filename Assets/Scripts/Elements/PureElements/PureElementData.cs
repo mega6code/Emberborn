@@ -2,7 +2,7 @@
 
 namespace Emberborn.Elements
 {
-    public struct PureElementMessageObjects
+    public struct PureElementData
     {
         public float strength;
         public Vector3 point_of_collision;

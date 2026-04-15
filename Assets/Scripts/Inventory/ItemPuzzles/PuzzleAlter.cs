@@ -25,7 +25,7 @@ public class PuzzleAlter : MonoBehaviour, IInteractable
         location = objectSpawn.GetComponent<Transform>();
     }
 
-    public void Interact()
+    public void Interact(InteractData interact_data)
     {
         if (playerInventory.HasItem(itemRequired))
         {

@@ -1381,8 +1381,8 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-  playerSpeed: 2
-  jumpHeight: 1
+  playerSpeed: 4
+  jumpHeight: 0.75
   gravityValue: -9.81
   rotationSpeed: 4
   glideGravity: -2

@@ -49,12 +49,12 @@ public class IceObject : MonoBehaviour, IObstacle, IFreezable, IFlammable
 
         return strength - ( (freeze_resistance / 100) * strength );
     }
-    public void OnFreeze(PureElementMessageObjects message_objects)
+    public void OnFreeze(PureElementData message_objects)
     {
         progressiveScaler.ChangeTargetScale(CalculateResistance(message_objects.strength, freeze_resistance));
         Debug.Log("FREEEEZE!!!");
     }
-    public void OnFire(PureElementMessageObjects message_objects)
+    public void OnFire(PureElementData message_objects)
     {
         progressiveScaler.ChangeTargetScale(CalculateResistance(message_objects.strength, flamed_resistance));
         Debug.Log("FIIIRREEEEEEE!!!");

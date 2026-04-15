@@ -33,7 +33,7 @@ namespace Emberborn.Mechanics
             progressiveScaler.ChangeTargetScale(-float.MaxValue);
         }
 
-        public void OnFreeze(PureElementMessageObjects message_objects)
+        public void OnFreeze(PureElementData message_objects)
         {
             timer = maxTimer; //reset the timer
         }

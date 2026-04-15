@@ -13,13 +13,8 @@ public class Interactor : MonoBehaviour
         {
             Debug.Log("");
             IInteractable interactable = hitObject.collider.GetComponent<IInteractable>();
-            interactable?.Interact();
+            interactable?.Interact(new InteractData(this.gameObject));
         }
     }
     
-}
-
-public interface IInteractable
-{
-    public void Interact();
 }

@@ -17354,6 +17354,14 @@ PrefabInstance:
       propertyPath: staminaBar
       value: 
       objectReference: {fileID: 1189202611}
+    - target: {fileID: 8087557044282033303, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
+      propertyPath: collected_elements.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087557044282033303, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
+      propertyPath: 'collected_elements.Array.data[0]'
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8267374612157329846, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
       propertyPath: launch_speed
       value: 3
