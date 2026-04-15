@@ -41,6 +41,7 @@ public class Pause : MonoBehaviour
             Debug.Log("Game should pause");
             pauseMenu.SetActive(true);
             gamePaused?.Invoke();
+            Time.timeScale = 0f;
         }
     }
 
@@ -55,6 +56,7 @@ public class Pause : MonoBehaviour
             Debug.Log("Game should unpause");
             pauseMenu.SetActive(false);
             gameUnPaused?.Invoke();
+            Time.timeScale = 1.0f;
         }
     }
 

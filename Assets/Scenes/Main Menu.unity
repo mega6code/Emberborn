@@ -531,7 +531,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5231108223363178266, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8276838366768321088, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -6.4000244
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2336,6 +2340,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Emby_Base
       objectReference: {fileID: 0}
+    - target: {fileID: 5958277052201756250, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
+      propertyPath: playerSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8579002508563003989, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.8273
@@ -3340,6 +3348,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1435388690}
+  - {fileID: 558524932}
   - {fileID: 1048384159}
   - {fileID: 1062976024}
   - {fileID: 1272851935}
@@ -3348,4 +3357,3 @@ SceneRoots:
   - {fileID: 616378214}
   - {fileID: 2117589176}
   - {fileID: 1615373623}
-  - {fileID: 558524932}

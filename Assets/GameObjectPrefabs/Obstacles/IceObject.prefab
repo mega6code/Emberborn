@@ -154,36 +154,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f50e39b7cbe88242aba3ef29ad09c50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IceObstacle
-  Frozen:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3629010148276468240}
-        m_TargetAssemblyTypeName: ProgressiveScaler, Assembly-CSharp
-        m_MethodName: ChangeTargetScale
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  Flamed:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3629010148276468240}
-        m_TargetAssemblyTypeName: ProgressiveScaler, Assembly-CSharp
-        m_MethodName: ChangeTargetScale
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  progressiveScaler: {fileID: 3629010148276468240}
+  freeze_resistance: 0
+  flamed_resistance: 0
 --- !u!114 &3629010148276468240
 MonoBehaviour:
   m_ObjectHideFlags: 0

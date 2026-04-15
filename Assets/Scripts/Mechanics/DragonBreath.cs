@@ -16,7 +16,11 @@ public class DragonBreath : MonoBehaviour
         Ray ray = new Ray(breath_start.position, breath_start.forward);
         RaycastHit ray_hit;
 
-        if( Physics.Raycast(ray, out ray_hit, ray_max_distance) )
+        if( Physics.Raycast(ray, out ray_hit, ray_max_distance, LayerMask.GetMask("Water"), QueryTriggerInteraction.Collide) )
+        {
+            pure_element.ApplyElement(ray_hit.transform.gameObject, ray_hit.point);
+        }
+        else if (Physics.Raycast(ray, out ray_hit, ray_max_distance))
         {
             pure_element.ApplyElement(ray_hit.transform.gameObject, ray_hit.point);
         }

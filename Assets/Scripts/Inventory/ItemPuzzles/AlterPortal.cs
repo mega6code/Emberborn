@@ -12,12 +12,14 @@ public class AlterPortal : Portals
     private bool activation3;
 
     public GameObject portal;
+    private AudioSource sfx;
 
     private void Awake()
     {
         activation1 = alter1.GetComponent<PuzzleAlter>().alterActivated;
         activation2 = alter2.GetComponent<PuzzleAlter>().alterActivated;
-        activation3 = alter3.GetComponent<PuzzleAlter>().alterActivated;   
+        activation3 = alter3.GetComponent<PuzzleAlter>().alterActivated; 
+        sfx = GetComponent<AudioSource>();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -35,6 +37,7 @@ public class AlterPortal : Portals
     private void ActivatePortal()
     {
         portal.SetActive(true);
+        sfx.Play();
         Debug.Log("Portal activate.");
     }
     private void CheckActivation()
