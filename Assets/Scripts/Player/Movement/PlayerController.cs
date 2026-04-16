@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] private ElementalStateManager elementalStateManager;
     [SerializeField] AudioSource grassStep_audio;
-    [SerializeField] AudioSource ambience_music;
     [SerializeField] AudioSource flapWing_SFX;
     [SerializeField] AudioSource landGrass_SFX;
     [SerializeField ]private LayerMask groundLayer;
