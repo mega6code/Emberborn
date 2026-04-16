@@ -80,11 +80,6 @@ public class PlayerController : MonoBehaviour
             Debug.Log("NOOOOT grounded");
         }
 
-        if (!ambience_music.isPlaying)
-        {
-            ambience_music.Play();
-        }
-
         //is not moving
         if (groundedPlayer && playerVelocity.y < 0)
         {
