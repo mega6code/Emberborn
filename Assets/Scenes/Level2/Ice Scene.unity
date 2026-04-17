@@ -7787,13 +7787,47 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1294500603521610, guid: 227f9257bcc7175478a7f935e3bfc552, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 472107993}
   m_SourcePrefab: {fileID: 100100000, guid: 227f9257bcc7175478a7f935e3bfc552, type: 3}
+--- !u!1 &472107989 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4252407231675155501, guid: 227f9257bcc7175478a7f935e3bfc552, type: 3}
+  m_PrefabInstance: {fileID: 472107988}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &472107990 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1634221500238398, guid: 227f9257bcc7175478a7f935e3bfc552, type: 3}
+  m_PrefabInstance: {fileID: 472107988}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &472107991 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4534106693493108, guid: 227f9257bcc7175478a7f935e3bfc552, type: 3}
   m_PrefabInstance: {fileID: 472107988}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &472107992 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1294500603521610, guid: 227f9257bcc7175478a7f935e3bfc552, type: 3}
+  m_PrefabInstance: {fileID: 472107988}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &472107993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472107992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1db4f79f941dcb49a510f811c22a17f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Emberborn.Elements.ElementalCrystal
+  elementalType: 0
+  tutorial: {fileID: 1714751625}
+  crystalLight: {fileID: 472107990}
+  crystalSound: {fileID: 472107989}
 --- !u!1 &478218530
 GameObject:
   m_ObjectHideFlags: 0
@@ -25058,6 +25092,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46c53497e3001f54a99bbdccd3d1a96f, type: 3}
+--- !u!1 &1714751625 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4888832316795517148, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
+  m_PrefabInstance: {fileID: 2061501826}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1720108731
 GameObject:
   m_ObjectHideFlags: 0
@@ -30606,6 +30645,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4916276490365371726, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 472107993}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

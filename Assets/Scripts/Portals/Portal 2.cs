@@ -21,7 +21,7 @@ public class Portal2 : Portals
         {
             BeatLevel(1);
             SceneManager.LoadScene("Cave Scene");
-            Debug.Log("Portal 2");
+            Debug.Log("Portal 2 used");
         }
     }
 }
