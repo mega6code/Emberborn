@@ -2725,7 +2725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2888460427439811556, guid: c91ad8188bae5144e9713e7c2ae33f57, type: 3}
       propertyPath: glideGravity
-      value: -4
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 3057509378294566454, guid: c91ad8188bae5144e9713e7c2ae33f57, type: 3}
       propertyPath: m_UseGravity
