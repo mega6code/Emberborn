@@ -847,10 +847,11 @@ GameObject:
   - component: {fileID: 8087557044282033303}
   - component: {fileID: 7944236042342709761}
   - component: {fileID: 408051550616259495}
+  - component: {fileID: 6433901388329755545}
   - component: {fileID: 5958277052201756250}
   - component: {fileID: 8051572158616654183}
-  - component: {fileID: 1234631771360418435}
   - component: {fileID: 1293986131576350895}
+  - component: {fileID: 1234631771360418435}
   m_Layer: 6
   m_Name: Emby_Base
   m_TagString: Animal
@@ -872,7 +873,6 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8052558748709645653}
-  - {fileID: 7149575230792717523}
   - {fileID: 7850127291244557735}
   - {fileID: 1736179389826788930}
   - {fileID: 4794646750095013003}
@@ -1357,9 +1357,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe5c91382a5383d40ae375ad7745b2e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DragonBreath
-  breath_start: {fileID: 6537259551019401745}
-  ray_max_distance: 1
-  p_element_strength: 0.01
+  raycaster: {fileID: 6433901388329755545}
+  pureElement:
+    elemental_type: 0
+    strength: 0.01
+--- !u!114 &6433901388329755545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4529074579130086384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d25de33d77de64c9ed102bd4ccc23d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Raycaster
+  start: {fileID: 6537259551019401745}
+  distance: 5
+  validLayers:
+    serializedVersion: 2
+    m_Bits: 512
+  hitTriggerColliders: 1
+  gizmosColor: {r: 0.34049416, g: 0, b: 1, a: 0}
 --- !u!114 &5958277052201756250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1375,7 +1395,6 @@ MonoBehaviour:
   animator: {fileID: 1202421980292280061}
   elementalStateManager: {fileID: 8087557044282033303}
   grassStep_audio: {fileID: 4233158337416474869}
-  ambience_music: {fileID: 2981551621977319267}
   flapWing_SFX: {fileID: 8981580660898497012}
   landGrass_SFX: {fileID: 4749603011728268324}
   groundLayer:
@@ -1404,21 +1423,6 @@ MonoBehaviour:
   embyGreen: {fileID: 2800000, guid: 9cb93de60b8983a438d0738f2ca88965, type: 3}
   embyBlue: {fileID: 2800000, guid: a58633dd897c1104a97cb0738f045306, type: 3}
   embyRed: {fileID: 2800000, guid: 91071586888de2b40a0b72c7cd638c15, type: 3}
---- !u!114 &1234631771360418435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4529074579130086384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2d25de33d77de64c9ed102bd4ccc23d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Raycaster
-  validLayers:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!114 &1293986131576350895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1432,7 +1436,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interactor
   raycaster: {fileID: 1234631771360418435}
-  raycastDistance: 1
+--- !u!114 &1234631771360418435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4529074579130086384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d25de33d77de64c9ed102bd4ccc23d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Raycaster
+  start: {fileID: 8579002508563003989}
+  distance: 10
+  validLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  hitTriggerColliders: 0
+  gizmosColor: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &4738014652014487158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,37 +1776,6 @@ Transform:
   - {fileID: 6994728860833530618}
   m_Father: {fileID: 8166730934081787604}
   m_LocalEulerAnglesHint: {x: -60.265728, y: 28.500095, z: 3.0830173}
---- !u!1 &5557364189762367620
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7149575230792717523}
-  m_Layer: 6
-  m_Name: ProjectileStartPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7149575230792717523
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5557364189762367620}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1004728, y: 0.53055954, z: 0.5470925}
-  m_LocalScale: {x: 1.166425, y: 1.0390447, z: 1.0053668}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8579002508563003989}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5587221444695180086
 GameObject:
   m_ObjectHideFlags: 0

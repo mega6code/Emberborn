@@ -1,8 +1,10 @@
-﻿using Emberborn.Interfaces;
+﻿using System;
+using Emberborn.Interfaces;
 using UnityEngine;
 
 namespace Emberborn.Elements
 {
+    [Serializable]
     public class PureElement
     {
         public ElementalTypes elemental_type;

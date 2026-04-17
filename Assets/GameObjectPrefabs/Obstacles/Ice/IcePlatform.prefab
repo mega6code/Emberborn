@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5131391859605885275
+--- !u!1001 &2952437377162857434
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9,12 +9,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2747941153633718768, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
+      propertyPath: m_UseGravity
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747941153633718768, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197004665449378283, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3197004665449378283, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.01
+      value: 0.095438
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197004665449378283, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3197004665449378283, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -56,48 +68,93 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3197004665449378283, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3629010148276468240, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
       propertyPath: max_scale.x
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3629010148276468240, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
       propertyPath: max_scale.y
-      value: 1
+      value: 0.095438
       objectReference: {fileID: 0}
     - target: {fileID: 3629010148276468240, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
       propertyPath: max_scale.z
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3629010148276468240, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
       propertyPath: min_scale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3629010148276468240, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
-      propertyPath: min_scale.z
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3629010148276468240, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
       propertyPath: upscale_rate
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3629010148276468240, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
       propertyPath: downscale_rate
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6422886263329020894, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
-      propertyPath: m_ExcludeLayers.m_Bits
-      value: 128
+    - target: {fileID: 3629010148276468240, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+      propertyPath: target_scale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629010148276468240, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+      propertyPath: target_scale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629010148276468240, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+      propertyPath: target_scale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5333694260452592798, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+      propertyPath: destroy_at_minimum
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6842968199008574991, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
       propertyPath: m_Name
-      value: IceSheet
+      value: IcePlatform
       objectReference: {fileID: 0}
-    - target: {fileID: 6842968199008574991, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
+    - target: {fileID: 7089048035044917550, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7864e0e6c9b9b1f4782230330aadc40e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6842968199008574991, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+      insertIndex: 6
+      addedObject: {fileID: 841878157665808239}
   m_SourcePrefab: {fileID: 100100000, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+--- !u!114 &1920221906606141898 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3629010148276468240, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+  m_PrefabInstance: {fileID: 2952437377162857434}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8506791122991027669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c945333cf0ca7e542bb33b7b6d153c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProgressiveScaler
+--- !u!1 &8506791122991027669 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6842968199008574991, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+  m_PrefabInstance: {fileID: 2952437377162857434}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &841878157665808239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8506791122991027669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fa5b61514c62c046ba31e6c24f9006a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Emberborn.Mechanics.AutoMelt
+  progressiveScaler: {fileID: 1920221906606141898}
+  maxTimer: 3
