@@ -189,6 +189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4534106693493108}
+  - component: {fileID: 5375052875479010304}
   m_Layer: 8
   m_Name: Crystalsv10
   m_TagString: Untagged
@@ -220,6 +221,21 @@ Transform:
   - {fileID: 5195805850919423190}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5375052875479010304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294500603521610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1db4f79f941dcb49a510f811c22a17f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Emberborn.Elements.ElementalCrystal
+  elementalType: 1
+  crystalLight: {fileID: 1634221500238398}
+  crystalSound: {fileID: 4252407231675155501}
 --- !u!1 &1315384930428862
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,7 +516,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4673631027014966}
   - component: {fileID: 108006731216870216}
-  - component: {fileID: 8031435399966895704}
+  - component: {fileID: 6104919520879955905}
   m_Layer: 8
   m_Name: Point light
   m_TagString: Untagged
@@ -588,7 +604,7 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
---- !u!114 &8031435399966895704
+--- !u!114 &6104919520879955905
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
