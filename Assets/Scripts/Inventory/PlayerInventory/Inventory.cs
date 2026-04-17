@@ -19,6 +19,11 @@ public class Inventory : MonoBehaviour
             Debug.Log("Inventory list is empty.");
         }
         player = GetComponentInParent<Transform>();
+        if (slotManager == null)
+        {
+            Debug.Log("Slot Manager Script is empty");
+            slotManager = FindFirstObjectByType<InventorySlotManager>();
+        }
     }
     private void OnTriggerEnter(Collider other)//player collects items if they collide with it
     {

@@ -6,9 +6,8 @@ using UnityEngine.SceneManagement;
 public class LoadingScreen : MonoBehaviour
 {
     public GameObject loadingScreen;//UI GameObject of lodaing screen
-    public int sceneID;
 
-    public void LoadScene()
+    public void LoadScene(int sceneID)
     {
         StartCoroutine(LoadSceneAsync(sceneID));
     }
@@ -25,5 +24,9 @@ public class LoadingScreen : MonoBehaviour
 
             yield return null;
         }
+
+        loadingScreen.SetActive(false);
+
+        Operation.allowSceneActivation = true;
     }
 }
