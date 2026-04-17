@@ -1,11 +1,13 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Emberborn.Elements
 {
     public class ElementalCrystal : MonoBehaviour, IInteractable
     {
+        public static event Action<ElementalTypes> collected;
+
         [SerializeField] private ElementalTypes elementalType; //element
-        public GameObject tutorial;
         public GameObject crystalLight;
         public GameObject crystalSound;
 
@@ -13,13 +15,12 @@ namespace Emberborn.Elements
         {
             interact_data.sender.TryGetComponent<ElementalStateManager>(out ElementalStateManager elementalStateManager);
             ReleaseElement(elementalStateManager);
-            tutorial.SetActive(true);
-            Time.timeScale = 0f;
         }
 
         private void ReleaseElement(ElementalStateManager elementalStateManager) //adds da element 
         {
             elementalStateManager.AddElement(elementalType); //add
+            collected?.Invoke(elementalType);
             crystalLight.SetActive(false);
             crystalSound.SetActive(false);
         }
