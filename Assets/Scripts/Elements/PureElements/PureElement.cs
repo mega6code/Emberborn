@@ -34,7 +34,7 @@ namespace Emberborn.Elements
 
         public void ApplyElement(GameObject game_object)
         {
-            PureElementMessageObjects message_objects = new PureElementMessageObjects();
+            PureElementData message_objects = new PureElementData();
             message_objects.strength = FormatStrength();
 
             game_object.BroadcastMessage(GetMessageMethodName(), message_objects, SendMessageOptions.DontRequireReceiver);
@@ -42,7 +42,7 @@ namespace Emberborn.Elements
 
         public void ApplyElement(GameObject game_object, Vector3 point)
         {
-            PureElementMessageObjects message_objects = new PureElementMessageObjects();
+            PureElementData message_objects = new PureElementData();
             message_objects.strength = FormatStrength();
             message_objects.point_of_collision = point;
 

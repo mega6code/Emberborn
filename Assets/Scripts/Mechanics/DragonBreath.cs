@@ -24,6 +24,8 @@ public class DragonBreath : MonoBehaviour
         {
             pure_element.ApplyElement(ray_hit.transform.gameObject, ray_hit.point);
         }
+        
+        //new Animator().
     }
 
     public void ActiveBreath(ElementalTypes type)

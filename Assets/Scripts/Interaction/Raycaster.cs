@@ -16,8 +16,6 @@ public class Raycaster : MonoBehaviour
         return hit;
     }
 
-
-
     public RaycastHit FireShot(float distance = 100f)
     {
         Vector3 startingPosition = this.transform.position;
