@@ -6,6 +6,7 @@ namespace Emberborn.Elements
     public class ElementalCrystal : MonoBehaviour, IInteractable
     {
         public static event Action<ElementalTypes> collected;
+        public GameObject tutorial;
 
         [SerializeField] private ElementalTypes elementalType; //element
         public GameObject crystalLight;
@@ -23,6 +24,18 @@ namespace Emberborn.Elements
             collected?.Invoke(elementalType);
             crystalLight.SetActive(false);
             crystalSound.SetActive(false);
+            Tutorial();
+        }
+        private void Tutorial()
+        {
+            tutorial.SetActive(true);
+            Time.timeScale = 0f;
+        }
+
+        public void CloseTutorial()
+        {
+            tutorial.SetActive(false);
+            Time.timeScale = 1.0f;
         }
     }
 }
