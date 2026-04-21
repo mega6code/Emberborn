@@ -485,14 +485,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 187418954643688464, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1621967856145273808, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1637983809594821097, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
+      propertyPath: state
+      value: 
+      objectReference: {fileID: 1615373625}
     - target: {fileID: 1753563701188476098, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 56.37768
@@ -535,14 +535,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5231108223363178266, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8276838366768321088, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -6.4000244
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6354464618458426833, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2341,6 +2336,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4237686924286529574, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
+      propertyPath: slotManager
+      value: 
+      objectReference: {fileID: 1709772458}
     - target: {fileID: 4529074579130086384, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
       propertyPath: m_Name
       value: Emby_Base
@@ -2411,6 +2410,39 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8579002508563003989, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
   m_PrefabInstance: {fileID: 1615373623}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1615373625 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8087557044282033303, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
+  m_PrefabInstance: {fileID: 1615373623}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176317684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2009e14796113dc489b17d0557e7101c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Emberborn.Player.ElementalStateManager
+--- !u!114 &1709772458 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4768711403990093201, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
+  m_PrefabInstance: {fileID: 558524932}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9c6cc54593f3d34cb08d15fc13a43a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySlotManager
+--- !u!114 &1819111938 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5496260125945797077, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
+  m_PrefabInstance: {fileID: 558524932}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa286863a7fd0904d81fde42d5223c1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoadingScreen
 --- !u!4 &1848849111 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 464160, guid: 0eba33735703d6b49a1773d1396db4b8, type: 3}
@@ -3101,6 +3133,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 176317684}
+    - target: {fileID: 4819329551838788436, guid: 0feda76545390924ab8eece8cdaf803a, type: 3}
+      propertyPath: loadingScreen
+      value: 
+      objectReference: {fileID: 1819111938}
     - target: {fileID: 5557631175077875591, guid: 0feda76545390924ab8eece8cdaf803a, type: 3}
       propertyPath: player
       value: 
@@ -3180,6 +3216,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1272851935}
     m_Modifications:
+    - target: {fileID: 2077473812958631173, guid: 0a324b6afa2a568479f676e3dba33b7c, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 176317684}
+    - target: {fileID: 2077473812958631173, guid: 0a324b6afa2a568479f676e3dba33b7c, type: 3}
+      propertyPath: portalVFX
+      value: 
+      objectReference: {fileID: 6230117810175558798}
+    - target: {fileID: 2077473812958631173, guid: 0a324b6afa2a568479f676e3dba33b7c, type: 3}
+      propertyPath: loadingScreen
+      value: 
+      objectReference: {fileID: 1819111938}
     - target: {fileID: 3497897995376279553, guid: 0a324b6afa2a568479f676e3dba33b7c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.64

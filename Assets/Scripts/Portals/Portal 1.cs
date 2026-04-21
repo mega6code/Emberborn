@@ -4,15 +4,11 @@ using UnityEngine.SceneManagement;
 public class Portal1 : Portals
 {
     public GameObject player;
+    public LoadingScreen loadingScreen;
 
     private void Awake()
     {
         this.gameObject.SetActive(true);
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
     }
 
     
@@ -20,7 +16,7 @@ public class Portal1 : Portals
     {
         if (other.gameObject == player)
         {
-            SceneManager.LoadScene("Level 1");
+            loadingScreen.LoadScene(1);//loads the forest level (1)
             Debug.Log("Portal 1");
 
         }

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InventorySlotManager : MonoBehaviour
+public class  InventorySlotManager : MonoBehaviour
 {
     //uses gameobject to get the postions of where the icons should go
     public GameObject ImageSlot1;

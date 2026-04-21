@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class Portal2 : Portals
 {
     public GameObject player;
+    public LoadingScreen loadingScreen;
 
     private void Awake()
     {
@@ -20,7 +21,7 @@ public class Portal2 : Portals
         if (other.gameObject == player)
         {
             BeatLevel(1);
-            SceneManager.LoadScene("Cave Scene");
+            loadingScreen.LoadScene(1);
             Debug.Log("Portal 2 used");
         }
     }
