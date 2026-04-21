@@ -193,6 +193,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce0336c838ea8bb47af6deede8f87396, type: 3}
+--- !u!114 &62234720 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5496260125945797077, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
+  m_PrefabInstance: {fileID: 665864520}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa286863a7fd0904d81fde42d5223c1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoadingScreen
 --- !u!1001 &109436147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -823,6 +834,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7504447238715375138, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1479123788, guid: d518e6829416f0d45b13aab88e8e1599, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3003,6 +3018,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -0.105212584
       objectReference: {fileID: 0}
+    - target: {fileID: 1665710607830781877, guid: c91ad8188bae5144e9713e7c2ae33f57, type: 3}
+      propertyPath: loadingScreen
+      value: 
+      objectReference: {fileID: 62234720}
     - target: {fileID: 1679938289079512774, guid: c91ad8188bae5144e9713e7c2ae33f57, type: 3}
       propertyPath: timer
       value: 0.3

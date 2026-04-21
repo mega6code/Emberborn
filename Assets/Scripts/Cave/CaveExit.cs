@@ -8,7 +8,7 @@ public class CaveExit : MonoBehaviour
     {
         if(other.gameObject.tag == "Animal")
         {
-            loadingScreen.LoadScene(4);
+            loadingScreen.LoadScene(3);
         }
     }
 }
