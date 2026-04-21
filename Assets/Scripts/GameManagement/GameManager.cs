@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get => instance; }
     public List<bool> Levelclears { get => levelclears; }
+    public InventorySlotManager inventoryUI;
 
     public void Awake()
     {
