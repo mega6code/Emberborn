@@ -8555,7 +8555,6 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.013917311, y: 0.25845686, z: -0.003723954, w: 0.9659154}
   m_LocalPosition: {x: 4.4275513, y: 2.2180004, z: -79.39676}
-  m_LocalPosition: {x: 4.7715454, y: 2.1089993, z: -78.999756}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11413,6 +11412,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 93b4df2a0de484d429a4e1ef2e463d00, type: 3}
   m_PrefabInstance: {fileID: 846563123}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &847405337 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8087557044282033303, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
+  m_PrefabInstance: {fileID: 712715593}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2009e14796113dc489b17d0557e7101c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Emberborn.Player.ElementalStateManager
 --- !u!1 &852092765
 GameObject:
   m_ObjectHideFlags: 0
@@ -26625,6 +26635,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1637983809594821097, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
+      propertyPath: state
+      value: 
+      objectReference: {fileID: 847405337}
     - target: {fileID: 1753563701188476098, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 692.3266
