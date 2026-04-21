@@ -887,9 +887,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 647cf4de35b8a344cb807dd226cc80b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  tutorial: {fileID: 0}
-  tutorialIce: {fileID: 0}
-  tutorialFire: {fileID: 0}
+  tutorialIce: {fileID: 7935025335335564659}
+  tutorialFire: {fileID: 4888832316795517148}
 --- !u!1 &1900362624663490049
 GameObject:
   m_ObjectHideFlags: 0

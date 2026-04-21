@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get => instance; }
     public List<bool> Levelclears { get => levelclears; }
-    public GameObject tutorial;
+    private GameObject tutorial;
     public GameObject tutorialIce;
     public GameObject tutorialFire;
 
