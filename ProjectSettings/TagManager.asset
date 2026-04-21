@@ -7,12 +7,11 @@ TagManager:
   - Animal
   - MovingPlaftorm
   - Point1
-  - Ice
-  - Fire
   - Ground
   - Obstacle
   - Projectile
   - Floor
+  - PowerUp
   layers:
   - Default
   - TransparentFX
@@ -23,7 +22,7 @@ TagManager:
   - Characters
   - GroundSurface
   - Interactable
-  - 
+  - Elemental
   - 
   - 
   - 

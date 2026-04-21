@@ -3,43 +3,55 @@
 public class Raycaster : MonoBehaviour
 {
     [Header("Raycast Parameters")]
+    [SerializeField] private Transform start;
+    [SerializeField] private float distance = 100f;
     [SerializeField] private LayerMask validLayers;
+    [SerializeField] private bool hitTriggerColliders = false;
+    [SerializeField] private Color gizmosColor;
 
-    public RaycastHit GetRaycastTarget(Ray ray, float distance)
+    private Ray ray;
+    private QueryTriggerInteraction queryTriggerInteraction;
+
+    private bool GetRaycastTarget(out RaycastHit hit)
     {
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, distance, validLayers))
+        ray = new Ray(start.position, start.forward);
+
+        if (hitTriggerColliders)
         {
-            return hit;
+            queryTriggerInteraction = QueryTriggerInteraction.Collide;
+        }
+        else 
+        {
+            queryTriggerInteraction = QueryTriggerInteraction.Ignore;
         }
 
-        return hit;
+        return Physics.Raycast(ray, out hit, distance, validLayers, queryTriggerInteraction);
     }
 
+    //float distance = 100f, Transform start, QueryTriggerInteraction queryTriggerInteraction = QueryTriggerInteraction.Ignore
 
-
-    public RaycastHit FireShot(float distance = 100f)
+    public bool FireRay(out RaycastHit hit)
     {
-        Vector3 startingPosition = this.transform.position;
-        Ray ray = new Ray(startingPosition, transform.forward);
-        RaycastHit hit = GetRaycastTarget(ray, distance);
-
-        if (hit.collider != null)
+        if (GetRaycastTarget(out hit))
         {
             Debug.Log("hit: " + hit.collider.name);
+            return true;
+        }
+        else
+        {
+            return false;
         }
 
-        return hit;
     }
 
     private void OnDrawGizmos()
     {
-        Vector3 startingPosition = this.transform.position;
-        Ray ray = new Ray(startingPosition, transform.forward);
-        RaycastHit hit = GetRaycastTarget(ray, 100f);
+        Gizmos.color = gizmosColor;
 
-        Gizmos.color = Color.red;
-        Gizmos.DrawRay(startingPosition, transform.forward * 100f);
-        Gizmos.DrawSphere(hit.point, 0.25f);
+        if(GetRaycastTarget(out RaycastHit hit))
+        {
+            Gizmos.DrawSphere(hit.point, 0.25f);
+        }
+        Gizmos.DrawRay(ray);
     }
 }

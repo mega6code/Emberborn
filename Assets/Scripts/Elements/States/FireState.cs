@@ -16,7 +16,7 @@ namespace Emberborn.Elements
 
         public override void ActivateAbility2(GameObject parent_game_object)
         {
-            parent_game_object.GetComponent<DragonBreath>().ActiveBreath(ElementalTypes.Fire);
+            parent_game_object.GetComponent<DragonBreath>().ActivateBreath(ElementalTypes.Fire);
         }
     }
 }

@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] private ElementalStateManager elementalStateManager;
     [SerializeField] AudioSource grassStep_audio;
-    [SerializeField] AudioSource ambience_music;
     [SerializeField] AudioSource flapWing_SFX;
     [SerializeField] AudioSource landGrass_SFX;
     [SerializeField ]private LayerMask groundLayer;
@@ -33,7 +32,6 @@ public class PlayerController : MonoBehaviour
     private bool groundedPlayer;
     private Transform cameraMainTransform;
     public Interactor interactor;
-
     #endregion
 
     #region Methods
@@ -81,11 +79,6 @@ public class PlayerController : MonoBehaviour
             Debug.Log("NOOOOT grounded");
         }
 
-        if (!ambience_music.isPlaying)
-        {
-            ambience_music.Play();
-        }
-
         //is not moving
         if (groundedPlayer && playerVelocity.y < 0)
         {
@@ -124,11 +117,10 @@ public class PlayerController : MonoBehaviour
             OnJump();
         }
 
-
         // Changes the height position of the player..
-        if (glideControl.IsPressed() && !groundedPlayer)
+        if (glideControl.IsPressed() && !groundedPlayer && playerVelocity.y < 0)
         {
-            OnGlide();
+            OnGlide();          
         }
         else
         {
