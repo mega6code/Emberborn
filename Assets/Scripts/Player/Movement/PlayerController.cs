@@ -132,6 +132,7 @@ public class PlayerController : MonoBehaviour
         //JohnStuff vvv
         if (InputSystem.actions.FindAction("Player/Ability2").IsPressed())
         {
+            //animator.
             OnAbility2(new InputAction.CallbackContext());
         } 
 

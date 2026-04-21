@@ -7,6 +7,8 @@ public class DragonBreath : MonoBehaviour
 {
     [SerializeField] private Raycaster raycaster;
     [SerializeField] private PureElement pureElement;
+    
+    public event Action dragonBreathActivated;
 
     private void FireRay()
     {
@@ -18,6 +20,8 @@ public class DragonBreath : MonoBehaviour
 
     public void ActivateBreath(ElementalTypes type)
     {
+        dragonBreathActivated?.Invoke();
+        
         pureElement.elemental_type = type;
         FireRay();
     }
