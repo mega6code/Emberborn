@@ -1548,11 +1548,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8867188747508439339, guid: 2b688f10ed599ae499bc85f6f8c7f57e, type: 3}
   m_PrefabInstance: {fileID: 213850716}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &213850718 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 672502055132295361, guid: 2b688f10ed599ae499bc85f6f8c7f57e, type: 3}
-  m_PrefabInstance: {fileID: 213850716}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &215015978
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12843,7 +12838,7 @@ MonoBehaviour:
   alter1: {fileID: 1051414858}
   alter2: {fileID: 977992812}
   alter3: {fileID: 1219396657}
-  portal: {fileID: 0}
+  portal: {fileID: 2102435371}
 --- !u!135 &1705937687
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -16753,9 +16748,6 @@ PrefabInstance:
       insertIndex: 0
       addedObject: {fileID: 213850717}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1621967856145273808, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3281823958063967683}
     - targetCorrespondingSourceObject: {fileID: 7935025335335564659, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1104376371}
@@ -16768,30 +16760,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1753563701188476098, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
   m_PrefabInstance: {fileID: 3281823958063967680}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3281823958063967682 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1621967856145273808, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
-  m_PrefabInstance: {fileID: 3281823958063967680}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3281823958063967683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3281823958063967682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa286863a7fd0904d81fde42d5223c1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LoadingScreen
-  loadingScreen: {fileID: 213850718}
 --- !u!114 &3281823958063967684 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5496260125945797077, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
   m_PrefabInstance: {fileID: 3281823958063967680}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3281823958063967682}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa286863a7fd0904d81fde42d5223c1f, type: 3}
