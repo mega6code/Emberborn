@@ -30,12 +30,16 @@ namespace Emberborn.Elements
         {
             tutorial.SetActive(true);
             Time.timeScale = 0f;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
 
         public void CloseTutorial()
         {
             tutorial.SetActive(false);
             Time.timeScale = 1.0f;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = true;
         }
     }
 }

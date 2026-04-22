@@ -12,13 +12,14 @@ public class Inventory : MonoBehaviour
     private Transform player;
     [SerializeField]InventorySlotManager slotManager;
     
-    private void Awake()
+    private void Start()
     {
         if (playerItems == null)
         {
             Debug.Log("Inventory list is empty.");
         }
         player = GetComponentInParent<Transform>();
+        slotManager = GameManager.Instance.inventoryUI;
     }
     private void OnTriggerEnter(Collider other)//player collects items if they collide with it
     {

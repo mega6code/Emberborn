@@ -10,9 +10,14 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get => instance; }
     public List<bool> Levelclears { get => levelclears; }
+    public InventorySlotManager inventoryUI;
 
     public void Awake()
     {
+        //Changing the visibility of the cursor and locking its position to the screen
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
         if (instance == null)
         {
             instance = this;
