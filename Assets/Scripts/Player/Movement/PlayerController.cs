@@ -10,10 +10,11 @@ public class PlayerController : MonoBehaviour
     //Serialized References
     [SerializeField] Animator animator;
     [SerializeField] private ElementalStateManager elementalStateManager;
+    [SerializeField] private Dra dragonBreathVFX;
     [SerializeField] AudioSource grassStep_audio;
     [SerializeField] AudioSource flapWing_SFX;
     [SerializeField] AudioSource landGrass_SFX;
-    [SerializeField ]private LayerMask groundLayer;
+    [SerializeField] private LayerMask groundLayer;
 
     //Serialized Values
     [SerializeField] private float playerSpeed = 2.0f;
@@ -132,9 +133,15 @@ public class PlayerController : MonoBehaviour
         //JohnStuff vvv
         if (InputSystem.actions.FindAction("Player/Ability2").IsPressed())
         {
-            //animator.
+            animator.SetBool("isMouth", true);
+            dragonBreathVFX.SetActive(true);
             OnAbility2(new InputAction.CallbackContext());
-        } 
+        }
+        else
+        {
+            animator.SetBool("isMouth", false);
+            dragonBreathVFX.SetActive(false);
+        }
 
     }
 

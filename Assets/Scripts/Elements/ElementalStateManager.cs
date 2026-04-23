@@ -19,7 +19,11 @@ namespace Emberborn.Elements
 
         #region Properties
         public ElementalState Current_state { get => current_state;} //in case u need to check Emby's state outside of this class
-        public int Collected_elem_index { get => collected_elem_index;} 
+        public int Collected_elem_index { get => collected_elem_index;}
+        #endregion
+
+        #region Events
+        public event Action<ElementalTypes> changedState;
         #endregion
 
         #region Methods
@@ -121,16 +125,9 @@ namespace Emberborn.Elements
             else
             {
                 Debug.Log("No Elements collected yet!");
-            }
-            
+            }            
         }
-
         #endregion
-
-        #region Events
-        public event Action<ElementalTypes> changedState;
-        #endregion
-
     } 
 
 }
