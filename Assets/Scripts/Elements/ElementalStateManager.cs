@@ -18,8 +18,15 @@ namespace Emberborn.Elements
         #endregion
 
         #region Properties
-        public ElementalState Current_state { get => current_state;} //in case u need to check Emby's state outside of this class
-        public int Collected_elem_index { get => collected_elem_index;}
+
+        /// <summary>
+        /// Emby's current state
+        /// </summary>
+        public ElementalState Current_state { get => current_state;} 
+        /// <summary>
+        /// Emby's current element (pretty much the same thing as his state, but this variable is an ElementalType variable)
+        /// </summary>
+        public ElementalTypes Current_element { get => collected_elements[collected_elem_index];}
         #endregion
 
         #region Events
