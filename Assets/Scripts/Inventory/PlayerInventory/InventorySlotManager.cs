@@ -62,14 +62,17 @@ public class  InventorySlotManager : MonoBehaviour
         if (itemToRemove.itemName == index1.itemName)
         {
             Destroy(instantiated1);
+            Debug.Log("Destroyed slot1");
         }
         else if (itemToRemove.itemName == index2.itemName)
         {
             Destroy (instantiated2);
+            Debug.Log("Destroyed slot2");
         }
         else if (itemToRemove.itemName == index3.itemName)
         {
             Destroy(instantiated3);
+            Debug.Log("Destroyed slot3");
         }
         else
         {
