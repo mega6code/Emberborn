@@ -850,6 +850,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4126734704629097778, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
+      propertyPath: loadingScreen
+      value: 
+      objectReference: {fileID: 62234720}
+    - target: {fileID: 4190534390227183185, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223160660367052731, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223160660367052731, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223160660367052731, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7504447238715375138, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
       propertyPath: m_Sprite
       value: 

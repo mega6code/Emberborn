@@ -4,6 +4,11 @@ using UnityEngine.SceneManagement;
 public class CaveExit : MonoBehaviour
 {
     public LoadingScreen loadingScreen;
+
+    private void Start()
+    {
+        loadingScreen = GameManager.Instance.loadingScreen;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Animal")
