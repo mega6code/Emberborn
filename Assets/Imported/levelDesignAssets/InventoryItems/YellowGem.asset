@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fce7f51f9faf56645b175dfc20a303d8, type: 3}
   m_Name: YellowGem
   m_EditorClassIdentifier: Assembly-CSharp::Assets.Scripts.Inventory.Item
-  name: YellowGem
+  itemName: YellowGem
   prefab: {fileID: 7352692620992275726, guid: b27426279f70ab84eaa238f0587a7ca7, type: 3}
   icon: {fileID: 2634015667792389395, guid: 8b3974b85267eb3419860a5e076550ff, type: 3}

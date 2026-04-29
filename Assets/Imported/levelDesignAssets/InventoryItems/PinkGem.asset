@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fce7f51f9faf56645b175dfc20a303d8, type: 3}
   m_Name: PinkGem
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  name: PinkGem
+  itemName: PinkGem
   prefab: {fileID: 293098575657837415, guid: 2f0e360d7ddd7c048aa9c64c89c0b83c, type: 3}
   icon: {fileID: 1877221557209455201, guid: e76cbf24099bc93429f289a1b50c6a98, type: 3}
