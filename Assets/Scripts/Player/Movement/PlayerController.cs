@@ -10,10 +10,11 @@ public class PlayerController : MonoBehaviour
     //Serialized References
     [SerializeField] Animator animator;
     [SerializeField] private ElementalStateManager elementalStateManager;
+    [SerializeField] private DragonBreathVFX dragonBreathVFX;
     [SerializeField] AudioSource grassStep_audio;
     [SerializeField] AudioSource flapWing_SFX;
     [SerializeField] AudioSource landGrass_SFX;
-    [SerializeField ]private LayerMask groundLayer;
+    [SerializeField] private LayerMask groundLayer;
 
     //Serialized Values
     [SerializeField] private float playerSpeed = 2.0f;
@@ -47,6 +48,7 @@ public class PlayerController : MonoBehaviour
         InputSystem.actions.FindAction("Player/Ability1").performed += OnAbility1;
         //InputSystem.actions.FindAction("Player/Ability2").performed += OnAbility2;
         InputSystem.actions.FindAction("Player/AbilitySwitch").performed += OnSwitchState;
+
     }
 
     private void OnDisable()
@@ -132,8 +134,22 @@ public class PlayerController : MonoBehaviour
         //JohnStuff vvv
         if (InputSystem.actions.FindAction("Player/Ability2").IsPressed())
         {
+            animator.SetBool("IsUsingMouth", true);
+            if (elementalStateManager.Current_state != null)
+            {
+                dragonBreathVFX.ActivateBreath(elementalStateManager.Current_element);
+            }
+
             OnAbility2(new InputAction.CallbackContext());
-        } 
+        }
+        else
+        {
+            animator.SetBool("IsUsingMouth", false);
+            if (elementalStateManager.Current_state != null)
+            {
+                dragonBreathVFX.DeActivateBreath();
+            }
+        }
 
     }
 
