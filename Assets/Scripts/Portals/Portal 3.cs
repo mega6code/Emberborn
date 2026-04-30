@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class Portal3 : Portals
 {
     public GameObject player;
+    public LoadingScreen loadingScreen;
 
     private void Awake()
     {
@@ -23,8 +24,8 @@ public class Portal3 : Portals
         if (other.gameObject == player)
         {
             BeatLevel(2);
-            //SceneManager.LoadScene("");
-            // Debug.Log("Portal 3");
+            loadingScreen.LoadScene(4);
+            Debug.Log("Portal 3");
 
         }
     }

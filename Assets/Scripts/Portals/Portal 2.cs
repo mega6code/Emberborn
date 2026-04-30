@@ -21,7 +21,7 @@ public class Portal2 : Portals
         if (other.gameObject == player)
         {
             BeatLevel(1);
-            loadingScreen.LoadScene(1);
+            loadingScreen.LoadScene(2);
             Debug.Log("Portal 2 used");
         }
     }
