@@ -156,6 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Emberborn.Projectiles.ElementalProjectile
   type: 1
   strength: 1
+  vfx: {fileID: 3156838148121006005}
 --- !u!1001 &4798594602927494952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -228,5 +229,10 @@ PrefabInstance:
 --- !u!4 &3156838146511616225 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7590641042179993545, guid: a8631dd9655a76e4298ba27146a76e21, type: 3}
+  m_PrefabInstance: {fileID: 4798594602927494952}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &3156838148121006005 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7590641043792337053, guid: a8631dd9655a76e4298ba27146a76e21, type: 3}
   m_PrefabInstance: {fileID: 4798594602927494952}
   m_PrefabAsset: {fileID: 0}
