@@ -20,11 +20,13 @@ namespace Emberborn.Elements
 
         private void ReleaseElement(ElementalStateManager elementalStateManager) //adds da element 
         {
+            Debug.Log("Starting release");
             elementalStateManager.AddElement(elementalType); //add
             collected?.Invoke(elementalType);
             crystalLight.SetActive(false);
             crystalSound.SetActive(false);
             Tutorial();
+            Debug.Log("ICe ICe baby");
         }
         private void Tutorial()
         {

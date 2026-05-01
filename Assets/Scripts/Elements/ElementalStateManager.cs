@@ -30,7 +30,7 @@ namespace Emberborn.Elements
         #endregion
 
         #region Events
-        public event Action<ElementalTypes> changedState;
+        public static event Action<ElementalTypes> changedState;
         #endregion
 
         #region Methods
