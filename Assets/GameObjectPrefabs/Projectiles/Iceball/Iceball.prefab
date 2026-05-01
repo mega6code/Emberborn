@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2055232921137415136, guid: b652e2a989e662513a2905af4fd736b5, type: 3}
+      propertyPath: type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055232921137415136, guid: b652e2a989e662513a2905af4fd736b5, type: 3}
       propertyPath: method_name
       value: OnFreeze
       objectReference: {fileID: 0}
