@@ -26,8 +26,11 @@ public class NPCSpeak : MonoBehaviour
             // if player gets close enough, play audio and start subtitles
             if (other.gameObject == player)
             {
-                audioSource.Play();
-                StartCoroutine(Subtitles());
+                if (audioSource.isPlaying != true)
+                {
+                    audioSource.Play();
+                    StartCoroutine(Subtitles());
+                }
             }
         }
     }

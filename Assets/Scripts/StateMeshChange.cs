@@ -27,11 +27,12 @@ public class StateMeshChange : MonoBehaviour
 
     private void OnEnable()
     {
-        stateManager.changedState += OnchangedState;
+        ElementalStateManager.changedState += OnchangedState;
+
     }
     private void OnDisable()
     {
-        stateManager.changedState -= OnchangedState;
+        ElementalStateManager.changedState -= OnchangedState;
     }
 
 

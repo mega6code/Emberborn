@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ElementalAssetSwap : MonoBehaviour
 {
     [SerializeField] private RawImage currentImage;
-    public ElementalStateManager state;
+    //public ElementalStateManager state;
     public Texture iceImage;
     public Texture fireImage;
 
@@ -16,25 +16,33 @@ public class ElementalAssetSwap : MonoBehaviour
 
     }
 
-    private void Update()
+    private void StateCheck(ElementalTypes typ)
     {
         if (currentImage != null) {
-            if (state.Current_state == null)
-            {
-                Debug.Log("No power up yet");
-            }
-            else if (state.Current_element == ElementalTypes.Ice)
+            if (typ == ElementalTypes.Ice)
             {
                 Debug.Log("You are in ice mode");
                 SwapAsset(iceImage);
             }
-            else if (state.Current_element == ElementalTypes.Fire)
+            else if (typ == ElementalTypes.Fire)
             {
                 Debug.Log("You are in fire mode");
                 SwapAsset(fireImage);
             }
         }
     }
+
+    private void OnDisable()
+    {
+        ElementalStateManager.changedState -= StateCheck;
+
+    }
+
+    private void OnEnable()
+    {
+        ElementalStateManager.changedState += StateCheck;
+    }
+
     //swap the things
     public void SwapAsset(Texture textureSet) 
     {

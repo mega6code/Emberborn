@@ -6,7 +6,7 @@ public class Portal1 : Portals
     public GameObject player;
     public LoadingScreen loadingScreen;
 
-    private void Awake()
+    private void Start()
     {
         this.gameObject.SetActive(true);
     }

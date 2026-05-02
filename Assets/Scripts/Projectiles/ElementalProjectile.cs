@@ -9,6 +9,7 @@ namespace Emberborn.Projectiles
     {
         [SerializeField] private ElementalTypes type;
         [SerializeField] private float strength;
+        [SerializeField] private ParticleSystem vfx;
 
         private PureElement pure_element;
 
@@ -20,6 +21,21 @@ namespace Emberborn.Projectiles
         private void OnCollisionEnter(Collision collision)
         {
             pure_element.ApplyElement(collision.gameObject);
+
+            
+
+            //if (gameObject.TryGetComponent<Renderer>(out Renderer renderer))
+            //{
+            //    renderer.enabled = false;
+            //}
+
+            //if (gameObject.TryGetComponent<Collider>(out Collider collider))
+            //{
+            //    collider.enabled = false;
+            //}
+
+            Destroy(vfx.gameObject, 5f);
+            transform.DetachChildren();
             Destroy(gameObject);
         }
     }
