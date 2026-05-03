@@ -2095,7 +2095,7 @@ Transform:
   m_GameObject: {fileID: 122572445}
   serializedVersion: 2
   m_LocalRotation: {x: 0.013917311, y: 0.25845686, z: -0.003723954, w: 0.9659154}
-  m_LocalPosition: {x: 548.1425, y: 29.818, z: 326.95123}
+  m_LocalPosition: {x: 516.24255, y: 29.818, z: 277.25125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3006,14 +3006,14 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 19e2a2e841f207a448492c060df3b69a, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 58
   DopplerLevel: 1
   MinDistance: 1.0597858
   MaxDistance: 500
@@ -3081,7 +3081,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.584
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -4458,7 +4458,7 @@ Transform:
   m_GameObject: {fileID: 282785443}
   serializedVersion: 2
   m_LocalRotation: {x: 0.013917311, y: 0.25845686, z: -0.003723954, w: 0.9659154}
-  m_LocalPosition: {x: 548.1425, y: 29.818, z: 326.95123}
+  m_LocalPosition: {x: 516.24255, y: 29.818, z: 277.25125}
   m_LocalScale: {x: 0.83332, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8478,14 +8478,14 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 7c0ffea15b35f2444862b1ae16977bcc, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 36
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -8523,7 +8523,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.531
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -9022,7 +9022,7 @@ Transform:
   m_GameObject: {fileID: 654997224}
   serializedVersion: 2
   m_LocalRotation: {x: 0.013917311, y: 0.25845686, z: -0.003723954, w: 0.9659154}
-  m_LocalPosition: {x: 16.09253, y: 2.2180004, z: -12.578766}
+  m_LocalPosition: {x: -15.807434, y: 2.2180004, z: -62.278748}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9709,7 +9709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8579002508563003989, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 550.24
+      value: 518.34
       objectReference: {fileID: 0}
     - target: {fileID: 8579002508563003989, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9717,7 +9717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8579002508563003989, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 330.59
+      value: 280.89
       objectReference: {fileID: 0}
     - target: {fileID: 8579002508563003989, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10506,8 +10506,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 7d04deda60330eb45b732c1f5d9dea5a, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.444
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -12607,7 +12607,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 3ca4071fcbfd17741814de8f744fb437, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.07
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -14295,7 +14295,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 42
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -14363,7 +14363,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.49
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -28760,7 +28760,7 @@ Transform:
   m_GameObject: {fileID: 2135526826}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.28005037, z: -0, w: 0.9599853}
-  m_LocalPosition: {x: 17.756653, y: 2.2180004, z: -9.731079}
+  m_LocalPosition: {x: -14.143311, y: 2.2180004, z: -59.43106}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

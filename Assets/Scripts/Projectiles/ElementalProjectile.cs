@@ -11,11 +11,16 @@ namespace Emberborn.Projectiles
         [SerializeField] private float strength;
         [SerializeField] private ParticleSystem vfx;
 
+        [SerializeField] private AudioSource projectileSFX;
+
+
+
         private PureElement pure_element;
 
         private void Start()
         {
             pure_element = new PureElement(type, strength);
+            projectileSFX.Play();
         }
 
         private void OnCollisionEnter(Collision collision)
@@ -35,6 +40,7 @@ namespace Emberborn.Projectiles
             //}
 
             Destroy(vfx.gameObject, 5f);
+            projectileSFX.Stop();
             transform.DetachChildren();
             Destroy(gameObject);
         }
