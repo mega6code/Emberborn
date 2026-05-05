@@ -596,9 +596,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1909854925749679617}
     m_Modifications:
+    - target: {fileID: 4233158337416474869, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
+      propertyPath: m_Pitch
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233158337416474869, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 0e57ba336d33c6340b44ad31c5feb3d3, type: 3}
     - target: {fileID: 4529074579130086384, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
       propertyPath: m_Name
       value: Emby_Base
+      objectReference: {fileID: 0}
+    - target: {fileID: 4749603011728268324, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8087557044282033303, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
       propertyPath: collected_elements.Array.size
@@ -822,6 +834,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4126734704629097778, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
+      propertyPath: loadingScreen
+      value: 
+      objectReference: {fileID: 1864450244}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

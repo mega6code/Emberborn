@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class CaveExit : MonoBehaviour
 {
-    public LoadingScreen loadingScreen;
+    /*public LoadingScreen loadingScreen;
 
     private void Start()
     {
@@ -14,6 +14,14 @@ public class CaveExit : MonoBehaviour
         if(other.gameObject.tag == "Animal")
         {
             loadingScreen.LoadScene(3);
+        }
+    }*/
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Animal")
+        {
+            SceneManager.LoadScene("Ice Scene");
         }
     }
 }
