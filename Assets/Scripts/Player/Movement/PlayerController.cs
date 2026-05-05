@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] private ElementalStateManager elementalStateManager;
     [SerializeField] private DragonBreathVFX dragonBreathVFX;
+    [SerializeField] private Raycaster groundChecker;
     [SerializeField] AudioSource grassStep_audio;
     [SerializeField] AudioSource flapWing_SFX;
     [SerializeField] AudioSource landGrass_SFX;
@@ -71,6 +72,17 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         groundedPlayer = controller.isGrounded;
+        if (groundChecker.FireRay(out RaycastHit raycastHit))
+        {
+            if(raycastHit.distance < 0.2)
+            {
+                groundedPlayer = true;
+            }
+            else
+            {
+                groundedPlayer = false;
+            }
+        }
         //groundedPlayer = CheckGround();
 
         if (groundedPlayer)

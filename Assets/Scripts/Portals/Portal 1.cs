@@ -16,7 +16,8 @@ public class Portal1 : Portals
     {
         if (other.gameObject == player)
         {
-            loadingScreen.LoadScene(1);//loads the forest level (1)
+            GameManager.Instance.GetComponent<LoadingScreen>().LoadScene(1);
+           // loadingScreen.LoadScene(1);//loads the forest level (1)
             Debug.Log("Portal 1");
 
         }

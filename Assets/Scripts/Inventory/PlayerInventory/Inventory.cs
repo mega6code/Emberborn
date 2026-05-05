@@ -10,7 +10,7 @@ public class Inventory : MonoBehaviour
 {
     List<Item> playerItems = new List<Item>();
     private Transform player;
-    [SerializeField]InventorySlotManager slotManager;
+    private InventorySlotManager slotManager;
     
     private void Start()
     {

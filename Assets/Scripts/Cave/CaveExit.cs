@@ -21,7 +21,8 @@ public class CaveExit : MonoBehaviour
     {
         if (other.gameObject.tag == "Animal")
         {
-            SceneManager.LoadScene("Ice Scene");
+            //SceneManager.LoadScene("Ice Scene");
+            GameManager.Instance.GetComponent<LoadingScreen>().LoadScene(3);
         }
     }
 }

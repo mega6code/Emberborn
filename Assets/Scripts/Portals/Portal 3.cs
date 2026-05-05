@@ -21,10 +21,10 @@ public class Portal3 : Portals
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == player)
+        if (other.gameObject.tag == player.tag)
         {
             BeatLevel(2);
-            loadingScreen.LoadScene(4);
+            GameManager.Instance.GetComponent<LoadingScreen>().LoadScene(4);
             Debug.Log("Portal 3");
 
         }

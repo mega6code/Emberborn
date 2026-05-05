@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get => instance; }
     public List<bool> Levelclears { get => levelclears; }
     public InventorySlotManager inventoryUI;
-    public LoadingScreen loadingScreen;
+    //public LoadingScreen loadingScreen;
     public void Awake()
     {
         //Changing the visibility of the cursor and locking its position to the screen

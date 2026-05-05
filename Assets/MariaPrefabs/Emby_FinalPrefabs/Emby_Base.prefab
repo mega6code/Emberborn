@@ -127,6 +127,37 @@ Transform:
   - {fileID: 5471993169753359473}
   m_Father: {fileID: 5098663319831505256}
   m_LocalEulerAnglesHint: {x: 10.471535, y: -5.4873614, z: 48.96261}
+--- !u!1 &1781234960899907668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1094239663264532172}
+  m_Layer: 6
+  m_Name: GroundDirection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1094239663264532172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781234960899907668}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0, y: -0.101, z: 0.14}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8579002508563003989}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &2031949782237027619
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,6 +899,7 @@ GameObject:
   - component: {fileID: 8051572158616654183}
   - component: {fileID: 1293986131576350895}
   - component: {fileID: 1234631771360418435}
+  - component: {fileID: 920453642569848405}
   m_Layer: 6
   m_Name: Emby_Base
   m_TagString: Animal
@@ -894,6 +926,7 @@ Transform:
   - {fileID: 4794646750095013003}
   - {fileID: 287492716834626882}
   - {fileID: 1520234916642690858}
+  - {fileID: 1094239663264532172}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 10.986, z: 0}
 --- !u!95 &1202421980292280061
@@ -1293,7 +1326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Raycaster
   start: {fileID: 647013113587808257}
-  distance: 5
+  distance: 15
   validLayers:
     serializedVersion: 2
     m_Bits: 512
@@ -1314,6 +1347,7 @@ MonoBehaviour:
   animator: {fileID: 1202421980292280061}
   elementalStateManager: {fileID: 8087557044282033303}
   dragonBreathVFX: {fileID: 553765751717155633}
+  groundChecker: {fileID: 920453642569848405}
   grassStep_audio: {fileID: 4233158337416474869}
   flapWing_SFX: {fileID: 8981580660898497012}
   landGrass_SFX: {fileID: 4749603011728268324}
@@ -1375,6 +1409,25 @@ MonoBehaviour:
     m_Bits: 256
   hitTriggerColliders: 0
   gizmosColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &920453642569848405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4529074579130086384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d25de33d77de64c9ed102bd4ccc23d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Raycaster
+  start: {fileID: 1094239663264532172}
+  distance: 100
+  validLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  hitTriggerColliders: 0
+  gizmosColor: {r: 0.04032588, g: 1, b: 0, a: 0}
 --- !u!1 &4738014652014487158
 GameObject:
   m_ObjectHideFlags: 0

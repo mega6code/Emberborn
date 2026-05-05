@@ -2375,7 +2375,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: c82cca28b9bcc6c458a93281db854560, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.852
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3453,6 +3453,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2138740730468403637, guid: c91ad8188bae5144e9713e7c2ae33f57, type: 3}
       insertIndex: 2
       addedObject: {fileID: 1267862040}
+    - targetCorrespondingSourceObject: {fileID: 1151019833620896076, guid: c91ad8188bae5144e9713e7c2ae33f57, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: c91ad8188bae5144e9713e7c2ae33f57, type: 3}
 --- !u!4 &1909854925749679617 stripped
 Transform:

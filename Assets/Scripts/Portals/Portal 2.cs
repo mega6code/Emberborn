@@ -5,12 +5,13 @@ public class Portal2 : Portals
 {
     public GameObject player;
     public LoadingScreen loadingScreen;
+    SceneManager sceneManager;
 
     private void Start()
     {
         this.gameObject.SetActive(false);
 
-        if (GameManager.Instance.Levelclears[0] == true)
+        if (gameObject.scene.buildIndex == 0)
         {
             this.gameObject.SetActive(true);
         }
@@ -18,10 +19,11 @@ public class Portal2 : Portals
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == player)
+        if (other.CompareTag("Animal"))
         {
             BeatLevel(1);
-            loadingScreen.LoadScene(2);
+            GameManager.Instance.GetComponent<LoadingScreen>().LoadScene(2);
+            //loadingScreen.LoadScene(2);
             Debug.Log("Portal 2 used");
         }
     }

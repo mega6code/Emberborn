@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -4950131423413052496, guid: 94a4cef9b813feb4d8a5812cedb743fa, type: 3}
       propertyPath: maxTimer
-      value: 7
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 951186539431517637, guid: 94a4cef9b813feb4d8a5812cedb743fa, type: 3}
       propertyPath: freeze_resistance
@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8460724611811486539, guid: 94a4cef9b813feb4d8a5812cedb743fa, type: 3}
       propertyPath: maxScale.y
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8460724611811486539, guid: 94a4cef9b813feb4d8a5812cedb743fa, type: 3}
       propertyPath: minScale.x
