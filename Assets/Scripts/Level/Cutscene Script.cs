@@ -1,10 +1,10 @@
+using System;
 using Unity.Cinemachine;
 using UnityEngine;
 
 public class CutsceneScript : MonoBehaviour
 {
     [SerializeField] AudioSource creditSong;
-    [SerializeField] GameObject gameManager;
     [SerializeField] GameObject credits;
     [SerializeField] GameObject player;
     public GameObject fakePlayer;
@@ -13,11 +13,14 @@ public class CutsceneScript : MonoBehaviour
     public Animator set3;
     public CinemachineCamera daCamera;
     public GameObject oldCam;
+
+    public static event Action KILLJOHN;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     { 
+        KILLJOHN?.Invoke();
         credits.SetActive(false);
         fakePlayer.SetActive(false);
         set1.SetBool("Paused", true);
@@ -27,7 +30,6 @@ public class CutsceneScript : MonoBehaviour
 
     void Credits()
     {
-        gameManager.SetActive(false);
         creditSong.Play();
         credits.SetActive(true);
         Debug.Log("set1 animator: " + set1);

@@ -41,11 +41,18 @@ public class GameManager : MonoBehaviour
     }
     public void OnEnable()
     {
+        CutsceneScript.KILLJOHN += TurnOff;
         Portals.levelBeaten += OnLevelBeat;
     }
 
     public void OnDisable()
     {
+        CutsceneScript.KILLJOHN -= TurnOff;
         Portals.levelBeaten -= OnLevelBeat;
+    }
+
+    void TurnOff()
+    {
+        Destroy(gameObject);
     }
 }
