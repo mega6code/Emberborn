@@ -157,7 +157,7 @@ MonoBehaviour:
   progressiveScaler: {fileID: 3629010148276468240}
   freeze_resistance: 0
   flamed_resistance: 0
-  destroy_at_minimum: 0
+  destroy_at_minimum: 1
 --- !u!114 &3629010148276468240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,8 +170,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c945333cf0ca7e542bb33b7b6d153c89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProgressiveScaler
-  min_scale: {x: 0, y: 0, z: 0}
-  max_scale: {x: 3, y: 3, z: 3}
+  minScale: {x: 0, y: 0, z: 0}
+  useStartScaleForMin: 0
+  maxScale: {x: 3, y: 3, z: 3}
+  useStartScaleForMax: 0
   upscale_rate: 1
   downscale_rate: 1
   target_scale: {x: 0, y: 0, z: 0}

@@ -6,14 +6,20 @@ public class ProgressiveScaler : MonoBehaviour
 {
     #region Fields
     [Header("Scale Limits")]
-    [SerializeField] private Vector3 min_scale;
-    [SerializeField] private Vector3 max_scale;
+    [SerializeField] private Vector3 minScale;
+    [SerializeField] private bool useStartScaleForMin = false;
+    [SerializeField] private Vector3 maxScale;
+    [SerializeField] private bool useStartScaleForMax = false;
 
     [Header("Scale Rate")]
     [Tooltip("Rate = amount of units it will scale per every 1 second")]
     [SerializeField] private float upscale_rate = 1;
     [Tooltip("Rate = amount of units it will scale per every 1 second")]
     [SerializeField] private float downscale_rate = 1;
+
+    [Header("Other Cool Stuff")]
+    [Tooltip("Reset the overall physics for the object each time the scale changes (if its floating and stuff)")]
+    [SerializeField] private bool resetGravityEachScale = false;
 
     [Space]
     [Header("| DEBUGGING ONLY |")]
@@ -34,6 +40,16 @@ public class ProgressiveScaler : MonoBehaviour
     private void Start()
     {
         target_scale = transform.localScale;
+
+        if (useStartScaleForMin)
+        {
+            minScale = transform.localScale;
+        }
+
+        if (useStartScaleForMax)
+        {
+            maxScale = transform.localScale;
+        }
     }
     void Update()
     {
@@ -51,11 +67,11 @@ public class ProgressiveScaler : MonoBehaviour
                 {
                     //if yes, time to check!!!!!! (the min/max limits)
 
-                    if (IsFloatsInRange(transform.localScale[i], min_scale[i])) //is the size at minimum size yet?
+                    if (IsFloatsInRange(transform.localScale[i], minScale[i])) //is the size at minimum size yet?
                     {
                         min_check++;
                     }
-                    if (IsFloatsInRange(transform.localScale[i], max_scale[i])) //is the size at maximum size yet?
+                    if (IsFloatsInRange(transform.localScale[i], maxScale[i])) //is the size at maximum size yet?
                     {
                         max_check++;
                     } 
@@ -69,6 +85,21 @@ public class ProgressiveScaler : MonoBehaviour
         }
 
         transform.localScale += scale_to_set;
+
+        //if (adjustYPositioning)
+        //{
+        //    transform.localPosition -= new Vector3(0, (scale_to_set.y/2), 0);
+        //}
+
+        if (resetGravityEachScale)
+        {
+            if(TryGetComponent<Rigidbody>(out Rigidbody rigidbody))
+            {
+                rigidbody.useGravity = !(rigidbody.useGravity);
+                rigidbody.useGravity = !(rigidbody.useGravity);
+            }
+
+        }
 
         if (min_check == 3)
         {
@@ -142,14 +173,14 @@ public class ProgressiveScaler : MonoBehaviour
 
         for (int i = 0; i < 3; i++)
         {
-            if (temp_scale[i] < min_scale[i]) //checks if its under minimum scale
+            if (temp_scale[i] < minScale[i]) //checks if its under minimum scale
             {
-                temp_scale[i] = min_scale[i];
+                temp_scale[i] = minScale[i];
                 min_check++;
             }
-            else if (temp_scale[i] > max_scale[i]) //checks if its over max scale
+            else if (temp_scale[i] > maxScale[i]) //checks if its over max scale
             {
-                temp_scale[i] = max_scale[i];
+                temp_scale[i] = maxScale[i];
                 max_check++;
             }
         }

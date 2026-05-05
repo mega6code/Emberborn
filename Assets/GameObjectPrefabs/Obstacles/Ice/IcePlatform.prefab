@@ -73,6 +73,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3629010148276468240, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+      propertyPath: maxScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629010148276468240, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+      propertyPath: maxScale.y
+      value: 0.095438
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629010148276468240, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+      propertyPath: maxScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629010148276468240, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
       propertyPath: max_scale.x
       value: 2
       objectReference: {fileID: 0}
@@ -106,6 +118,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3629010148276468240, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
       propertyPath: target_scale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629010148276468240, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+      propertyPath: useStartScaleForMax
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5333694260452592798, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}

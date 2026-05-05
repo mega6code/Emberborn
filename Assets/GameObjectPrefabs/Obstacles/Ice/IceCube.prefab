@@ -48,6 +48,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3629010148276468240, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+      propertyPath: maxScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629010148276468240, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+      propertyPath: maxScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629010148276468240, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+      propertyPath: maxScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629010148276468240, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+      propertyPath: upscale_rate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629010148276468240, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+      propertyPath: useStartScaleForMin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629010148276468240, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+      propertyPath: resetGravityEachScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5333694260452592798, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+      propertyPath: freeze_resistance
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5333694260452592798, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
+      propertyPath: destroy_at_minimum
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6842968199008574991, guid: 96dd91db1a076cd4a8a616a4592d14c6, type: 3}
       propertyPath: m_Name
       value: IceCube

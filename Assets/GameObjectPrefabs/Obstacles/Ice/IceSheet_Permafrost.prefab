@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8680653732755030324
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -4950131423413052496, guid: 94a4cef9b813feb4d8a5812cedb743fa, type: 3}
+      propertyPath: maxTimer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 951186539431517637, guid: 94a4cef9b813feb4d8a5812cedb743fa, type: 3}
+      propertyPath: freeze_resistance
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855842482694164308, guid: 94a4cef9b813feb4d8a5812cedb743fa, type: 3}
+      propertyPath: m_Name
+      value: IceSheet_Permafrost
+      objectReference: {fileID: 0}
+    - target: {fileID: 7739532147681370288, guid: 94a4cef9b813feb4d8a5812cedb743fa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7739532147681370288, guid: 94a4cef9b813feb4d8a5812cedb743fa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7739532147681370288, guid: 94a4cef9b813feb4d8a5812cedb743fa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7739532147681370288, guid: 94a4cef9b813feb4d8a5812cedb743fa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7739532147681370288, guid: 94a4cef9b813feb4d8a5812cedb743fa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7739532147681370288, guid: 94a4cef9b813feb4d8a5812cedb743fa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7739532147681370288, guid: 94a4cef9b813feb4d8a5812cedb743fa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7739532147681370288, guid: 94a4cef9b813feb4d8a5812cedb743fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7739532147681370288, guid: 94a4cef9b813feb4d8a5812cedb743fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7739532147681370288, guid: 94a4cef9b813feb4d8a5812cedb743fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460724611811486539, guid: 94a4cef9b813feb4d8a5812cedb743fa, type: 3}
+      propertyPath: maxScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460724611811486539, guid: 94a4cef9b813feb4d8a5812cedb743fa, type: 3}
+      propertyPath: minScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460724611811486539, guid: 94a4cef9b813feb4d8a5812cedb743fa, type: 3}
+      propertyPath: minScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460724611811486539, guid: 94a4cef9b813feb4d8a5812cedb743fa, type: 3}
+      propertyPath: max_scale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460724611811486539, guid: 94a4cef9b813feb4d8a5812cedb743fa, type: 3}
+      propertyPath: upscale_rate
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 94a4cef9b813feb4d8a5812cedb743fa, type: 3}
