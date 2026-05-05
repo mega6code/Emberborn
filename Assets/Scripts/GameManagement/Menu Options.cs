@@ -20,6 +20,7 @@ public class MenuOptions : MonoBehaviour
     public void ReturnToMain()
     {
         //Return to main menu
+        pausePanel.Unpause();
         SceneManager.LoadScene("Main Menu");
         Debug.Log("Returning to Main menu");
     }

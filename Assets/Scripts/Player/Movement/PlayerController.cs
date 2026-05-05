@@ -60,6 +60,7 @@ public class PlayerController : MonoBehaviour
     }
     private void Start()
     {
+        //InputSystem.actions.FindActionMap("Player").Enable();
         controller = gameObject.GetComponent<CharacterController>();
         cameraMainTransform = Camera.main.transform;
         animator = GetComponent<Animator>();

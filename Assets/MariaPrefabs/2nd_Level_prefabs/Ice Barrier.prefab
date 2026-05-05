@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5803723004361822377}
   - component: {fileID: 6121004266019763652}
   - component: {fileID: 1726392587494932518}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ice Barrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,36 +127,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f50e39b7cbe88242aba3ef29ad09c50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IceObstacle
-  Frozen:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6121004266019763652}
-        m_TargetAssemblyTypeName: ProgressiveScaler, Assembly-CSharp
-        m_MethodName: ChangeTargetScale
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  Flamed:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6121004266019763652}
-        m_TargetAssemblyTypeName: ProgressiveScaler, Assembly-CSharp
-        m_MethodName: ChangeTargetScale
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  progressiveScaler: {fileID: 6121004266019763652}
+  freeze_resistance: 0
+  flamed_resistance: 0
+  destroy_at_minimum: 1
 --- !u!114 &6121004266019763652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,10 +143,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c945333cf0ca7e542bb33b7b6d153c89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProgressiveScaler
-  min_scale: {x: 3.878549, y: 0, z: 0.21044}
-  max_scale: {x: 3.8785489, y: 3.4451976, z: 0.21044001}
+  minScale: {x: 3.9534953, y: 0, z: 0.21044001}
+  useStartScaleForMin: 0
+  maxScale: {x: 0, y: 0, z: 0}
+  useStartScaleForMax: 1
   upscale_rate: 1
   downscale_rate: 1
+  resetGravityEachScale: 1
   target_scale: {x: 0, y: 0, z: 0}
 --- !u!54 &1726392587494932518
 Rigidbody:
@@ -193,7 +170,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
