@@ -119,11 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &17493356 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4935755286243098190, guid: c91ad8188bae5144e9713e7c2ae33f57, type: 3}
-  m_PrefabInstance: {fileID: 1909854925749679616}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &23168571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -786,7 +781,7 @@ PrefabInstance:
     - target: {fileID: 1637983809594821097, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
       propertyPath: state
       value: 
-      objectReference: {fileID: 1909854925749679618}
+      objectReference: {fileID: 0}
     - target: {fileID: 1753563701188476098, guid: abf18e824a6f8d54a88ddf8881517abb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 692.3266
@@ -1541,6 +1536,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4856714819404372320, guid: bf63438b96bbc004cba3334297746d9c, type: 3}
   m_PrefabInstance: {fileID: 1109815588}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1215891103 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4529074579130086384, guid: c03fa7e3559ef634da8784585f2d9692, type: 3}
+  m_PrefabInstance: {fileID: 564190032}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1221440218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2064,6 +2064,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
+  m_UseReflectionProbes: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -2100,7 +2101,7 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470455201}
   m_Enabled: 1
-  serializedVersion: 12
+  serializedVersion: 13
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 0.76
@@ -2152,7 +2153,7 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
-  m_ShadowRadius: 0
+  m_ShapeRadius: 0
   m_ShadowAngle: 0
   m_LightUnit: 1
   m_LuxAtDistance: 1
@@ -2864,7 +2865,7 @@ PrefabInstance:
     - target: {fileID: 1538751520720421410, guid: debab0a3d9d433245a03dcffb9a12a99, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 17493356}
+      objectReference: {fileID: 1215891103}
     - target: {fileID: 1538751520720421410, guid: debab0a3d9d433245a03dcffb9a12a99, type: 3}
       propertyPath: textbox
       value: 
@@ -3408,7 +3409,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6036313864662477533, guid: c91ad8188bae5144e9713e7c2ae33f57, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4935755286243098190, guid: c91ad8188bae5144e9713e7c2ae33f57, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1000974820005948417, guid: c91ad8188bae5144e9713e7c2ae33f57, type: 3}
       insertIndex: 1
@@ -3417,7 +3419,7 @@ PrefabInstance:
       insertIndex: 2
       addedObject: {fileID: 564190033}
     - targetCorrespondingSourceObject: {fileID: 1000974820005948417, guid: c91ad8188bae5144e9713e7c2ae33f57, type: 3}
-      insertIndex: 7
+      insertIndex: 6
       addedObject: {fileID: 1285921212}
     - targetCorrespondingSourceObject: {fileID: 1000974820005948417, guid: c91ad8188bae5144e9713e7c2ae33f57, type: 3}
       insertIndex: -1
@@ -3441,17 +3443,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1000974820005948417, guid: c91ad8188bae5144e9713e7c2ae33f57, type: 3}
   m_PrefabInstance: {fileID: 1909854925749679616}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1909854925749679618 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 763663968893520169, guid: c91ad8188bae5144e9713e7c2ae33f57, type: 3}
-  m_PrefabInstance: {fileID: 1909854925749679616}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 17493356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2009e14796113dc489b17d0557e7101c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Emberborn.Player.ElementalStateManager
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

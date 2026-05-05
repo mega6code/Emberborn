@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Unity.Cinemachine;
 using UnityEngine;
 
@@ -21,6 +22,7 @@ public class CutsceneScript : MonoBehaviour
     void Start()
     { 
         KILLJOHN?.Invoke();
+        Cursor.lockState = CursorLockMode.Locked;
         credits.SetActive(false);
         fakePlayer.SetActive(false);
         set1.SetBool("Paused", true);
@@ -54,6 +56,13 @@ public class CutsceneScript : MonoBehaviour
             Spawn();
             Credits();
             player.SetActive(false);
+            StartCoroutine(MouseTimer());
         }
+    }
+
+    IEnumerator MouseTimer()
+    {
+        yield return new WaitForSecondsRealtime(20.0f);
+        Cursor.lockState = CursorLockMode.None;
     }
 }
